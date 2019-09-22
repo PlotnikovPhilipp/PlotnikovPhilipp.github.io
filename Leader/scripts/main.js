@@ -5,5 +5,5 @@ function chnageBar() {
 if (window.addEventListener) {
     window.addEventListener('scroll', chnageBar, false);
 } else {
-    window.RTCDataChannelEvent('onscroll', chnageBar);
+    window.attachEvent('onscroll', chnageBar);
 }

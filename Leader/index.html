@@ -1,77 +1,144 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="author" content="Plotnikov Philipp && Tonkushin Konstantin"/>
-  <meta name="description" content=""/>
-  <meta name="keywords" content=""/>
-  <!--[if lt IE9]>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Plotnikov Philipp && Tonkushin Konstantin" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lt IE9]>
     <script type="text/javascript" language="javascript" src="compatibilityOfIE8WithHTML5.js"></script>
   <![endif]-->
-  <!--[if lte IE9]>
+    <!--[if lte IE9]>
     <script type="text/javascript" language="javascript" src="es5-shim.js"></script>
     <script type="text/javascript" language="javascript" src="es5-sham.js"></script>
   <![endif]-->
-  <link type="image/x-icon" rel="shortcut icon" href=""/>
-  <link type="text/css" rel="stylesheet" href="css/header.css"/>
-  <title>Leader</title>
-</head>
-<body ontouchstart="">
+    <link type="image/x-icon" rel="shortcut icon" href="" />
+    <link type="text/css" rel="stylesheet" href="css/header.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <title>Leader</title>
+  </head>
 
-  <!--
-    Header
-  -->
-  <header>
+  <body ontouchstart="">
 
     <!--
-      Navigation
+      Header
     -->
-    <nav>
-      <ul role="navigation">
-        <li>
-          <img src="img/logo.svg" alt=""/> <span>лидерснаб</span>
-        </li><li>
-          Доставка
-        </li><li>
-          Оплата
-        </li><li>
-          Товар
-        </li><li>
-          Контакты
-        </li><li>
-          О нас
-        </li><li class="align-center"></li>
-      </ul>
-    </nav>
+    <header>
 
-    <!--
+      <!--
+        Navigation
+      -->
+      <nav>
+        <ul role="navigation">
+          <li>
+            <img src="img/logo.svg" alt="" /> <span>лидерснаб</span>
+          </li>
+          <li>
+            Доставка
+          </li>
+          <li>
+            Оплата
+          </li>
+          <li>
+            Товар
+          </li>
+          <li>
+            Контакты
+          </li>
+          <li>
+            О нас
+          </li>
+          <li class="align-center"></li>
+        </ul>
+      </nav>
+
+      <!--
       Middle
     -->
-    <img src="img/logo.svg" alt=""/>
-    <div role="banner">
-      <h1>Снабжение как искусство</h1>
-      <p>
-        Мы являемся экспертами по снабжению<br/>компрессорного оборудования
-      </p>
-      <button type="button">заказать</button>
-    </div>
-    <div role="navigation" class="mouse"></div>
-  </header>
+      <img src="img/logo.svg" alt="" />
+      <div role="banner">
+        <h1>Снабжение как искусство</h1>
+        <p>
+          Мы являемся экспертами по снабжению<br />компрессорного оборудования
+        </p>
+        <button type="button">заказать</button>
+      </div>
+      <div role="navigation" class="mouse"></div>
+    </header>
 
-  <!--
-    Indicator
-  -->
-  <section class="indicator">
-    <h4>top</h4>
-    <div role="progressbar">
-      <div role="progressbar" id="bar" class="bar"></div>
+    <!--
+      Indicator
+    -->
+    <section class="indicator">
+      <h4>top</h4>
+      <div role="progressbar">
+        <div role="progressbar" id="bar" class="bar"></div>
+      </div>
+    </section>
+    
+    <!-- Вторая секция -->
+
+    <div class="s2">
+      <div class="zagolovok">
+        <h2>Почему "Лидерснаб"?</h2>
+      </div>
+      <div class="s2_content">
+        <ul>
+          <table>
+            <tr>
+              <td>
+                <li id="_1">
+                  <h4>Быстро</h4>
+                </li>
+                <p>Мы используем технологию везде, где это возможно</p>
+              </td>
+              <td>
+                <li id="_2">
+                  <h4>Точно в срок</h4>
+                </li>
+                <p>Мы всегда выполняем нашу работу к договоренному сроку</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <li id="_3">
+                  <h4>Ценник для вас</h4>
+                </li>
+                <p>У нас доступные цены</p>
+              </td>
+              <td>
+                <li id="_4">
+                  <h4>Легко</h4>
+                </li>
+                <p>С нами легко договриться о сроках</p>
+              </td>
+            </tr>
+          </table>
+        </ul>
+      </div>
     </div>
-  </section>
-  <!--
+
+    <!-- Третья секция -->
+
+    <div class="s3">
+      <div class="s3_content">
+        <div class="s3_content_left">
+          <img src="img/figure.png">
+        </div>
+        <div class="s3_content_right">
+          <h2>Всё, что вам нужно</h2>
+          <p>Мы предлагаем все, что вам нужно от регистрации до подачи документов для корпоративных действий. По мере
+            роста вашего бизнеса, мы будем на вашей стороне, чтобы помочь вам сделать документы эффективно.</p>
+          <a href="#">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    <!--
     Подключаем внешнии скрипты
-  -->
+    -->
   <script type="text/javascript" language="javascript" src="scripts/main.js"></script>
-</body>
-</html>
+  </body>
+
+  </html>
