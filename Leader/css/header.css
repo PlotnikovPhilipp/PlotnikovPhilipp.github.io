@@ -124,9 +124,21 @@ main {display: block}
     Header
 
 */
-body > header {padding: 2% 3%}
+body > header {padding: 6% 3%}
 
-body > header nav {overflow: hidden}
+body > header nav {
+    padding: 2% 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 94%;
+    background-color: white;
+    -webkit-transition: 0.3s ease-in-out 0s;
+    -moz-transition: 0.3s ease-in-out 0s;
+    -ms-transition: 0.3s ease-in-out 0s;
+    -o-transition: 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out 0s;
+}
 
 body > header nav ul {text-align: right}
 
@@ -140,6 +152,7 @@ body > header nav ul li {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
 }
 
 body > header nav ul li:first-child, body > header nav ul li:nth-child(6), body > header nav ul li:last-child {margin-right: 0}
@@ -157,6 +170,61 @@ body > header nav ul li:first-child span {
 }
 
 .align-center {height: 4vw}
+
+.buy:hover .submenu {
+    opacity: 1;
+    -webkit-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -moz-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -ms-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -o-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.submenu {
+    padding: 50% 50%;
+    opacity: 0;
+    position: absolute;
+    top: 2.5vw;
+    left: -250%;
+    background: white;
+    width: 500%;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    -moz-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    -ms-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    -o-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+}
+
+.submenu > li:not(:first-child) {
+    margin-top: 10%;
+}
+
+.submenu > li:hover {color: red}
+
+.submenu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1vw solid transparent;
+    border-bottom-color: red;
+    bottom: 100%;
+    right: 0;
+    width: 0;
+    margin: 0 auto;
+    left: 0;
+}
 
 /*
 

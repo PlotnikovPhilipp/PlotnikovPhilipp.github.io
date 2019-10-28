@@ -8,15 +8,16 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <!--[if lt IE9]>
-    <script type="text/javascript" language="javascript" src="compatibilityOfIE8WithHTML5.js"></script>
-  <![endif]-->
+      <script type="text/javascript" language="javascript" src="compatibilityOfIE8WithHTML5.js"></script>
+    <![endif]-->
     <!--[if lte IE9]>
-    <script type="text/javascript" language="javascript" src="es5-shim.js"></script>
-    <script type="text/javascript" language="javascript" src="es5-sham.js"></script>
-  <![endif]-->
+      <script type="text/javascript" language="javascript" src="es5-shim.js"></script>
+      <script type="text/javascript" language="javascript" src="es5-sham.js"></script>
+    <![endif]-->
     <link type="image/x-icon" rel="shortcut icon" href="" />
     <link type="text/css" rel="stylesheet" href="css/header.css" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/footer.css" />
     <title>Leader</title>
   </head>
 
@@ -30,7 +31,7 @@
       <!--
         Navigation
       -->
-      <nav>
+      <nav id='navigation'>
         <ul role="navigation">
           <li>
             <img src="img/logo.svg" alt="" /> <span>лидерснаб</span>
@@ -41,8 +42,18 @@
           <li>
             Оплата
           </li>
-          <li>
+          <li class='buy'>
             Товар
+            <ul class='submenu' role='menu'>
+              <li>Компрессорное оборудование</li>
+              <li>Насосное оборудование</li>
+              <li>Фильтры для компрессоров</li>
+              <li>Буровые установки</li>
+              <li>Запчасти к передвижным компрессорным станциям</li>
+              <li>Криогенное оборудование</li>
+              <li>Лубрикатор<br/>(Станция смазочная)</li>
+              <li>Поршневые кольца<br/>для компрессора</li>
+            </ul>
           </li>
           <li>
             Контакты
@@ -135,6 +146,20 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div>
+        <img src="img/logo.svg" alt=""/>
+        <h2>лидерснаб</h2>
+      </div><div>
+        8-000-000-000<br/>
+        8-000-000-000
+      </div><div>
+        example@mail.ru
+      </div><div>
+        Екатеринбург,<br/>
+        ул. пример, д. 5
+      </div>
+    </footer>
     <!--
     Подключаем внешнии скрипты
     -->

@@ -7,10 +7,11 @@ a {
 
 /*Вторая секция */
 
-.s2{
+.s2 {
   width: 100%;
   overflow: hidden;
   padding: 5vh 0;
+  margin-top: 25%;
 }
 
 .zagolovok{
@@ -21,7 +22,6 @@ a {
 
 .s2_content{
   width: 80%;
-  overflow: hidden;
   margin: 5vh 10%;
 }
 
@@ -29,15 +29,23 @@ a {
   width: 100%;
 }
 
-/*.s2_content ul #_1{list-style-image: url("../img/Fast.png")}
+.s2_content ul #_1 {
+  list-style-image: url("../img/Fast.png");
+}
 
-.s2_content ul #_2{list-style-image: url("../img/Time.png")}
+.s2_content ul #_2 {
+  list-style-image: url("../img/Time.png");
+}
 
-.s2_content ul #_3{list-style-image: url("../img/Easy.png")}
+.s2_content ul #_3 {
+  list-style-image: url("../img/Easy.png");
+}
 
-.s2_content ul #_4{list-style-image: url("../img/Money.png")}*/
+.s2_content ul #_4 {
+  list-style-image: url("../img/Money.png");
+}
 
-.s2_content ul li{
+.s2_content ul li {
   margin-left: 10%;
   font-weight: bold;
 }
@@ -60,6 +68,7 @@ a {
   width: 100%;
   overflow: hidden;
   padding: 30vh 0;
+  margin-top: 25%;
 }
 
 .s3_content{
