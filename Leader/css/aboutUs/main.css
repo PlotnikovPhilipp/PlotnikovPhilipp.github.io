@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/*
+    Устанавливаем шрифты
+*/
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../../fonts/Roboto.eot");
+    src: url("../../fonts/Roboto.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Roboto.woff") format("woff"),
+        url("../../fonts/Roboto.ttf") format("truetype"),
+        url("../../fonts/Roboto.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../../fonts/Robotolight.eot");
+    src: url("../../fonts/Robotolight.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Robotolight.woff") format("woff"),
+        url("../../fonts/Robotolight.ttf") format("truetype"),
+        url("../../fonts/Robotolight.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("../../fonts/Robotomedium.eot");
+    src: url("../../fonts/Robotomedium.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Robotomedium.woff") format("woff"),
+        url("../../fonts/Robotomedium.ttf") format("truetype"),
+        url("../../fonts/Robotomedium.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("../../fonts/Robotobold.eot");
+    src: url("../../fonts/Robotobold.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Robotobold.woff") format("woff"),
+        url("../../fonts/Robotobold.ttf") format("truetype"),
+        url("../../fonts/Robotobold.svg") format("svg");
+}
+
+/*
+
+    Устанавливаем стандартные стили
+
+*/
+* {
+    border: none;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+html,
+body {
+    width: 100%
+}
+
+html {
+    font-family: Roboto-Regular;
+    font-size: 0.9vw;
+    background-color: white;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+    font-family: Roboto-Bold
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: block
+}
+
+/*
+
+    Header
+
+*/
+body>header {
+    padding: 6% 3%
+}
+
+body>header nav {
+    padding: 2% 3%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 94%;
+    background-color: white;
+    -webkit-transition: 0.3s ease-in-out 0s;
+    -moz-transition: 0.3s ease-in-out 0s;
+    -ms-transition: 0.3s ease-in-out 0s;
+    -o-transition: 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out 0s;
+}
+
+body>header nav ul {
+    text-align: right
+}
+
+body>header nav ul li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    margin-right: 8%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+}
+
+body>header nav ul li:first-child,
+body>header nav ul li:nth-child(6),
+body>header nav ul li:last-child {
+    margin-right: 0
+}
+
+body>header nav ul li:first-child {
+    float: left
+}
+
+body>header nav ul li:first-child * {
+    vertical-align: middle
+}
+
+body>header nav ul li:first-child img {
+    height: 4vw
+}
+
+body>header nav ul li:first-child span {
+    font-family: Roboto-Bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.align-center {
+    height: 4vw
+}
+
+.buy:hover .submenu {
+    opacity: 1;
+    -webkit-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -moz-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -ms-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -o-transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    transition: transform 0s linear 0s, opacity 0.5s ease-in-out 0s;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.submenu {
+    padding: 50% 50%;
+    opacity: 0;
+    position: absolute;
+    top: 2.5vw;
+    left: -250%;
+    background: white;
+    width: 500%;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    -moz-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    -ms-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    -o-transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+    transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
+}
+
+.submenu>li:not(:first-child) {
+    margin-top: 10%;
+}
+
+.submenu>li:hover {
+    color: red
+}
+
+.submenu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1vw solid transparent;
+    border-bottom-color: red;
+    bottom: 100%;
+    right: 0;
+    width: 0;
+    margin: 0 auto;
+    left: 0;
+}
+
+/*
+
+    Main
+
+*/
+main h1 {
+    text-align: center;
+    font-weight: normal;
+    font-family: Roboto-Bold;
+    font-size: 2.5rem;
+}
+
+main p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+}
+
+/*
+
+    Footer
+
+*/
+
+/*
+
+    General
+
+*/
+footer {
+    background-color: #2E3038;
+    color: #E4E4E4;
+    font-family: Roboto-Medium;
+    padding: 3% 4%;
+    margin-top: 25%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+footer>* {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*
+
+    First section
+
+*/
+footer div:first-child {
+    width: 36%;
+}
+
+footer div:first-child img {
+    width: 30%;
+    vertical-align: middle;
+}
+
+footer div:first-child h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: Roboto-Bold;
+    font-size: 2.4rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer div:nth-child(2),
+footer div:nth-child(3) {
+    width: 20%;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+footer div:last-child {
+    width: 24%;
+    font-size: 1.7rem;
+    text-align: right;
+}

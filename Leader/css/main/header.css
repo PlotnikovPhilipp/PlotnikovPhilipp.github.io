@@ -5,38 +5,38 @@
 */
 @font-face {
     font-family: Roboto-Regular;
-    src: url("../fonts/Roboto.eot");
-    src: url("../fonts/Roboto.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/Roboto.woff") format("woff"),
-        url("../fonts/Roboto.ttf") format("truetype"),
-        url("../fonts/Roboto.svg") format("svg");
+    src: url("../../fonts/Roboto.eot");
+    src: url("../../fonts/Roboto.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Roboto.woff") format("woff"),
+        url("../../fonts/Roboto.ttf") format("truetype"),
+        url("../../fonts/Roboto.svg") format("svg");
 }
 
 @font-face {
     font-family: Roboto-Light;
-    src: url("../fonts/Robotolight.eot");
-    src: url("../fonts/Robotolight.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/Robotolight.woff") format("woff"),
-        url("../fonts/Robotolight.ttf") format("truetype"),
-        url("../fonts/Robotolight.svg") format("svg");
+    src: url("../../fonts/Robotolight.eot");
+    src: url("../../fonts/Robotolight.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Robotolight.woff") format("woff"),
+        url("../../fonts/Robotolight.ttf") format("truetype"),
+        url("../../fonts/Robotolight.svg") format("svg");
 }
 
 @font-face {
     font-family: Roboto-Medium;
-    src: url("../fonts/Robotomedium.eot");
-    src: url("../fonts/Robotomedium.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/Robotomedium.woff") format("woff"),
-        url("../fonts/Robotomedium.ttf") format("truetype"),
-        url("../fonts/Robotomedium.svg") format("svg");
+    src: url("../../fonts/Robotomedium.eot");
+    src: url("../../fonts/Robotomedium.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Robotomedium.woff") format("woff"),
+        url("../../fonts/Robotomedium.ttf") format("truetype"),
+        url("../../fonts/Robotomedium.svg") format("svg");
 }
 
 @font-face {
     font-family: Roboto-Bold;
-    src: url("../fonts/Robotobold.eot");
-    src: url("../fonts/Robotobold.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/Robotobold.woff") format("woff"),
-        url("../fonts/Robotobold.ttf") format("truetype"),
-        url("../fonts/Robotobold.svg") format("svg");
+    src: url("../../fonts/Robotobold.eot");
+    src: url("../../fonts/Robotobold.eot?#iefix") format("embedded-opentype"),
+        url("../../fonts/Robotobold.woff") format("woff"),
+        url("../../fonts/Robotobold.ttf") format("truetype"),
+        url("../../fonts/Robotobold.svg") format("svg");
 }
 
 /*
@@ -56,7 +56,10 @@
     border-radius: 0;
 }
 
-html, body {width: 100%}
+html,
+body {
+    width: 100%
+}
 
 html {
     font-family: Roboto-Regular;
@@ -64,11 +67,22 @@ html {
     background-color: white;
 }
 
-h1, h2, h3, h5, h6 {font-family: Roboto-Bold}
+h1,
+h2,
+h3,
+h5,
+h6 {
+    font-family: Roboto-Bold
+}
 
-ul, ol {list-style: none}
+ul,
+ol {
+    list-style: none
+}
 
-main {display: block}
+main {
+    display: block
+}
 
 /*
 
@@ -93,7 +107,7 @@ main {display: block}
     user-select: none;
 }
 
-.indicator > div[role="progressbar"] {
+.indicator>div[role="progressbar"] {
     width: 15%;
     position: absolute;
     top: 2vh;
@@ -124,9 +138,11 @@ main {display: block}
     Header
 
 */
-body > header {padding: 6% 3%}
+body>header {
+    padding: 6% 3%
+}
 
-body > header nav {
+body>header nav {
     padding: 2% 3%;
     position: fixed;
     top: 0;
@@ -140,9 +156,11 @@ body > header nav {
     transition: 0.3s ease-in-out 0s;
 }
 
-body > header nav ul {text-align: right}
+body>header nav ul {
+    text-align: right
+}
 
-body > header nav ul li {
+body>header nav ul li {
     display: inline-block;
     vertical-align: middle;
     font-size: 1.1rem;
@@ -155,21 +173,33 @@ body > header nav ul li {
     position: relative;
 }
 
-body > header nav ul li:first-child, body > header nav ul li:nth-child(6), body > header nav ul li:last-child {margin-right: 0}
+body>header nav ul li:first-child,
+body>header nav ul li:nth-child(6),
+body>header nav ul li:last-child {
+    margin-right: 0
+}
 
-body > header nav ul li:first-child {float: left}
+body>header nav ul li:first-child {
+    float: left
+}
 
-body > header nav ul li:first-child * {vertical-align: middle}
+body>header nav ul li:first-child * {
+    vertical-align: middle
+}
 
-body > header nav ul li:first-child img {height: 4vw}
+body>header nav ul li:first-child img {
+    height: 4vw
+}
 
-body > header nav ul li:first-child span {
+body>header nav ul li:first-child span {
     font-family: Roboto-Bold;
     text-transform: uppercase;
     font-size: 1.1rem;
 }
 
-.align-center {height: 4vw}
+.align-center {
+    height: 4vw
+}
 
 .buy:hover .submenu {
     opacity: 1;
@@ -194,7 +224,7 @@ body > header nav ul li:first-child span {
     background: white;
     width: 500%;
     text-align: center;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -207,11 +237,13 @@ body > header nav ul li:first-child span {
     transition: opacity 0.5s ease-in-out 1s, transform 0s linear 1.5s;
 }
 
-.submenu > li:not(:first-child) {
+.submenu>li:not(:first-child) {
     margin-top: 10%;
 }
 
-.submenu > li:hover {color: red}
+.submenu>li:hover {
+    color: red
+}
 
 .submenu::before {
     content: '';
@@ -231,7 +263,7 @@ body > header nav ul li:first-child span {
     Middle
 
 */
-body > header > img {
+body>header>img {
     width: 27%;
     display: inline-block;
     margin-top: 8.5%;
@@ -239,22 +271,24 @@ body > header > img {
     vertical-align: middle;
 }
 
-body > header > div:first-of-type {
+body>header>div:first-of-type {
     margin-top: 8.5%;
     display: inline-block;
     vertical-align: middle;
     margin-left: 17%;
 }
 
-body > header > div h1 {font-size: 3.5rem}
+body>header>div h1 {
+    font-size: 3.5rem
+}
 
-body > header > div p {
+body>header>div p {
     margin-top: 1.6%;
     line-height: 1.5;
     font-size: 1.5rem;
 }
 
-body > header > div button {
+body>header>div button {
     background-color: red;
     color: white;
     text-transform: uppercase;
@@ -284,6 +318,7 @@ body > header > div button {
         transform: translateY(0.3vw);
         opacity: 1;
     }
+
     70% {
         -webkit-transform: translateY(0.7vw);
         -moz-transform: translateY(0.7vw);
@@ -292,7 +327,9 @@ body > header > div button {
         transform: translateY(0.7vw);
         opacity: 1;
     }
-    80%, to {
+
+    80%,
+    to {
         opacity: 0;
     }
 }

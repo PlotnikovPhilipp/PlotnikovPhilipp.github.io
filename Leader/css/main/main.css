@@ -2,7 +2,7 @@
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 
 /*Вторая секция */
@@ -14,35 +14,35 @@ a {
   margin-top: 25%;
 }
 
-.zagolovok{
+.zagolovok {
   width: 100%;
   text-align: center;
   font-size: 1.5em;
 }
 
-.s2_content{
+.s2_content {
   width: 80%;
   margin: 5vh 10%;
 }
 
-.s2_content table{
+.s2_content table {
   width: 100%;
 }
 
 .s2_content ul #_1 {
-  list-style-image: url("../img/Fast.png");
+  list-style-image: url("../../img/Fast.png");
 }
 
 .s2_content ul #_2 {
-  list-style-image: url("../img/Time.png");
+  list-style-image: url("../../img/Time.png");
 }
 
 .s2_content ul #_3 {
-  list-style-image: url("../img/Easy.png");
+  list-style-image: url("../../img/Easy.png");
 }
 
 .s2_content ul #_4 {
-  list-style-image: url("../img/Money.png");
+  list-style-image: url("../../img/Money.png");
 }
 
 .s2_content ul li {
@@ -50,28 +50,30 @@ a {
   font-weight: bold;
 }
 
-.s2 h4{font-size: 1.3em}
+.s2 h4 {
+  font-size: 1.3em
+}
 
-.s2_content p{
+.s2_content p {
   margin-left: 10%;
   padding: 1vh 0;
   color: #8B9CCA;
 }
 
-.s2_content table td{
+.s2_content table td {
   width: 50%;
 }
 
 /* Третья секция */
 
-.s3{
+.s3 {
   width: 100%;
   overflow: hidden;
   padding: 30vh 0;
   margin-top: 25%;
 }
 
-.s3_content{
+.s3_content {
   width: 80%;
   float: left;
   overflow: hidden;
@@ -81,38 +83,38 @@ a {
   padding-bottom: 10vh;
 }
 
-.s3_content_left{
+.s3_content_left {
   width: 50%;
   float: left;
   overflow: hidden;
 }
 
-.s3_content_left img{
+.s3_content_left img {
   width: 50%;
   margin-left: 25%;
   margin-top: 5vh;
 }
 
-.s3_content_right{
+.s3_content_right {
   width: 50%;
   float: right;
   color: #fff;
 }
 
-.s3_content_right h2{
+.s3_content_right h2 {
   color: #FF4A5A;
   margin: 3vh 0;
   font-size: 1.8em;
 }
 
-.s3_content_right p{
+.s3_content_right p {
   width: 80%;
   line-height: 1.5em;
   font-weight: 300;
   margin-bottom: 7vh;
 }
 
-.s3_content_right a{
+.s3_content_right a {
   background-color: #FF4A5A;
   border-radius: 100px;
   padding: 15px;
