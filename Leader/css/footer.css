@@ -11,6 +11,10 @@ footer {
     font-family: Roboto-Medium;
     padding: 3% 4%;
     margin-top: 25%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 footer > * {
