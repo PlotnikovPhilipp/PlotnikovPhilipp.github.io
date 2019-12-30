@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Ковры</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    <script src="scripts/main.js" type="text/javascript" defer></script>
+</head>
+<body ontouchstart="">
+    <div class="wrapper">
+    <!--
+        Левая часть
+    -->
+        <section class="left-section">
+            <header>
+                <h1>Подобрать EVA коврики</h1>
+            </header>
+
+    <!--
+        Вид и форма
+    -->
+            <div class="view">
+                <h6>Вид</h6>
+                <div class="left-first-view">
+                    <input checked name="view" id="firstView" type="radio"/>
+                    <label for="firstView">Ромбы</label>
+                </div>
+                <div class="left-second-view">
+                    <input name="view" id="secondView" type="radio"/>
+                    <label for="secondView">Соты</label>
+                </div>
+            </div>
+            <div class="shape">
+                <h6>Форма</h6>
+                <div class="left-first-shape">
+                    <input checked id="firstShape" name="shape" type="radio"/>
+                    <label for="firstShape">Стандарт</label>
+                </div>
+                <div class="left-second-shape">
+                    <input name="shape" id="secondShape" type="radio"/>
+                    <label for="secondShape">3D</label> <img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                    <div class="first-pop">
+                        <p>
+                            За счёт бортиков и литой лапки лучше защищает напольное ковровое покрытие от пыли и грязи.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        <!--
+            Цвет коврика, цвет окантовки, комплектация
+        -->   
+            <div class="color">
+                <div>
+                    <h6>Цвет коврика</h6>
+                    <ul class="kovrik">
+                        <li style="background-color: #000000;" class="chernyj_kovrik" data-color="Чёрный"><div></div></li><li data-color="Серый" style="background-color: #A29D9D;" class="seryi_kovrik"><div></div></li><li data-color="Бежевый" style="background-color: #E1A063;" class="bejevyj_kovrik"><div></div></li><li data-color="Коричневый" style="background-color: #934E30;" class="korichnevyi_kovrik"><div></div></li><li data-color="Кофейный" style="background-color: #652D21;" class="koveinyi_kovrik"><div></div></li><li data-color="Красный" style="background-color: #FA0404;" class="krasnyi_kovrik"><div></div></li><li data-color="Оранжевый" style="background-color: #F45B05;" class="oranjevyi_kovrik"><div></div></li><br/>
+                        <li data-color="Тёмно-зеленый" style="background-color: #113E0A;" class="temno_zelenyi_kovrik"><div></div></li><li data-color="Лаймовый" style="background-color: #54D33F;" class="laimovyi_kovrik"><div></div></li><li data-color="Голубой" style="background-color: #8FD0E4;" class="goluboi_kovrik"><div></div></li><li data-color="Синий" style="background-color: #1850E1;" class="sinij_kovrik"><div></div></li><li data-color="Тёмно-синий" style="background-color: #0F39CE;" class="temno_sinij_kovrik"><div></div></li><li data-color="Фиолетовый" style="background-color: #87129A;" class="fioletovyi_kovrik"><div></div></li>
+                    </ul>
+                    <span id="colorOfKovrika">Голубой</span>
+                </div>
+                <div>
+                    <h6>Цвет окантовки</h6>
+                    <ul class="okantovka">
+                        <li data-color="Тёмно-зеленый" style="background-color: #2C7340;" class="temno_zelyonaya_okantovka"><div></div></li><li data-color="Фиолетовый" style="background-color: #7925A1;" class="fioletovaya_okantovka"><div></div></li><li data-color="Чёрный" style="background-color: #000000;" class="chernaya_okantovka"><div></div></li><li data-color="Тёмно-синий" style="background-color: #181A4A;" class="temno_sinyaya_okantovka"><div></div></li><li data-color="Синий" style="background-color: #3F54C2;" class="sinyaya_okantovka"><div></div></li><li data-color="Голубой" style="background-color: #5DCFE8;" class="golubaya_okantovka"><div></div></li><li data-color="Красный" style="background-color: #FF0505;" class="krasnaya_okantovka"><div></div></li><br/>
+                        <li data-color="Изумрудный" style="background-color: #21351A;" class="izumrudnaya_okantovka"><div></div></li><li data-color="Красно-Чёрный" style="background-color: #8F1A1A;" class="krasno_chernaya_okantovka"><div></div></li><li data-color="Бордовый" style="background-color: #D31515;" class="bordovaya_okantovka"><div></div></li><li data-color="Оранжевый" style="background-color: #F7700D;" class="oranjevaya_okantovka"><div></div></li><li data-color="Жёлтый" style="background-color: #F8E006;" class="jeltaya_okantovka"><div></div></li><li data-color="Бежевый" style="background-color: #EAA96C;" class="bejevaya_okantovka"><div></div></li><li data-color="Тёмно-серый" style="background-color: #828181;" class="temno_seraya_okantovka"><div></div></li><li data-color="Светло серый" style="background-color: #C4C4C4;" class="svetlo_seraya_okantovka"><div></div></li>
+                    </ul>
+                    <span id="colorOfOkantovki">Чёрный</span>
+                </div>
+            </div>
+
+            <div class="complect">
+                <h6>Комплектация</h6>
+                <ul>
+                    <li>
+                        <input checked id="firstComplect" data-price1="2300" data-price2="2800" name="complect" type="radio"/>
+                        <label for="firstComplect">Комплект ковриков на весь салон с перемычкой</label>
+                    </li>
+                    <li>
+                        <input id="secondComplect" data-price1="750" data-price2="1000" name="complect" type="radio"/>
+                        <label for="secondComplect">Коврик видительский</label>
+                    </li>
+                    <li>
+                        <input id="thirdComplect" data-price1="900" name="complect" type="radio"/>
+                        <label for="thirdComplect">Коврик водительский с литой лапкой</label> <img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                        <div class="second-pop">
+                            <p>
+                                Повторяет форму зоны для отдыха левой ноги в автомобиле. Защищает от попадания пыли и грязи под педали.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <input id="fourthComplect" data-price1="1500" data-price2="2000" name="complect" type="radio"/>
+                        <label for="fourthComplect">Коврик водительский и пассажирский</label>
+                    </li>
+                    <li>
+                        <input id="fifthComplect" data-price1="1750" name="complect" type="radio"/>
+                        <label for="fifthComplect">Коврик в багажник</label><br/>
+                        <div class="select">
+                            <select name="cusov1">
+                                <option value="false">Выберите кузов</option>
+                                <option value="Sedan">Седан</option>
+                                <option value="Xechbeck">Хэчбек</option>
+                                <option value="Kupe">Купэ</option>
+                                <option value="Universal">Универсал</option>
+                                <option value="Other">Другое</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <input id="sixthComplect" data-price1="3750" name="complect" type="radio"/>
+                        <label for="sixthComplect">Комплект на весь салон с перемычкой + в багажник</label><br/>
+                        <div class="select">
+                            <select name="cusov1">
+                                <option value="false">Выберите кузов</option>
+                                <option value="Sedan">Седан</option>
+                                <option value="Xechbeck">Хэчбек</option>
+                                <option value="Kupe">Купэ</option>
+                                <option value="Universal">Универсал</option>
+                                <option value="Other">Другое</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
+
+        <!--
+            Аксессуары
+        -->
+            <div class="dop">
+                <h6>Дополнительно</h6>
+                <ul role="menu">
+                    <li>
+                        <div class="first-line">
+                            <input data-price="200" name="shildyk" type="checkbox"/><label></label><img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                            <div class="third-pop">
+                                <p>
+                                    Металлический, крепится на болтики. На любые марки автомобиля.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="imgs/shildyk.png" alt=""/><br/>
+                        <span>Шильдик</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" name="podpyannyk_aluminievyi" type="checkbox"/><label></label><img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                            <div class="fourth-pop">
+                                <p>
+                                    Толщина 1 мм.<br/>
+                                    Размер 15*22 см.<br/>
+                                    Нержавеющий крепёж.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="imgs/aluminievyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Алюминиевый подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" name="podpyannyk_plastikovyi" type="checkbox"/><label></label><img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                            <div class="fifth-pop">
+                                <p>
+                                    Размер 23 * 15 см<br/>
+                                    Толщина 3,5 см
+                                </p>
+                            </div>
+                        </div>
+                        <img src="imgs/plastikovyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Пластиковый подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" name="podpyannyk_rezinovyi" type="checkbox"/><label></label><img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                            <div class="sixth-pop">
+                                <p>
+                                    Размер 20*15 см.<br/>
+                                    Толщина 6 мм.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="imgs/rezinovyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Резиновый подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="150" name="litaya_lapka" type="checkbox"/><label for=""></label><img class="pop" alt="Доп. информация" src="imgs/info.svg"/>
+                            <div class="seventh-pop">
+                                <p>
+                                    Повторяет форму зоны для отдыха левой ноги в автомобиле. Защищает от попадания пыли и грязи под педали.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="imgs/litaya_lapka_1.png" alt=""/><br/>
+                        <span>Литая лапка</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!--
+        Правая часть
+    -->
+        <section class="right-section">
+            <div class="image-area">
+                <img id="selfOkantovka" alt="" src="imgs/chernaya_okantovka.png"/>
+                <img id="selfKovrik" alt="" src="imgs/chernyj_kovrik_romby.png"/>      
+            </div>
+            <h6>Комплектация</h6>
+            <img alt="" id="selfComplect" src="imgs/komplekt_na ves_salon_s_peremychkoy.png"/>
+            <div class="description">
+                <div class="line"></div>
+                <p role="contentinfo">
+                    <strong>Вид: </strong><span id="view">Ромбы;</span>
+                    <strong>Форма: </strong><span id="shape">Стандарт;</span>
+                    <strong>Комплектация: </strong><span id="compl">Комплект ковриков на весь салон с перемычкой;</span>
+                    <strong>Цвет коврика: </strong><span id="colorK">Чёрный;</span>
+                    <strong>Цвет окантовки: </strong><span id="colorO">Чёрный;</span>
+                    <strong>Дополнительно: </strong><span id="dopo">Нет</span>
+                </p>
+                <div class="last-line">
+                    <h6>Цена</h6>
+                    <span id="price">2000 р.</span>
+                    <button type="button">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
