@@ -1,0 +1,556 @@
+@charset "utf-8";
+
+/*
+    Устанавливаем шрифты
+*/
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../fonts/Roboto.eot");
+    src: url("../fonts/Roboto.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Roboto.woff") format("woff"),
+        url("../fonts/Roboto.ttf") format("truetype"),
+        url("../fonts/Roboto.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../fonts/Robotolight.eot");
+    src: url("../fonts/Robotolight.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Robotolight.woff") format("woff"),
+        url("../fonts/Robotolight.ttf") format("truetype"),
+        url("../fonts/Robotolight.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("../fonts/Robotomedium.eot");
+    src: url("../fonts/Robotomedium.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Robotomedium.woff") format("woff"),
+        url("../fonts/Robotomedium.ttf") format("truetype"),
+        url("../fonts/Robotomedium.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("../fonts/Robotobold.eot");
+    src: url("../fonts/Robotobold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/Robotobold.woff") format("woff"),
+        url("../fonts/Robotobold.ttf") format("truetype"),
+        url("../fonts/Robotobold.svg") format("svg");
+}
+
+/*
+    Установка дефолтных стилей
+*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    outline: 0;
+    border: none;
+}
+
+body, html {width: 100%}
+
+html {
+    font-family: Roboto-Regular;
+    font-size: 1vw;
+    background-color: white;
+}
+
+h1, h2, h3, h5, h6 {font-family: Roboto-Regular}
+
+ul, ol {list-style: none}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+small, address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+button, textarea, input {
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    outline: 0;
+}
+
+fieldset {border: none}
+
+/*
+
+    Левая часть
+
+*/
+.wrapper {
+    overflow-x: hidden;
+    width: 96%;
+    padding: 1% 2% 0 2%;
+}
+
+.wrapper::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.left-section {
+    float: left;
+    width: 46%;
+}
+
+.left-section::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.right-section {
+    width: 54%;
+    float: left;
+}
+
+.right-section::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+header h1 {font-size: 2.5rem}
+
+header {
+    margin-bottom: 2.5%;
+}
+
+/*
+
+    Вид и форма
+
+*/
+.view {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+}
+
+.view input, .view label {cursor: pointer}
+
+.view h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.left-first-view {
+    float: left;
+    width: 38%;
+    margin-top: 2.5%;
+}
+
+.left-second-view {
+    overflow: hidden;
+    margin-top: 2.5%;
+}
+
+.shape {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+
+.shape::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.shape input, .shape label {cursor: pointer}
+
+.shape h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.left-first-shape {
+    float: left;
+    width: 38%;
+    margin-top: 2.5%;
+}
+
+.left-second-shape {
+    margin-top: 2.5%;
+    position: relative;
+    float: left;
+}
+
+.left-second-shape img {
+    width: 1.1vw;
+    vertical-align: middle;
+    margin-left: 0.3vw;
+    cursor: pointer;
+}
+
+.first-pop, .second-pop {
+    position: absolute;
+    font-size: 0.9rem;
+    top: 120%;
+    background-color: white;
+    left: 0;
+    padding: 3%;
+    right: 0;
+}
+
+/*
+
+     Комплектация, цвет коврика, цвет окантовки
+
+*/
+.complect {
+    margin-top: 5%;
+    overflow: hidden;
+    width: 50%;
+    float: left;
+}
+
+.complect input, .complect label {cursor: pointer}
+
+.complect select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: 0;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+    width: 100%;
+}
+
+.complect .select {
+    position: relative;
+    display: inline-block;
+    margin-top: 8%;
+    width: 46%;
+    cursor: pointer;
+}
+
+.complect .select::after {
+    content: " ";
+    pointer-events: none;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    display: inline-block;
+    border: 0.45vw solid transparent;
+    border-top-color: black; 
+}
+
+.complect h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 2.5%;
+}
+
+.complect ul li:nth-child(3) {
+    position: relative;
+}
+
+.complect ul li:not(:first-child) {
+    margin-top: 8%;
+}
+
+.complect ul li:nth-of-type(3) img {
+    vertical-align: middle;
+    width: 1.1vw;
+    margin-left: 0.3vw;
+    cursor: pointer;
+}
+
+.color {
+    margin-top: 5%;
+    float: left;
+    width: 50%;
+    clear: both;
+}
+
+.color > div > span {
+    display: inline-block;
+    margin-top: 3%;
+}
+
+.color > div:first-of-type {
+    margin-bottom: 9%;
+}
+
+.color input, .color label {cursor: pointer}
+
+.color h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 4.5%;
+}
+
+.color ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.color ul li:not(:first-of-type):not(:nth-of-type(8)) {
+    margin-left: 3.5%;
+}
+
+.color ul li:nth-of-type(n + 8) {margin-top: 2%}
+
+.color li {
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    width: 1.2vw;
+    height: 1.2vw;
+    position: relative;
+}
+
+.color li div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    width: 1.1vw;
+    height: 1.1vw;
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.color li.chernyj_kovrik div, .color li.chernaya_okantovka div  {
+    border: 0.5px solid black;
+}
+
+/*
+
+    Акссесуары
+
+*/
+.dop h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 2%;
+}
+
+.dop ul {
+    display: table;
+    width: 100%;
+}
+
+.dop ul li {
+    display: table-cell;
+    width: 20%;
+    position: relative;    
+}
+
+.dop ul li .first-line {
+    position: relative;
+    z-index: 1;
+}
+
+.third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {
+    position: absolute;
+    font-size: 0.9vw;
+    padding: 3%;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+}
+
+.dop ul li .first-line input {
+    cursor: pointer;
+}
+
+.dop ul li .first-line img {
+    width: 1.1vw;
+    margin-left: 5%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.dop ul li > img {
+    width: 70%;
+    margin-top: 4%;
+}
+
+.dop ul li:nth-child(2) > img {
+    margin-top: 5%;
+}
+
+.dop ul li > span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.dop ul li:not(:last-child) > span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*
+
+    Правая часть
+
+*/
+.right-section > * {
+    margin-left: 20%;
+}
+
+.right-section > h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.right-section > img {
+    height: 13vw;
+    margin-top: 1%;
+}
+
+.image-area {
+    position: relative;
+    width: 80%;
+}
+
+.image-area img {
+    width: 65%;
+}
+
+.image-area .shaper {
+    position: absolute;
+    top: 2%;
+    left: -10%;
+    width: 33%;
+}
+
+.image-area .shild {
+    position: absolute;
+    top: 14%;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .alum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .plast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .resin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .bigCircle {
+    position: absolute;
+    top: -4%;
+    left: -7%;
+    width: 80%;
+}
+
+.image-area img:first-of-type {
+    position: absolute;
+}
+
+.description {
+    width: 60%;
+    position: relative;
+    margin-top: 2%;
+    padding-left: 3%;
+}
+
+.last-line {
+    margin-top: 4%;
+    width: 100%;
+}
+
+.description p {
+    line-height: 1.5;
+    height: 6rem;
+}
+
+.description h6 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.last-line span {
+    font-family: Roboto-Bold;
+    font-size: 2.3rem;
+    width: 7.9rem;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.description button {
+    color: white;
+    font-family: Roboto-Bold;
+    background-color: red;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    font-size: 1rem;
+    padding: 2.9% 6.5%;
+    cursor: pointer;
+    vertical-align: bottom;
+    margin-left: 6%;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background-color: black;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+}
