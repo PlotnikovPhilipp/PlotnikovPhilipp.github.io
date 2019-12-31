@@ -156,6 +156,41 @@ header {
     margin-top: 2.5%;
 }
 
+.left-first-view input, .left-second-view input {
+    display: none;
+}
+
+.circle-of-first-view, .circle-of-second-view {
+    border: 2px solid black;
+    display: inline-block;
+    width: 0.6vw;
+    height: 0.6vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-of-first-view::after, .circle-of-second-view::after {
+    content: ' ';
+    display: block;
+    width: 0.6vw;
+    height: 0.6vw;
+    font-size: 1.4rem;
+    line-height: 0.6vw;
+    text-align: center;
+    color: black;
+}
+
+.left-first-view input:checked + .circle-of-first-view::after,
+.left-second-view input:checked + .circle-of-second-view::after {
+    content: '\2022';
+}
+
 .left-second-view {
     overflow: hidden;
     margin-top: 2.5%;
@@ -194,6 +229,41 @@ header {
     float: left;
     width: 46.4%;
     text-align: right;
+}
+
+.left-first-shape input, .left-second-shape input {
+    display: none;
+}
+
+.circle-of-first-shape, .circle-of-second-shape {
+    border: 2px solid black;
+    display: inline-block;
+    width: 0.6vw;
+    height: 0.6vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-of-first-shape::after, .circle-of-second-shape::after {
+    content: ' ';
+    display: block;
+    width: 0.6vw;
+    height: 0.6vw;
+    font-size: 1.4rem;
+    line-height: 0.6vw;
+    text-align: center;
+    color: black;
+}
+
+.left-first-shape input:checked + .circle-of-first-shape::after,
+.left-second-shape input:checked + .circle-of-second-shape::after {
+    content: '\2022';
 }
 
 .left-second-shape img {
@@ -267,8 +337,43 @@ header {
     margin-bottom: 2.5%;
 }
 
+.complect ul li input {
+    display: none;
+}
+
+.complect ul li label:nth-of-type(1) {
+    border: 2px solid black;
+    display: inline-block;
+    width: 0.6vw;
+    height: 0.6vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+}
+
+.complect ul li label:nth-of-type(1)::after {
+    content: ' ';
+    display: block;
+    width: 0.6vw;
+    height: 0.6vw;
+    font-size: 1.4rem;
+    line-height: 0.6vw;
+    text-align: center;
+    color: black;
+}
+
+.complect ul li input:checked + label::after {
+    content: '\2022';
+}
+
 .complect ul li:nth-child(3) {
     position: relative;
+    z-index: 1;
 }
 
 .complect ul li:not(:first-child) {
@@ -306,13 +411,21 @@ header {
     margin-bottom: 4.5%;
 }
 
+.color ul {
+    width: 71%;
+}
+
 .color ul li {
     display: inline-block;
     cursor: pointer;
 }
 
 .color ul li:not(:first-of-type):not(:nth-of-type(8)) {
-    margin-left: 3.5%;
+    margin-left: 5%;
+}
+
+.color > div:nth-of-type(2) li:last-child {
+    margin-left: 0;
 }
 
 .color ul li:nth-of-type(n + 8) {margin-top: 2%}
@@ -323,8 +436,8 @@ header {
     -ms-border-radius: 100vw;
     -o-border-radius: 100vw;
     border-radius: 100vw;
-    width: 1.2vw;
-    height: 1.2vw;
+    width: 1.5vw;
+    height: 1.5vw;
     position: relative;
 }
 
@@ -340,13 +453,13 @@ header {
     -ms-border-radius: 100vw;
     -o-border-radius: 100vw;
     border-radius: 100vw;
-    width: 1.1vw;
-    height: 1.1vw;
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
-    transform: scale(1.5);
+    width: 1.5vw;
+    height: 1.5vw;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
 }
 
 .color li.chernyj_kovrik div, .color li.chernaya_okantovka div  {
@@ -378,6 +491,38 @@ header {
 .dop ul li .first-line {
     position: relative;
     z-index: 1;
+}
+
+.first-line input {
+    display: none;
+}
+
+.first-line label {
+    border: 1px solid black;
+    display: inline-block;
+    width: 0.7vw;
+    vertical-align: middle;
+    height: 0.7vw;
+    cursor: pointer;
+}
+
+.first-line label::after {
+    content: ' ';
+    color: black;
+    display: block;
+    width: 0.7vw;
+    height: 0.7vw;
+    line-height: 0.7vw;
+    font-size: 1.3rem;
+    -webkit-transform: translate(-5%, -12%);
+    -moz-transform: translate(-5%, -12%);
+    -ms-transform: translate(-5%, -12%);
+    -o-transform: translate(-5%, -12%);
+    transform: translate(-5%, -12%);
+}
+
+.first-line input:checked + label::after {
+    content: '\2714';
 }
 
 .third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {
@@ -557,4 +702,376 @@ header {
     -ms-border-radius: 100vw;
     -o-border-radius: 100vw;
     border-radius: 100vw;
+}
+
+.fadap {
+    display: none;
+}
+
+.fadap3 {
+    display: none;
+}
+
+/*
+
+    Адаптив
+
+*/
+@media(max-width: 640px) {
+    .wrapper {
+        padding-top: 0;
+        overflow: hidden;
+    }
+
+    header h1 {
+        font-size: 3.3rem;
+        font-family: Roboto-Medium;
+        font-weight: normal;
+    }
+
+    .view, .shape {
+        width: 100%;
+        float: none;
+    }
+
+    .view::after {
+        content: ' ';
+        display: table;
+        width: 100%;
+    }
+
+    .view h6, .shape h6 {
+        font-size: 2.5rem;
+    }
+
+    .view > div, .shape > div {
+        font-size: 2.2rem;
+    }
+
+    .view h6, .shape h6, .view > div, .shape > div {
+        display: inline-block;
+        float: none;
+        width: auto;
+        vertical-align: bottom;
+    }
+
+    .circle-of-first-view, .circle-of-second-view {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    .circle-of-first-view::after, .circle-of-second-view::after {
+        width: 1.5vw;
+        height: 1.5vw;
+        font-size: 4rem;
+        line-height: 1.5vw;
+    }
+
+    .left-first-view {
+        margin-left: 15%;
+    }
+
+    .left-second-view {
+        margin-left: 10%;
+    }
+
+    .shape {
+        margin-top: 4%;
+    }
+
+    .circle-of-first-shape, .circle-of-second-shape {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    .circle-of-first-shape::after, .circle-of-second-shape::after {
+        width: 1.5vw;
+        height: 1.5vw;
+        font-size: 4rem;
+        line-height: 1.5vw;
+    }
+
+    .left-first-shape {
+        margin-left: 9%;
+    }
+
+    .left-second-shape {
+        margin-left: 10%;
+    }
+
+    .left-second-shape img {
+        width: 2.5vw;
+        margin-left: 0.6vw;
+        vertical-align: top;
+    }
+
+    /*
+    
+        Цвет, комплектация
+    
+    */
+    .complect {
+        float: none;
+    }
+
+    .color {
+        float: none;
+        width: 100%;
+        margin-top: 8%;
+    }
+
+    .color h6 {
+        margin-bottom: 8%;
+    }
+
+    .color::after {
+        content: ' ';
+        display: table;
+        width: 100%;
+    }
+
+    .color > div {
+        width: 50%;
+        float: left;
+    }
+
+    .color > div:first-of-type {
+        margin-bottom: 0;
+    }
+
+    .color > div:last-of-type h6, .color > div:last-of-type span {
+        display: inline-block;
+        margin-left: 20%;
+    }
+
+    .color > div:last-of-type ul {
+        margin-left: 20%;
+    }
+
+    .color > div:first-of-type {margin: none}
+
+    .color h6 {
+        font-size: 2.5rem;
+    }
+
+    .color ul {
+        width: 80%;
+    }
+
+    .color li {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .color ul li:not(:first-of-type):not(:nth-of-type(8)) {
+        margin-left: 0;
+    }
+
+    .color ul li:not(:first-of-type):not(:nth-of-type(5)):not(:nth-of-type(9)):not(:nth-of-type(13)) {
+        margin-left: 8%;
+    }
+
+    .color ul li:nth-of-type(n + 5) {margin-top: 5%}
+
+    .color > div > span {
+        display: inline-block;
+        margin-top: 8%;
+        font-size: 2.3rem;
+    }
+
+    .color li div {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .complect {
+        margin-top: 10%;
+        width: 100%;
+        float: none;
+        font-size: 2.2rem;
+    }
+
+    .complect ul li:not(:first-child) {
+        margin-top: 10%;
+    }
+
+    .complect .select {
+        margin-top: 10%;
+    }
+
+    .complect h6 {
+        font-size: 2.5rem;
+        font-weight: normal;
+        margin-bottom: 4.5%;
+    }
+
+    .complect ul li label:nth-of-type(1) {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    .complect ul li label:nth-of-type(1)::after {
+        width: 1.5vw;
+        height: 1.5vw;
+        font-size: 4rem;
+        line-height: 1.5vw;
+    }
+
+    .complect select {
+        font-size: 2.2rem;
+    }
+
+    .complect .select::after {
+        border: 0.8vw solid transparent;
+        border-top-color: black; 
+    }
+
+    .complect ul li:nth-of-type(3) img {
+        width: 2.5vw;
+        margin-left: 0.6vw;
+        vertical-align: top; 
+    }
+
+    /*
+    
+        Правая часть
+
+    */
+    .image-area img {
+        width: 100%;
+    }
+
+    .right-section > h6 {
+        display: none;
+    }
+
+    .right-section > * {
+        margin-left: 5%;
+    }
+
+    .image-area {
+        width: 95%;
+    }
+
+    .right-section {
+        text-align: center;
+    }
+
+    /*
+    
+        Центр
+    
+    */
+    .fadap1, .fadap2 {
+        display: none;
+    }
+
+    .fadap, .fadap3 {
+        display: block;
+        margin-top: 2%;
+    }
+
+    .right-section > img {
+        height: 24.7vw;
+        margin-top: 65%;
+        margin-left: 0;
+    }
+
+    .dop h6 {
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        font-size: 2.5rem;
+        margin-bottom: 3%;
+        clear: both;
+    }
+
+    .first-line label {
+        width: 1.9vw;
+        height: 1.9vw;
+    }
+
+    .first-line label::after {
+        content: ' ';
+        width: 1.9vw;
+        height: 1.9vw;
+        line-height: 1.9vw;
+        font-size: 3.5rem;
+    }
+
+    .dop ul li .first-line img {
+        width: 2.5vw;
+    }
+
+    .dop ul li > span {
+        font-size: 2.2rem;
+        top: 110%;
+    }
+
+    .image-area .shaper {
+        width: 50%;
+    }
+
+    .image-area .shild {
+        top: 30%;
+        left: 4%;
+        width: 70%;
+    }
+
+    .image-area .alum {
+        top: 5%;
+        left: 8%;
+        width: 84%;
+    }
+
+    .image-area .plast {
+        top: 5%;
+        left: 8%;
+        width: 84%;
+    }
+    
+    .image-area .resin {
+        top: 5%;
+        left: 8%;
+        width: 84%;
+    }
+
+    .image-area .bigCircle {
+        top: -4%;
+        left: -7%;
+        width: 120%;
+    }
+
+    .fadap3 {
+        display: block;
+        width: 100%;
+        margin-top: 17%;
+    }
+
+    .description {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .description h6 {
+        font-size: 2.2rem;
+        vertical-align: middle;
+    }
+
+    .last-line span {
+        font-size: 4rem;
+        width: 16rem;
+        vertical-align: middle;
+    }
+
+    .description button {
+        font-size: 2.2rem;
+        padding: 2.4% 6%;
+        vertical-align: middle;
+    }
+}
+
+@media(max-width: 360px) {
+
 }

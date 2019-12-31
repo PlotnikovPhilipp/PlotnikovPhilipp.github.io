@@ -373,6 +373,7 @@ function changeSelect(e) {
 }
 
 function initiate() {
+    price = (window.innerWidth > 640)? price1 : price2;
     if(flag) {
         if(Array.from) {
             colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'))
