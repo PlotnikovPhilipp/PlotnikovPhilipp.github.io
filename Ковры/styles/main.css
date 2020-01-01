@@ -312,9 +312,14 @@ header {
 
 .complect {
     margin-top: 5%;
-    overflow: hidden;
     width: 50%;
     float: left;
+}
+
+.complect::after {
+    content: ' ';
+    display: table;
+    width: 100%;
 }
 
 .complect input, .complect label {cursor: pointer}
@@ -336,7 +341,7 @@ header {
 .complect .select {
     position: relative;
     display: inline-block;
-    margin-top: 7.8%;
+    margin-top: 4%;
     width: 46%;
     cursor: pointer;
 }
@@ -345,7 +350,7 @@ header {
     content: " ";
     pointer-events: none;
     position: absolute;
-    top: 30%;
+    top: 33%;
     right: 0;
     display: inline-block;
     border: 0.45vw solid transparent;
@@ -358,15 +363,27 @@ header {
     margin-bottom: 2.5%;
 }
 
+.complect ul li {
+    position: relative;
+    overflow: hidden;
+}
+
 .complect ul li input {
     display: none;
 }
 
+.complect ul li label:nth-of-type(2) {
+    overflow: hidden;
+    display: block;
+    margin-left: 6%;
+}
+
 .complect ul li label:nth-of-type(1) {
     border: 2px solid black;
+    float: left;
+    margin-top: 0.5%;
     height: 0.7vw;
     width: 0.7vw;
-    display: inline-block;
     -webkit-border-radius: 100vw;
     -moz-border-radius: 100vw;
     -ms-border-radius: 100vw;
@@ -406,7 +423,7 @@ header {
 }
 
 .complect ul li:not(:first-child) {
-    margin-top: 7.8%;
+    margin-top: 10%;
 }
 
 .color {
@@ -496,7 +513,7 @@ header {
 .dop {
     float: left;
     width: 100%;
-    margin-top: 6%;
+    margin-top: 1%;
 }
 
 .dop h6 {
@@ -941,11 +958,11 @@ header {
     }
 
     .complect ul li:not(:first-child) {
-        margin-top: 10%;
+        margin-top: 13%;
     }
 
     .complect .select {
-        margin-top: 10%;
+        margin-top: 6%;
     }
 
     .complect h6 {
@@ -971,6 +988,7 @@ header {
     .complect .select::after {
         border: 0.8vw solid transparent;
         border-top-color: black; 
+        
     }
 
     /*
@@ -1108,7 +1126,7 @@ header {
 
     .description p {
         font-size: 2.5rem;
-        height: 15rem;
+        height: 26.5rem;
     }
 
     .description h6 {
@@ -1401,7 +1419,7 @@ header {
         width: 80%;
         display: block;
         margin: auto;
-        height: 48rem;
+        height: 62rem;
     }
 
     .fadap3 {

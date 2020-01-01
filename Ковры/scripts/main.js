@@ -238,7 +238,7 @@ function changeComplects(e) {
         case 'firstComplect':
             if(flagCusov) {
                 cusov.previousElementSibling.textContent = "";
-                cusov.textContent = '';
+                cusov.innerHTML = '';
                 flagCusov = false;
             }
             compl.textContent = "Комплект ковриков на весь салон с перемычкой;";
@@ -259,7 +259,7 @@ function changeComplects(e) {
         case 'secondComplect':
             if(flagCusov) {
                 cusov.previousElementSibling.textContent = "";
-                cusov.textContent = '';
+                cusov.innerHTML = '';
                 flagCusov = false;
             }
             compl.textContent = "Коврик видительский;";
@@ -280,7 +280,7 @@ function changeComplects(e) {
         case 'thirdComplect':
             if(flagCusov) {
                 cusov.previousElementSibling.textContent = "";
-                cusov.textContent = '';
+                cusov.innerHTML = '';
                 flagCusov = false;
             }
             compl.textContent = "Коврик водительский и пассажирский;";
@@ -299,6 +299,10 @@ function changeComplects(e) {
             }
             break;
         case 'fourthComplect':
+            if(!flagCusov) {
+                cusov.previousElementSibling.textContent = "Кузов: ";
+                cusov.innerHTML = 'Не выбран;' + dopStr;
+            }   
             compl.textContent = "Коврик в багажник;";
             if(selfComplect.src != "imgs/kovrik_v_bagajnik.png") {
                 price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
@@ -310,7 +314,11 @@ function changeComplects(e) {
             }
             selfComplect.src = "imgs/kovrik_v_bagajnik.png";
             break;
-        case 'fifthComplect': 
+        case 'fifthComplect':
+            if(!flagCusov) {
+                cusov.previousElementSibling.textContent = "Кузов: ";
+                cusov.innerHTML = 'Не выбран' + dopStr;
+            } 
             compl.textContent = "Комплект на весь салон с перемычкой + в багажник;";
             if(selfComplect.src != "imgs/komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png") {
                 price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
@@ -348,11 +356,26 @@ function changeSelect(e) {
         e.currentTarget.parentNode.parentNode.firstElementChild.checked = true;
         e.currentTarget.parentNode.parentNode.firstElementChild.dispatchEvent(new Event('click'));
         cusov.previousElementSibling.textContent = "Кузов: ";
-        cusov.textContent = e.currentTarget.options[e.currentTarget.selectedIndex].textContent + ';';
+        cusov.innerHTML = e.currentTarget.options[e.currentTarget.selectedIndex].textContent + ';' + dopStr;
         flagCusov = true;
     } else if(flagCusov) {
-        cusov.textContent = 'Не выбран;';
+        cusov.innerHTML = 'Не выбран;' + dopStr;
     }
+}
+
+function catchChange() {
+    price = (window.innerWidth > 1024)? price1 : price2;
+    selfKovrik = (window.innerWidth > 400)? selfKovrik1 : selfKovrik2;
+    selfOkantovka = (window.innerWidth > 400)? selfOkantovka1 : selfOkantovka2;
+    selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
+    view = (window.innerWidth > 1024)? view1 : view2;
+    shape = (window.innerWidth > 1024)? shape1 : shape2;
+    compl = (window.innerWidth > 1024)? compl1 : compl2;
+    cusov = (window.innerWidth > 1024)? cusov1: cusov2;
+    colorK = (window.innerWidth > 1024)? colorK1 : colorK2;
+    colorO = (window.innerWidth > 1024)? colorO1 : colorO2;
+    dopo = (window.innerWidth > 1024)? dopo1 : dopo2;
+    dopStr = (window.innerWidth > 1024)? '' : '<br/>';
 }
 
 function initiate() {
@@ -367,6 +390,7 @@ function initiate() {
     colorK = (window.innerWidth > 1024)? colorK1 : colorK2;
     colorO = (window.innerWidth > 1024)? colorO1 : colorO2;
     dopo = (window.innerWidth > 1024)? dopo1 : dopo2;
+    dopStr = (window.innerWidth > 1024)? '' : '<br/>';
     if(flag) {
         if(Array.from) {
             colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'))
@@ -500,9 +524,13 @@ var indexOfElement = (window.innerWidth > 1024)? 0 : 1;
 if(window.addEventListener) {
     var flag = true;
     document.addEventListener('DOMContentLoaded', initiate, false);
+    window.addEventListener('resize', catchChange, false);
+    window.addEventListener('orientationchange', catchChange, false);
 } else {
     var flag = false;
     document.attachEvent('onDOMContentLoaded', initiate);
+    window.attachEvent('onresize', catchChange);
+    window.attachEvent('onorientationchange', catchChange);
 }
 
 window.onload = function() {
