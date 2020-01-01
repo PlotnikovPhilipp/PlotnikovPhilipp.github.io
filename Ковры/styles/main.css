@@ -76,8 +76,9 @@ small, address {
     font-weight: normal;
 }
 
-button, textarea, input {
+button, textarea, input, select {
     border: none;
+    background: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
