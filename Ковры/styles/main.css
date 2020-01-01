@@ -1172,4 +1172,58 @@ header {
     .left-second-shape img {
         width: 5vw;
     }
+
+    /*
+    
+        Цвет, комплектация
+    
+    */
+    .color {
+        width: 95%;
+        padding-left: 5%;
+    }
+
+    .color > div {
+        float: none;
+        width: 90%;
+    }
+
+    .color > div:first-of-type {
+        margin-bottom: 0;
+        width: 90%;
+    }
+
+    .color h6 {
+        margin-bottom: 8%;
+        word-spacing: initial;
+    }
+
+    .color ul {
+        width: 100%;
+    }
+
+    .color > div:last-of-type ul {
+        margin-left: 0;
+    }
+
+    .color li {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .color ul li:not(:first-of-type):not(:nth-of-type(8)) {
+        margin-left: 5% !important;
+    }
+
+    .color ul li:nth-of-type(8), .color ul li:first-of-type {
+        margin-left: 0 !important;
+    }
+
+    .color div:nth-of-type(2) ul li:last-of-type {
+        margin-left: 0 !important;
+    }
+
+    .color ul li:nth-of-type(n - 7) {margin-top: 0}
+
+    .color ul li:nth-of-type(n + 8) {margin-top: 6%}
 }
