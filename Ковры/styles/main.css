@@ -749,7 +749,7 @@ header {
     Адаптив
 
 */
-@media(max-width: 834px) {
+@media(max-width: 1024px) {
     html, body {
         overflow-x: hidden;
     }
