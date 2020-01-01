@@ -76,8 +76,9 @@ small, address {
     font-weight: normal;
 }
 
-button, textarea, input {
+button, textarea, input, select {
     border: none;
+    background: none;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -408,13 +409,6 @@ header {
     margin-top: 7.8%;
 }
 
-.complect ul li:nth-of-type(3) img {
-    vertical-align: middle;
-    width: 1.1vw;
-    margin-left: 0.3vw;
-    cursor: pointer;
-}
-
 .color {
     margin-top: 5%;
     float: left;
@@ -499,6 +493,12 @@ header {
     Акссесуары
 
 */
+.dop {
+    float: left;
+    width: 100%;
+    margin-top: 6%;
+}
+
 .dop h6 {
     font-size: 1.5rem;
     font-weight: normal;
@@ -973,12 +973,6 @@ header {
         border-top-color: black; 
     }
 
-    .complect ul li:nth-of-type(3) img {
-        width: 2.9vw;
-        margin-left: 0.6vw;
-        vertical-align: top; 
-    }
-
     /*
     
         Правая часть
@@ -1022,6 +1016,12 @@ header {
         height: 24.7vw;
         margin-top: 77%;
         margin-left: 0;
+    }
+
+    .dop {
+        float: none;
+        width: 100%;
+        margin-top: 0;
     }
 
     .dop h6 {
@@ -1128,7 +1128,7 @@ header {
     }
 }
 
-@media(max-width: 400px) {
+@media all and (max-width: 400px) {
     .wrapper {
         padding-left: 7%;
         width: 93%;
@@ -1229,8 +1229,8 @@ header {
     }
 
     .color li {
-        width: 8vw;
-        height: 8vw;
+        width: 7.9vw;
+        height: 7.9vw;
     }
 
     .color li div {
@@ -1293,10 +1293,6 @@ header {
     .complect .select::after {
         border: 1.6vw solid transparent;
         border-top-color: black; 
-    }
-
-    .complect ul li:nth-of-type(3) img {
-        width: 5vw;
     }
 
     .fadap6 {
@@ -1392,7 +1388,7 @@ header {
     }
 
     .description h6 {
-        font-size: 4.2rem;
+        font-size: 4.9rem;
     }
 
     .fadap3 {
@@ -1401,15 +1397,22 @@ header {
     }
 
     .last-line span {
-        font-size: 7rem;
-        width: 24rem;
+        font-size: 7.2rem;
+        width: 25rem;
+        display: inline-block;
+        margin-left: 5%;
     }
 
     .description button {
         font-size: 4.4rem;
         padding: 3% 8%;
+        margin: 0;
         margin-top: 4%;
         vertical-align: middle;
+    }
+
+    .last-line {
+        text-align: center;
     }
 
     .third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {

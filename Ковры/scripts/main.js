@@ -283,23 +283,6 @@ function changeComplects(e) {
                 cusov.textContent = '';
                 flagCusov = false;
             }
-            compl.textContent = "Коврик водительский с литой лапкой;";
-            if(selfComplect.src != "imgs/kovrik_voditelskiy_litaya_lapka.png") {
-                price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
-            }
-            if(firstShape.checked) {
-                flag3D = false;
-            } else {
-                flag3D = true;
-            }
-            selfComplect.src = "imgs/kovrik_voditelskiy_litaya_lapka.png";
-            break;
-        case 'fourthComplect':
-            if(flagCusov) {
-                cusov.previousElementSibling.textContent = "";
-                cusov.textContent = '';
-                flagCusov = false;
-            }
             compl.textContent = "Коврик водительский и пассажирский;";
             if(firstShape.checked) {
                 if(selfComplect.src != "imgs/komplekt_voditelskiy_i_passajirskiy.png") {
@@ -315,7 +298,7 @@ function changeComplects(e) {
                 selfComplect.src = "imgs/komplekt_3d_voditelskiy_i_passajirskiy.png";     
             }
             break;
-        case 'fifthComplect':
+        case 'fourthComplect':
             compl.textContent = "Коврик в багажник;";
             if(selfComplect.src != "imgs/kovrik_v_bagajnik.png") {
                 price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
@@ -327,7 +310,7 @@ function changeComplects(e) {
             }
             selfComplect.src = "imgs/kovrik_v_bagajnik.png";
             break;
-        case 'sixthComplect': 
+        case 'fifthComplect': 
             compl.textContent = "Комплект на весь салон с перемычкой + в багажник;";
             if(selfComplect.src != "imgs/komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png") {
                 price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
