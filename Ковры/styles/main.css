@@ -162,9 +162,9 @@ header {
 
 .circle-of-first-view, .circle-of-second-view {
     border: 2px solid black;
+    height: 0.7vw;
+    width: 0.7vw;
     display: inline-block;
-    width: 0.6vw;
-    height: 0.6vw;
     -webkit-border-radius: 100vw;
     -moz-border-radius: 100vw;
     -ms-border-radius: 100vw;
@@ -172,23 +172,31 @@ header {
     border-radius: 100vw;
     vertical-align: middle;
     position: relative;
-    overflow: hidden;
 }
 
 .circle-of-first-view::after, .circle-of-second-view::after {
     content: ' ';
     display: block;
-    width: 0.6vw;
-    height: 0.6vw;
-    font-size: 1.4rem;
-    line-height: 0.6vw;
-    text-align: center;
-    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: transparent;
+    height: 0.4vw;
+    width: 0.4vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
 }
 
 .left-first-view input:checked + .circle-of-first-view::after,
 .left-second-view input:checked + .circle-of-second-view::after {
-    content: '\2022';
+    content: ' ';
+    background-color: black;
 }
 
 .left-second-view {
@@ -237,9 +245,9 @@ header {
 
 .circle-of-first-shape, .circle-of-second-shape {
     border: 2px solid black;
+    height: 0.7vw;
+    width: 0.7vw;
     display: inline-block;
-    width: 0.6vw;
-    height: 0.6vw;
     -webkit-border-radius: 100vw;
     -moz-border-radius: 100vw;
     -ms-border-radius: 100vw;
@@ -247,23 +255,31 @@ header {
     border-radius: 100vw;
     vertical-align: middle;
     position: relative;
-    overflow: hidden;
 }
 
 .circle-of-first-shape::after, .circle-of-second-shape::after {
     content: ' ';
     display: block;
-    width: 0.6vw;
-    height: 0.6vw;
-    font-size: 1.4rem;
-    line-height: 0.6vw;
-    text-align: center;
-    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: transparent;
+    height: 0.4vw;
+    width: 0.4vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
 }
 
 .left-first-shape input:checked + .circle-of-first-shape::after,
 .left-second-shape input:checked + .circle-of-second-shape::after {
-    content: '\2022';
+    content: ' ';
+    background-color: black;
 }
 
 .left-second-shape img {
@@ -289,6 +305,10 @@ header {
      Комплектация, цвет коврика, цвет окантовки
 
 */
+.fadap5 {
+    display: none;
+}
+
 .complect {
     margin-top: 5%;
     overflow: hidden;
@@ -343,9 +363,9 @@ header {
 
 .complect ul li label:nth-of-type(1) {
     border: 2px solid black;
+    height: 0.7vw;
+    width: 0.7vw;
     display: inline-block;
-    width: 0.6vw;
-    height: 0.6vw;
     -webkit-border-radius: 100vw;
     -moz-border-radius: 100vw;
     -ms-border-radius: 100vw;
@@ -353,22 +373,30 @@ header {
     border-radius: 100vw;
     vertical-align: middle;
     position: relative;
-    overflow: hidden;
 }
 
 .complect ul li label:nth-of-type(1)::after {
     content: ' ';
     display: block;
-    width: 0.6vw;
-    height: 0.6vw;
-    font-size: 1.4rem;
-    line-height: 0.6vw;
-    text-align: center;
-    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: transparent;
+    height: 0.4vw;
+    width: 0.4vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
 }
 
 .complect ul li input:checked + label::after {
-    content: '\2022';
+    content: ' ';
+    background-color: black;
 }
 
 .complect ul li:nth-child(3) {
@@ -453,13 +481,13 @@ header {
     -ms-border-radius: 100vw;
     -o-border-radius: 100vw;
     border-radius: 100vw;
-    width: 1.5vw;
-    height: 1.5vw;
-    -webkit-transform: scale(1.3);
-    -moz-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    -o-transform: scale(1.3);
-    transform: scale(1.3);
+    width: 1vw;
+    height: 1vw;
+    -webkit-transform: scale(1.9);
+    -moz-transform: scale(1.9);
+    -ms-transform: scale(1.9);
+    -o-transform: scale(1.9);
+    transform: scale(1.9);
 }
 
 .color li.chernyj_kovrik div, .color li.chernaya_okantovka div  {
@@ -717,14 +745,16 @@ header {
     Адаптив
 
 */
-@media(max-width: 640px) {
+@media(max-width: 834px) {
+
     .wrapper {
-        padding-top: 0;
+        padding-top: 2%;
+        padding-bottom: 5%;
         overflow: hidden;
     }
 
     header h1 {
-        font-size: 3.3rem;
+        font-size: 3.4rem;
         font-family: Roboto-Medium;
         font-weight: normal;
     }
@@ -734,6 +764,19 @@ header {
         float: none;
     }
 
+    .first-pop {
+        font-size: 2.1rem;
+        text-align: left;
+        top: 120%;
+        left: -70%;
+        padding: 10%;
+        right: -70%;
+    }
+
+    .second-pop {
+        font-size: 2.1rem;
+    }
+
     .view::after {
         content: ' ';
         display: table;
@@ -741,7 +784,7 @@ header {
     }
 
     .view h6, .shape h6 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .view > div, .shape > div {
@@ -756,15 +799,13 @@ header {
     }
 
     .circle-of-first-view, .circle-of-second-view {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1.9vw;
+        height: 1.9vw;
     }
 
     .circle-of-first-view::after, .circle-of-second-view::after {
-        width: 1.5vw;
-        height: 1.5vw;
-        font-size: 4rem;
-        line-height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
     }
 
     .left-first-view {
@@ -780,15 +821,13 @@ header {
     }
 
     .circle-of-first-shape, .circle-of-second-shape {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1.9vw;
+        height: 1.9vw;
     }
 
     .circle-of-first-shape::after, .circle-of-second-shape::after {
-        width: 1.5vw;
-        height: 1.5vw;
-        font-size: 4rem;
-        line-height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
     }
 
     .left-first-shape {
@@ -797,10 +836,11 @@ header {
 
     .left-second-shape {
         margin-left: 10%;
+        z-index: 1;
     }
 
     .left-second-shape img {
-        width: 2.5vw;
+        width: 2.9vw;
         margin-left: 0.6vw;
         vertical-align: top;
     }
@@ -822,6 +862,7 @@ header {
 
     .color h6 {
         margin-bottom: 8%;
+        word-spacing: 6rem;
     }
 
     .color::after {
@@ -837,6 +878,7 @@ header {
 
     .color > div:first-of-type {
         margin-bottom: 0;
+        width: 50%;
     }
 
     .color > div:last-of-type h6, .color > div:last-of-type span {
@@ -851,7 +893,7 @@ header {
     .color > div:first-of-type {margin: none}
 
     .color h6 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .color ul {
@@ -880,8 +922,8 @@ header {
     }
 
     .color li div {
-        width: 3.5vw;
-        height: 3.5vw;
+        width: 2.5vw;
+        height: 2.5vw;
     }
 
     .complect {
@@ -900,21 +942,19 @@ header {
     }
 
     .complect h6 {
-        font-size: 2.5rem;
+        font-size: 2.9rem;
         font-weight: normal;
         margin-bottom: 4.5%;
     }
 
     .complect ul li label:nth-of-type(1) {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1.9vw;
+        height: 1.9vw;
     }
 
     .complect ul li label:nth-of-type(1)::after {
-        width: 1.5vw;
-        height: 1.5vw;
-        font-size: 4rem;
-        line-height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
     }
 
     .complect select {
@@ -927,7 +967,7 @@ header {
     }
 
     .complect ul li:nth-of-type(3) img {
-        width: 2.5vw;
+        width: 2.9vw;
         margin-left: 0.6vw;
         vertical-align: top; 
     }
@@ -973,15 +1013,15 @@ header {
 
     .right-section > img {
         height: 24.7vw;
-        margin-top: 65%;
+        margin-top: 77%;
         margin-left: 0;
     }
 
     .dop h6 {
+        font-size: 2.9rem;
         margin-top: 5%;
         float: left;
         width: 100%;
-        font-size: 2.5rem;
         margin-bottom: 3%;
         clear: both;
     }
@@ -1000,12 +1040,17 @@ header {
     }
 
     .dop ul li .first-line img {
-        width: 2.5vw;
+        width: 2.9vw;
     }
 
     .dop ul li > span {
         font-size: 2.2rem;
         top: 110%;
+    }
+
+    .third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {
+        font-size: 2.1vw;
+        padding: 5%;
     }
 
     .image-area .shaper {
@@ -1072,6 +1117,59 @@ header {
     }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 400px) {
+    .fadap4 {
+        display: none;
+    }
 
+    .fadap5 {
+        text-align: center;
+        margin: auto;
+        display: block;
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .left-section {
+        width: 100%;
+        float: none;
+    }
+
+    .left-section h1 {
+        font-size: 7rem;
+    }
+
+    .view h6, .shape h6 {
+        font-size: 5.5rem;
+    }
+
+    .view label:last-of-type, .shape label:last-of-type {
+        font-size: 4rem
+    }
+
+    .circle-of-first-view, .circle-of-second-view {
+        width: 3.5vw;
+        height: 3.5vw;
+        vertical-align: top;
+    }
+
+    .circle-of-first-view::after, .circle-of-second-view::after {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
+
+    .circle-of-first-shape, .circle-of-second-shape {
+        width: 3.5vw;
+        height: 3.5vw;
+        vertical-align: top;
+    }
+
+    .circle-of-first-shape::after, .circle-of-second-shape::after {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
+
+    .left-second-shape img {
+        width: 5vw;
+    }
 }
