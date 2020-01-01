@@ -746,6 +746,9 @@ header {
 
 */
 @media(max-width: 834px) {
+    html, body {
+        overflow-x: hidden;
+    }
 
     .wrapper {
         padding-top: 2%;
@@ -1129,7 +1132,6 @@ header {
     }
 
     .fadap5 {
-        text-align: center;
         margin: auto;
         display: block;
         width: 80%;
