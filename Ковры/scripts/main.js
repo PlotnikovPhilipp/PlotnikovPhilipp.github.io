@@ -376,6 +376,7 @@ function initiate() {
     price = (window.innerWidth > 834)? price1 : price2;
     selfKovrik = (window.innerWidth > 400)? selfKovrik1 : selfKovrik2;
     selfOkantovka = (window.innerWidth > 400)? selfOkantovka1 : selfOkantovka2;
+    selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
     if(flag) {
         if(Array.from) {
             colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'))
