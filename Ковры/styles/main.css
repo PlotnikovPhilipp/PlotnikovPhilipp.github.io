@@ -749,7 +749,7 @@ header {
     Адаптив
 
 */
-@media(max-width: 834px) {
+@media(max-width: 1024px) {
     html, body {
         overflow-x: hidden;
     }
@@ -1106,6 +1106,11 @@ header {
         text-align: center;
     }
 
+    .description p {
+        font-size: 2.5rem;
+        height: 15rem;
+    }
+
     .description h6 {
         font-size: 2.2rem;
         vertical-align: middle;
@@ -1128,7 +1133,7 @@ header {
     }
 }
 
-@media all and (max-width: 400px) {
+@media (max-width: 400px) {
     .wrapper {
         padding-left: 7%;
         width: 93%;
@@ -1389,6 +1394,14 @@ header {
 
     .description h6 {
         font-size: 4.9rem;
+    }
+
+    .description p {
+        font-size: 4.5rem;
+        width: 80%;
+        display: block;
+        margin: auto;
+        height: 48rem;
     }
 
     .fadap3 {

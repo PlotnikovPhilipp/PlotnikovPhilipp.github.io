@@ -70,7 +70,7 @@ function changeGeneralImage(e) {
                 flagPlast = true;
                 if(flagAl) {
                     selfKovrik.parentNode.removeChild(document.getElementsByClassName('alum')[0]);
-                    document.getElementsByName('podpyannyk_aluminievyi')[0].checked = false;
+                    document.getElementsByName('podpyannyk_aluminievyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Алюминиевый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -78,7 +78,7 @@ function changeGeneralImage(e) {
                     flagAl = false;
                 } else if(flagRes) {
                     selfKovrik.parentNode.removeChild(document.getElementsByClassName('resin')[0]);
-                    document.getElementsByName('podpyannyk_rezinovyi')[0].checked = false;
+                    document.getElementsByName('podpyannyk_rezinovyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Резиновый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -103,7 +103,7 @@ function changeGeneralImage(e) {
                 flagRes = true;
                 if(flagAl) {
                     selfKovrik.parentNode.removeChild(document.getElementsByClassName('alum')[0]);
-                    document.getElementsByName('podpyannyk_aluminievyi')[0].checked = false;
+                    document.getElementsByName('podpyannyk_aluminievyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Алюминиевый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -356,10 +356,17 @@ function changeSelect(e) {
 }
 
 function initiate() {
-    price = (window.innerWidth > 834)? price1 : price2;
+    price = (window.innerWidth > 1024)? price1 : price2;
     selfKovrik = (window.innerWidth > 400)? selfKovrik1 : selfKovrik2;
     selfOkantovka = (window.innerWidth > 400)? selfOkantovka1 : selfOkantovka2;
     selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
+    view = (window.innerWidth > 1024)? view1 : view2;
+    shape = (window.innerWidth > 1024)? shape1 : shape2;
+    compl = (window.innerWidth > 1024)? compl1 : compl2;
+    cusov = (window.innerWidth > 1024)? cusov1: cusov2;
+    colorK = (window.innerWidth > 1024)? colorK1 : colorK2;
+    colorO = (window.innerWidth > 1024)? colorO1 : colorO2;
+    dopo = (window.innerWidth > 1024)? dopo1 : dopo2;
     if(flag) {
         if(Array.from) {
             colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'))
@@ -489,6 +496,7 @@ var flagRes = false;
 var flag3D = false;
 var flagPop = true;
 var flagCusov = false;
+var indexOfElement = (window.innerWidth > 1024)? 0 : 1;
 if(window.addEventListener) {
     var flag = true;
     document.addEventListener('DOMContentLoaded', initiate, false);
