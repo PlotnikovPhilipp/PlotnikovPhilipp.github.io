@@ -1118,6 +1118,12 @@ header {
 }
 
 @media(max-width: 400px) {
+    .wrapper {
+        padding-left: 7%;
+        width: 98%;
+        overflow: hidden;
+    }
+
     .fadap4 {
         display: none;
     }
@@ -1144,7 +1150,7 @@ header {
     }
 
     .view label:last-of-type, .shape label:last-of-type {
-        font-size: 4rem
+        font-size: 4.2rem
     }
 
     .circle-of-first-view, .circle-of-second-view {
@@ -1179,8 +1185,7 @@ header {
     
     */
     .color {
-        width: 95%;
-        padding-left: 5%;
+        width: 100%;
     }
 
     .color > div {
@@ -1194,12 +1199,19 @@ header {
     }
 
     .color h6 {
-        margin-bottom: 8%;
+        margin-bottom: 5%;
         word-spacing: initial;
+        font-size: 5.5rem;
     }
 
     .color ul {
         width: 100%;
+    }
+
+    .color > div > span {
+        display: inline-block;
+        margin-top: 6%;
+        font-size: 4.2rem;
     }
 
     .color > div:last-of-type ul {
@@ -1209,6 +1221,16 @@ header {
     .color li {
         width: 8vw;
         height: 8vw;
+    }
+
+    .color li div {
+        width: 5.6vw;
+        height: 5.6vw;
+    }
+
+    .color > div:last-of-type h6, .color > div:last-of-type span {
+        display: inline-block;
+        margin-left: 0%;
     }
 
     .color ul li:not(:first-of-type):not(:nth-of-type(8)) {
@@ -1223,7 +1245,34 @@ header {
         margin-left: 0 !important;
     }
 
+    .color > div:first-of-type {
+        margin-bottom: 8%;
+    }
+
     .color ul li:nth-of-type(n - 7) {margin-top: 0}
 
     .color ul li:nth-of-type(n + 8) {margin-top: 6%}
+
+    /*
+    
+        Комплектация
+    
+    */
+    .complect {
+        font-size: 4.2rem;
+    }
+
+    .complect h6 {
+        font-size: 5.5rem;
+    }
+
+    .complect ul li label:nth-of-type(1) {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .complect ul li label:nth-of-type(1)::after {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
 }
