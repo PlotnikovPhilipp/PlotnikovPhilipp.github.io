@@ -340,10 +340,10 @@ header {
 
 .complect .select {
     position: relative;
-    display: inline-block;
-    margin-top: 4%;
+    margin-top: 10%;
     width: 46%;
     cursor: pointer;
+    float: left;
 }
 
 .complect .select::after {
@@ -535,7 +535,6 @@ header {
 
 .dop ul li .first-line {
     position: relative;
-    z-index: 1;
 }
 
 .first-line input {
@@ -749,15 +748,7 @@ header {
     border-radius: 100vw;
 }
 
-.fadap {
-    display: none;
-}
-
-.fadap3 {
-    display: none;
-}
-
-.fadap6 {
+.fadap, .fadap3, .fadap6, .fadap7, .fadap8 {
     display: none;
 }
 
@@ -962,7 +953,7 @@ header {
     }
 
     .complect .select {
-        margin-top: 6%;
+        margin-top: 13%;
     }
 
     .complect h6 {
@@ -974,6 +965,10 @@ header {
     .complect ul li label:nth-of-type(1) {
         width: 1.9vw;
         height: 1.9vw;
+    }
+
+    .complect ul li label:nth-of-type(2) {
+        margin-left: 7.5%;
     }
 
     .complect ul li label:nth-of-type(1)::after {
@@ -1148,6 +1143,97 @@ header {
 
     .fadap, .dop {
         width: 100%;
+    }
+
+    /*
+    
+        Кнопка
+
+    */
+    .fadap7 {
+        display: block;
+        position: fixed;
+        bottom: 3%;
+        right: 6%;
+        text-align: center;
+        width: 15vw;
+        height: 15vw;
+        background-color: red;
+        -webkit-border-radius: 100vw;
+        -moz-border-radius: 100vw;
+        -ms-border-radius: 100vw;
+        -o-border-radius: 100vw;
+        border-radius: 100vw;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    .fadap7 img {
+        width: 8vw;
+        line-height: 15vw;
+    }
+
+    @keyframes animate1 {
+        from {
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+            -o-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+        to {
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+    }
+
+    @keyframes animate2 {
+        from {
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+        to {
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+            -o-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+    }
+
+    .fadap8 {
+        display: block;
+        position: fixed;
+        width: 100%;
+        bottom: 100%;
+        left: 0;
+        background-color: white;
+        padding: 11% 0;
+        z-index: 2;
+    }
+
+    .animate-open-frame {
+        -webkit-animation: animate1 1s 1 ease-in-out;
+        animation: animate1 1s 1 ease-in-out;
+        animation-fill-mode: both;
+    }
+
+    .animate-close-frame {
+        -webkit-animation: animate2 1s 1 ease-in-out;
+        animation: animate2 1s 1 ease-in-out;
+        animation-fill-mode: both;
+    }
+
+    .fadap8 .image-area {
+        width: 60%;
+        margin: auto;
+        
     }
 }
 
@@ -1453,5 +1539,35 @@ header {
 
     .first-pop, .second-pop {
         font-size: 4rem;
+    }
+
+    /*
+    
+        Button
+
+    */
+    .fadap7 {
+        bottom: 3%;
+        right: 6%;
+        width: 22vw;
+        height: 22vw;
+        cursor: pointer;
+    }
+
+    .fadap7 img {
+        width: 10vw;
+        line-height: 22vw;
+    }
+    
+    .fadap8 {
+        width: 100%;
+        bottom: 100%;
+        padding: 11% 0;
+    }
+
+    .fadap8 .image-area {
+        width: 80%;
+        margin: auto;
+        
     }
 }

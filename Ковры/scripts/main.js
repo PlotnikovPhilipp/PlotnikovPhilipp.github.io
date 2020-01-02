@@ -432,6 +432,17 @@ function initiate() {
         secondView.addEventListener('click', changeView, false);
         firstShape.addEventListener('click', changeShape, false);
         secondShape.addEventListener('click', changeShape, false);
+        fixedButton.addEventListener('click', function() {
+            if(!buttonFlag ) {
+                fixedFrame.classList.add('animate-open-frame');
+                fixedFrame.classList.remove('animate-close-frame');
+                buttonFlag = true;
+            } else {
+                fixedFrame.classList.add('animate-close-frame');
+                fixedFrame.classList.remove('animate-open-frame');
+                buttonFlag = false;
+            }
+        }, false);
         colorsOfKovrik.forEach((element, index, arr) => {
             element.addEventListener('click', changeColorOfKovrik, false);
         });
@@ -520,6 +531,7 @@ var flagRes = false;
 var flag3D = false;
 var flagPop = true;
 var flagCusov = false;
+var buttonFlag = false;
 var indexOfElement = (window.innerWidth > 1024)? 0 : 1;
 if(window.addEventListener) {
     var flag = true;
