@@ -5,22 +5,18 @@ function changeColorOfKovrik(e) {
     e.currentTarget.firstElementChild.style.border = "0.5px solid black";
     currentColorOfKovrik = e.currentTarget;
     if(firstView.checked) {
-        selfKovrik.src = "imgs/" + e.currentTarget.className + "_romby" + ".png";
+        selfKovriks.forEach((element) => {element.src = "imgs/" + e.currentTarget.className + "_romby" + ".png";});
     } else {
-        selfKovrik.src = "imgs/" + e.currentTarget.className + "_soty" + ".png";
+        selfKovriks.forEach((element) => {element.src = "imgs/" + e.currentTarget.className + "_soty" + ".png";});
     }
 }
 
 function changeGeneralImage(e) {
-    let element;
     let middleResult = null;
     let sum = parseInt(price.textContent);
     if(e.currentTarget.checked) {
         switch(e.currentTarget.name) {
             case 'shildyk':
-                element = document.createElement('img');
-                element.src = "imgs/shildik.png";
-                element.className = "shild";
                 if(dopo.textContent == 'Нет' && !document.getElementsByClassName('shild')[0]) {
                     dopo.textContent = 'Шильдик'
                     price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' р.';
@@ -28,24 +24,30 @@ function changeGeneralImage(e) {
                     dopo.textContent += ', Шильдик';
                     price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' p.';
                 }
-                selfKovrik.parentNode.appendChild(element);
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "imgs/shildik.png";
+                    element1.className = "shild";
+                    element.parentNode.appendChild(element1);
+                });
                 break;
             case 'podpyannyk_aluminievyi':
-                element = document.createElement('img');
-                element.src = "imgs/aluminievyi_podpyatnik.png";
-                element.className = "alum";
                 flagAl = true;
                 if(flagPlast) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('plast')[0]);
-                    document.getElementsByName('podpyannyk_plastikovyi')[0].checked = false;
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('plast')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_plastikovyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? dopo.textContent.indexOf(', Пластиковый подпятник') : dopo.textContent.indexOf('Пластиковый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Пластиковый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
                     sum = sum - 600 + ' р.';
                     flagPlast = false;
                 } else if(flagRes) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('resin')[0]);
-                    document.getElementsByName('podpyannyk_rezinovyi')[0].checked = false;
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('resin')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_rezinovyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Резиновый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -61,15 +63,19 @@ function changeGeneralImage(e) {
                     dopo.textContent = middleResult + ', Алюминиевый подпятник';
                     price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' p.';
                 }
-                selfKovrik.parentNode.appendChild(element);
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "imgs/aluminievyi_podpyatnik.png";
+                    element1.className = "alum";
+                    element.parentNode.appendChild(element1);
+                });
                 break;
             case 'podpyannyk_plastikovyi':
-                element = document.createElement('img');
-                element.src = "imgs/plastikovyi_podpyatnik.png";
-                element.className = "plast";
                 flagPlast = true;
                 if(flagAl) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('alum')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('alum')[0]);
+                    });
                     document.getElementsByName('podpyannyk_aluminievyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
@@ -77,7 +83,9 @@ function changeGeneralImage(e) {
                     sum = sum - 600 + ' р.';
                     flagAl = false;
                 } else if(flagRes) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('resin')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('resin')[0]);
+                    });
                     document.getElementsByName('podpyannyk_rezinovyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
@@ -94,15 +102,19 @@ function changeGeneralImage(e) {
                     dopo.textContent = middleResult + ', Пластиковый подпятник';
                     price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
                 }
-                selfKovrik.parentNode.appendChild(element);
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "imgs/plastikovyi_podpyatnik.png";
+                    element1.className = "plast";
+                    element.parentNode.appendChild(element1);
+                });
                 break;
             case 'podpyannyk_rezinovyi':
-                element = document.createElement('img');
-                element.src = "imgs/rezinovyi_podpyatnik.png";
-                element.className = "resin";
                 flagRes = true;
                 if(flagAl) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('alum')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('alum')[0]);
+                    });
                     document.getElementsByName('podpyannyk_aluminievyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
@@ -110,8 +122,10 @@ function changeGeneralImage(e) {
                     sum = sum - 600 + ' р.';
                     flagAl = false;
                 } else if(flagPlast) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('plast')[0]);
-                    document.getElementsByName('podpyannyk_plastikovyi')[0].checked = false;
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('plast')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_plastikovyi')[indexOfElement].checked = false;
                     let firstPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? dopo.textContent.indexOf(', Пластиковый подпятник') : dopo.textContent.indexOf('Пластиковый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Пластиковый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -127,13 +141,15 @@ function changeGeneralImage(e) {
                     dopo.textContent = middleResult + ', Резиновый подпятник';
                     price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
                 }
-                selfKovrik.parentNode.appendChild(element);
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "imgs/rezinovyi_podpyatnik.png";
+                    element1.className = "resin";
+                    element.parentNode.appendChild(element1);
+                });
                 break;
             case 'litaya_lapka':
                 if(firstShape.checked) {
-                    element = document.createElement('img');
-                    element.src = "imgs/litaya_lapka_krug.png";
-                    element.className = "bigCircle";
                     if(dopo.textContent == 'Нет' && !document.getElementsByClassName('bigCircle')[0]) {
                         dopo.textContent = 'Литая лапка';
                         price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' p.';
@@ -141,7 +157,12 @@ function changeGeneralImage(e) {
                         dopo.textContent += ', Литая лапка';
                         price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' p.';
                     }
-                    selfKovrik.parentNode.appendChild(element);
+                    selfKovriks.forEach((element) => {
+                        let element1 = document.createElement('img');
+                        element1.src = "imgs/litaya_lapka_krug.png";
+                        element1.className = "bigCircle";
+                        element.parentNode.appendChild(element1);
+                    });
                 } else {
                     e.currentTarget.checked = false;
                 }
@@ -151,7 +172,9 @@ function changeGeneralImage(e) {
         switch(e.currentTarget.name) {
             case 'shildyk':
                 if(document.getElementsByClassName('shild')[0]) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('shild')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('shild')[0]);
+                    });
                     let firstPosition = (dopo.textContent.indexOf(', Шильдик') != -1)? dopo.textContent.indexOf(', Шильдик') : dopo.textContent.indexOf('Шильдик');
                     let lastPosition = (dopo.textContent.indexOf(', Шильдик') != -1)? firstPosition + 9 : firstPosition + 7;
                     dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Шильдик')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -160,7 +183,9 @@ function changeGeneralImage(e) {
                 break;
             case 'podpyannyk_aluminievyi':
                 if(flagAl) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('alum')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('alum')[0]);
+                    });
                     let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Алюминиевый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -170,7 +195,9 @@ function changeGeneralImage(e) {
                 break;
             case 'podpyannyk_plastikovyi':
                 if(flagPlast) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('plast')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('plast')[0]);
+                    });
                     let firstPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? dopo.textContent.indexOf(', Пластиковый подпятник') : dopo.textContent.indexOf('Пластиковый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Пластиковый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -180,7 +207,9 @@ function changeGeneralImage(e) {
                 break;
             case 'podpyannyk_rezinovyi':
                 if(flagRes) {
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('resin')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('resin')[0]);
+                    });
                     let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
                     let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
                     dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Резиновый подпятник')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
@@ -193,7 +222,9 @@ function changeGeneralImage(e) {
                     let firstPosition = (dopo.textContent.indexOf(', Литая лапка') != -1)? dopo.textContent.indexOf(', Литая лапка') : dopo.textContent.indexOf('Литая лапка');
                     let lastPosition = (dopo.textContent.indexOf(', Литая лапка') != -1)? firstPosition + 13 : firstPosition + 11;
                     dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Литая лапка')? dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition + 2) : 'Нет';
-                    selfKovrik.parentNode.removeChild(document.getElementsByClassName('bigCircle')[0]);
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('bigCircle')[0]);
+                    });
                     price.textContent = parseInt(price.textContent) - parseInt(e.currentTarget.dataset.price) + ' p.';
                 }
         }
@@ -206,29 +237,33 @@ function changeColorOfOkantovki(e) {
     currentColorOfOkanatovka = e.currentTarget;
     colorOfOkantovki.textContent = e.currentTarget.dataset.color;
     colorO.textContent = e.currentTarget.dataset.color + ';';
-    selfOkantovka.src = "imgs/" + e.currentTarget.className + ".png";
+    selfOkantovkas.forEach((element) => {element.src = "imgs/" + e.currentTarget.className + ".png";});
 }
 
 function changeView(e) {
-    let a = selfKovrik.src.slice(0, selfKovrik.src.lastIndexOf('_'));
-    selfKovrik.src = a + ((firstView.checked)? '_romby.png' : '_soty.png');
+    let a = selfKovriks[0].src.slice(0, selfKovriks[0].src.lastIndexOf('_'));
+    selfKovriks.forEach((element) => {element.src = a + ((firstView.checked)? '_romby.png' : '_soty.png');});
     view.textContent = (firstView.checked)? 'Ромбы;' : 'Соты;'
 }
 
 function changeShape() {
     if(secondShape.checked && !document.getElementsByClassName('shaper')[0]) {
-        let element = document.createElement('img');
-        element.src = "imgs/3d_kovrik 1.png";
-        element.className = "shaper";
-        selfKovrik.parentNode.appendChild(element);
+        selfKovriks.forEach((element) => {
+            let element2 = document.createElement('img');
+            element2.src = "imgs/3d_kovrik 1.png";
+            element2.className = "shaper";
+            element.parentNode.appendChild(element2);
+        });
         shape.textContent = (firstShape.checked)? 'Стандарт;' : '3D;';
         if(document.getElementsByClassName('bigCircle')[0]) {
-            document.getElementsByName('litaya_lapka')[0].checked = false;
-            document.getElementsByName('litaya_lapka')[0].dispatchEvent(new Event('click'));
+            document.getElementsByName('litaya_lapka')[indexOfElement].checked = false;
+            document.getElementsByName('litaya_lapka')[indexOfElement].dispatchEvent(new Event('click'));
         }
         currentComplect.dispatchEvent(new Event('click'));
     } else if(firstShape.checked && document.getElementsByClassName('shaper')[0]) {
-        selfKovrik.parentNode.removeChild(document.getElementsByClassName('shaper')[0]);
+        selfKovriks.forEach((element) => {
+            element.parentNode.removeChild(element.parentNode.getElementsByClassName('shaper')[0]);
+        });
         currentComplect.dispatchEvent(new Event('click'));
     }
 }
@@ -365,8 +400,6 @@ function changeSelect(e) {
 
 function catchChange() {
     price = (window.innerWidth > 1024)? price1 : price2;
-    selfKovrik = (window.innerWidth > 400)? selfKovrik1 : selfKovrik2;
-    selfOkantovka = (window.innerWidth > 400)? selfOkantovka1 : selfOkantovka2;
     selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
     view = (window.innerWidth > 1024)? view1 : view2;
     shape = (window.innerWidth > 1024)? shape1 : shape2;
@@ -380,8 +413,6 @@ function catchChange() {
 
 function initiate() {
     price = (window.innerWidth > 1024)? price1 : price2;
-    selfKovrik = (window.innerWidth > 400)? selfKovrik1 : selfKovrik2;
-    selfOkantovka = (window.innerWidth > 400)? selfOkantovka1 : selfOkantovka2;
     selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
     view = (window.innerWidth > 1024)? view1 : view2;
     shape = (window.innerWidth > 1024)? shape1 : shape2;
@@ -391,6 +422,19 @@ function initiate() {
     colorO = (window.innerWidth > 1024)? colorO1 : colorO2;
     dopo = (window.innerWidth > 1024)? dopo1 : dopo2;
     dopStr = (window.innerWidth > 1024)? '' : '<br/>';
+    if(Array.from) {
+        selfKovriks = Array.from(document.getElementsByClassName('selfKovrik'));
+        selfOkantovkas = Array.from(document.getElementsByClassName('selfOkantovka'));
+    } else {
+        selfKovriks = [], g = document.getElementsByClassName('selfKovrik');
+        selfOkantovkas = [], h = document.getElementsByClassName('selfOkantovka');
+        for(let i = 0; i < g.length; i++) {
+            selfKovriks.push(g[i]);
+        }
+        for(let i = 0; i < h.length; i++) {
+            selfOkantovkas.push(h[i]);
+        }
+    }
     if(flag) {
         if(Array.from) {
             colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'))
