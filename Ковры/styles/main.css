@@ -161,6 +161,10 @@ header {
     display: none;
 }
 
+.left-first-view label, .left-second-view label, .left-first-shape label, .left-second-shape label {
+    vertical-align: middle;
+}
+
 .circle-of-first-view, .circle-of-second-view {
     border: 2px solid black;
     height: 0.7vw;
@@ -211,6 +215,7 @@ header {
     width: 50%;
     float: left;
     position: relative;
+    z-index: 1;
 }
 
 .shape::after {
@@ -290,11 +295,11 @@ header {
     cursor: pointer;
 }
 
-.first-pop, .second-pop {
+.first-pop {
     position: absolute;
     font-size: 0.9rem;
     text-align: left;
-    top: 120%;
+    bottom: 120%;
     background-color: white;
     left: 0;
     padding: 3%;
@@ -513,7 +518,6 @@ header {
 .dop {
     float: left;
     width: 100%;
-    margin-top: 1%;
 }
 
 .dop h6 {
@@ -619,7 +623,7 @@ header {
 
 */
 .right-section > * {
-    margin-left: 15%;
+    margin-left: 17%;
 }
 
 .right-section > h6 {
@@ -639,6 +643,11 @@ header {
 
 .image-area img {
     width: 65%;
+    transform: translateX(-8.7%);
+    -webkit-transform: translateX(-8.7%);
+    -moz-transform: translateX(-8.7%);
+    -ms-transform: translateX(-8.7%);
+    -o-transform: translateX(-8.7%);
 }
 
 .image-area .shaper {
@@ -785,11 +794,8 @@ header {
         top: 120%;
         left: -70%;
         padding: 10%;
+        bottom: auto;
         right: -70%;
-    }
-
-    .second-pop {
-        font-size: 2.1rem;
     }
 
     .view::after {
