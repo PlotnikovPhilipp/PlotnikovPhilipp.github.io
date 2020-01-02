@@ -639,15 +639,15 @@ header {
 .image-area {
     position: relative;
     width: 82%;
+    -webkit-transform: translateX(-4.5%);
+    -moz-transform: translateX(-4.5%);
+    -ms-transform: translateX(-4.5%);
+    -o-transform: translateX(-4.5%);
+    transform: translateX(-4.5%);
 }
 
 .image-area img {
     width: 65%;
-    transform: translateX(-8.7%);
-    -webkit-transform: translateX(-8.7%);
-    -moz-transform: translateX(-8.7%);
-    -ms-transform: translateX(-8.7%);
-    -o-transform: translateX(-8.7%);
 }
 
 .image-area .shaper {
@@ -1072,6 +1072,16 @@ header {
         font-size: 2.1vw;
         padding: 5%;
     }
+
+    .image-area {
+        position: relative;
+        width: 82%;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+}
 
     .image-area .shaper {
         width: 50%;
