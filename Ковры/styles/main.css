@@ -419,7 +419,6 @@ header {
 
 .complect ul li:nth-child(3) {
     position: relative;
-    z-index: 1;
 }
 
 .complect ul li:not(:first-child) {
