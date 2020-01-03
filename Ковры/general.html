@@ -2358,7 +2358,48 @@ function catchChange() {
     dopStr = (window.innerWidth > 1024)? '' : '<br/>';
 }
 
+function changeStore(e) {
+  let index = JSON.parse(localStorage['tcart']).products.length - 1;
+  let object = JSON.parse(localStorage['tcart']);
+  object.products[index].name = 'Eva Коврик';
+  if(window.innerWidth > 1024) {
+    var copyNode = e.target.parentNode.parentNode.previousElementSibling.cloneNode(true);
+    let spans = copyNode.getElementsByTagName('span');
+    copyNode.removeChild(copyNode.getElementsByTagName('strong')[0]);
+    for(let i = 0; i < spans.length; i++) {
+      if(spans[i] == spans[3]) continue;
+      spans[i].insertAdjacentHTML('afterEnd', '<br/>');
+    }
+  }
+  object.products[index].options = [{'option': '<strong>Вид</strong>', 'variant': copyNode.innerHTML, 'price': 0}];
+  object.products[index].img = "url('" + e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.src + "'), url('" + e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.nextElementSibling.src +"')";
+  object.products[index].price = parseInt(e.target.parentNode.previousElementSibling.textContent);
+  object.products[index].amount = parseInt(e.target.parentNode.previousElementSibling.textContent);
+  localStorage['tcart'] = JSON.stringify(object);
+}
+
+function wrapper1(e) {setTimeout(changeStore, 20, e)}
+
+
+
+function openStore(e) {
+  let elements = document.getElementsByClassName('t706__product-title');
+  for(let i = 0; i < elements.length; i++) {
+    if(elements[i].firstChild.textContent == 'Eva Коврик') {
+      elements[i].parentNode.firstChild.firstChild.style.backgroundImage = JSON.parse(localStorage['tcart']).products[elements[i].parentNode.dataset.cartProductI].img;
+    }
+  }
+}
+
+function wrapper2(e) {setTimeout(openStore, 4, e)}
+
 function initiate() {
+    for(let i = 0; i < document.links.length; i++) {
+        if(document.links[i].href.slice(0, 80) == 'http://project1942088.tilda.ws/#order:Eva%20%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA') {
+            document.links[i].addEventListener('click', wrapper1, false);
+        }
+    }
+    document.getElementsByClassName('t706__carticon-wrapper')[0].addEventListener('click', wrapper2, false);
     price = (window.innerWidth > 1024)? price1 : price2;
     selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
     view = (window.innerWidth > 1024)? view1 : view2;
@@ -2535,47 +2576,6 @@ if(window.addEventListener) {
     window.attachEvent('onresize', catchChange);
     window.attachEvent('onorientationchange', catchChange);
 }
-
-function changeStore(e) {
-  let index = JSON.parse(localStorage['tcart']).products.length - 1;
-  let object = JSON.parse(localStorage['tcart']);
-  object.products[index].name = 'Eva Коврик';
-  if(window.innerWidth > 1024) {
-    var copyNode = e.target.parentNode.parentNode.previousElementSibling.cloneNode(true);
-    let spans = copyNode.getElementsByTagName('span');
-    copyNode.removeChild(copyNode.getElementsByTagName('strong')[0]);
-    for(let i = 0; i < spans.length; i++) {
-      if(spans[i] == spans[3]) continue;
-      spans[i].insertAdjacentHTML('afterEnd', '<br/>');
-    }
-  }
-  object.products[index].options = [{'option': '<strong>Вид</strong>', 'variant': copyNode.innerHTML, 'price': 0}];
-  object.products[index].img = "url('" + e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.src + "'), url('" + e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.nextElementSibling.src +"')";
-  object.products[index].price = parseInt(e.target.parentNode.previousElementSibling.textContent);
-  object.products[index].amount = parseInt(e.target.parentNode.previousElementSibling.textContent);
-  localStorage['tcart'] = JSON.stringify(object);
-}
-
-function wrapper1(e) {setTimeout(changeStore, 20, e)}
-
-for(let i = 0; i < document.links.length; i++) {
-  if(document.links[i].href.slice(0, 80) == 'http://project1942088.tilda.ws/#order:Eva%20%D0%BA%D0%BE%D0%B2%D1%80%D0%B8%D0%BA') {
-    document.links[i].addEventListener('click', wrapper1, false);
-  }
-}
-
-function openStore(e) {
-  let elements = document.getElementsByClassName('t706__product-title');
-  for(let i = 0; i < elements.length; i++) {
-    if(elements[i].firstChild.textContent == 'Eva Коврик') {
-      elements[i].parentNode.firstChild.firstChild.style.backgroundImage = JSON.parse(localStorage['tcart']).products[elements[i].parentNode.dataset.cartProductI].img;
-    }
-  }
-}
-
-function wrapper2(e) {setTimeout(openStore, 4, e)}
-
-document.getElementsByClassName('t706__carticon-wrapper')[0].addEventListener('click', wrapper2, false);
 
 window.onload = function() {
     if(Array.from) {
