@@ -1829,7 +1829,7 @@ header {
                 <div class="last-line">
                     <h6>Цена</h6>
                     <span id="price1">2300 р.</span>
-                    <button type="button"><a href="#order:Eva коврик=2300"></a>Добавить в корзину</button>
+                    <button type="button"><a href="#order:Eva коврик"></a>Добавить в корзину</button>
                 </div>
             </div>
         </section>
@@ -2549,8 +2549,10 @@ function changeStore(e) {
       spans[i].insertAdjacentHTML('afterEnd', '<br/>');
     }
   }
-  object.products[index].options = [{'option': '<strong>Вид</strong>', 'variant': copyNode.innerHTML}];
+  object.products[index].options = [{'option': '<strong>Вид</strong>', 'variant': copyNode.innerHTML, 'price': 0}];
   object.products[index].img = "url('" + e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.src + "'), url('" + e.target.parentNode.parentNode.parentNode.parentNode.firstElementChild.firstElementChild.nextElementSibling.src +"')";
+  object.products[index].price = parseInt(e.target.parentNode.previousElementSibling.textContent);
+  object.products[index].amount = parseInt(e.target.parentNode.previousElementSibling.textContent);
   localStorage['tcart'] = JSON.stringify(object);
 }
 
