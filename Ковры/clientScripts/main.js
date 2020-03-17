@@ -301,11 +301,13 @@ function arConstructorImg(event) {
     Change the the constructor scheme
 
 */
-let constructorScheme = [];
-let currentSchemeImg = [];
+let constructorScheme = null;
+let currentSchemeImg = null;
 function changeConstructorScheme(event) {
     if(event.currentTarget.dataset.type != 'shape') {
+        detectInformation(currentSchemeImg, 'remove');
         currentSchemeImg = event.currentTarget.firstElementChild.firstElementChild;
+        detectInformation(currentSchemeImg, 'add');
     }
     switch(standartImg.checked) {
         case true:
@@ -443,13 +445,15 @@ function detectInformation(element, command) {
     //Define the command remove/add and create needing text
     switch(command) {
         case 'add':
-
+            
             //Define empty or not
             if(text.indexOf(defaultTitleOfSubscribing) != -1) {
-                let firsIndex = text.indexOf(' ' + defaultTitleOfSubscribing);
-                let firsPart = text.substring(0, firsIndex);
-                text = firsPart;
+                let firstIndex = text.indexOf(' ' + defaultTitleOfSubscribing);
+                let firstPart = text.substring(0, firstIndex);
+                text = firstPart;
             }
+
+            //Additional describing
             if(elementClass == 'additional-describing' && text.indexOf('</b>') + '</b>'.length == text.length) {
                 text += ' ' + element.dataset.value.substring(0, element.dataset.value.length - 1); // without dot comma in the end
             } else if(elementClass == 'additional-describing' && text.indexOf('</b>') + '</b>'.length != text.length) {
@@ -457,20 +461,49 @@ function detectInformation(element, command) {
             } else {
                 text += ' ' + element.dataset.value;
             }
+
+            //Complect describing
+            if(elementClass == 'complect-describing') {
+                if(element.dataset.cusov == 'true') {
+                    let cusovDescribing = document.getElementsByClassName('cusov-describing')[0];
+                    cusovDescribing.classList.remove('close-cusov-describing');
+                    cusovElement = element.parentNode.parentNode.getElementsByTagName('select')[0];
+                    let valueOfCusov = cusovElement.value;
+                    let cusovDescribingText = cusovDescribing.innerHTML;
+                    cusovDescribingText += ' ' + valueOfCusov + ';';
+                    cusovDescribing.innerHTML = cusovDescribingText;
+                }
+            }
+
             describingPlace.innerHTML = text;
             break;
         case 'remove':
             let needingText = ' ' + element.dataset.value;
             let firstIndex = (text.indexOf(needingText) != -1)? text.indexOf(needingText) : text.indexOf(needingText.substring(0, needingText.length - 1)); //Define with ; in the end or not
             let lastIndex = (text.indexOf(needingText) != -1)? text.indexOf(needingText) + needingText.length : text.indexOf(needingText.substring(0, needingText.length - 1)) + needingText.length - 1; //Define with ; in the end or not
-            let firsPart = text.substring(0, firstIndex);
+            let firstPart = text.substring(0, firstIndex);
             let secondPart = text.substring(lastIndex);
-            text = firsPart + secondPart;
+            text = firstPart + secondPart;
+
+            //Additional describing
             if(elementClass == 'additional-describing' && text.indexOf('</b>') + '</b>'.length == text.length) {
                 let firstIndex = text.indexOf('</b>') + '</b>'.length;
-                let firsPart = text.substring(0, firstIndex);
-                text = firsPart + ' ' + defaultTitleOfSubscribing; //if empty
+                let firstPart = text.substring(0, firstIndex);
+                text = firstPart + ' ' + defaultTitleOfSubscribing; //if empty
             }
+
+            //Complect describing
+            if(elementClass == 'complect-describing') {
+                if(element.dataset.cusov == 'true') {
+                    let cusovDescribing = document.getElementsByClassName('cusov-describing')[0];
+                    cusovDescribing.classList.add('close-cusov-describing');
+                    cusovElement = element.parentNode.parentNode.getElementsByTagName('select')[0];
+                    let cusovDescribingText = cusovDescribing.innerHTML;
+                    cusovDescribingText = cusovDescribingText.substring(0, cusovDescribingText.indexOf('</b>') + '</b>'.length);
+                    cusovDescribing.innerHTML = cusovDescribingText;
+                }
+            }
+
             if(text.indexOf(';') == text.length - 1) {
                 text = text.substring(0, text.length-1);
             }
@@ -628,6 +661,11 @@ function initiate() {
             if(element.firstElementChild.firstElementChild.checked) {
                 complectOptionHighlight(element);
                 currentSchemeImg = element.firstElementChild.firstElementChild; //define the choice for reloading page
+                element.addEventListener('click', (event) => { complectOptionHighlight(event.currentTarget) }, false); //highlight complect options
+                element.addEventListener('click', changeConstructorScheme, false); //change scheme
+                detectInformation(currentSchemeImg, 'add');
+                element.dispatchEvent(new Event('click'));
+                return;
             }
             element.addEventListener('click', (event) => { complectOptionHighlight(event.currentTarget) }, false); //highlight complect options
             element.addEventListener('click', changeConstructorScheme, false); //change scheme
@@ -697,6 +735,12 @@ function initiate() {
         complectOptions.forEach((element) => {
             if(element.firstElementChild.firstElementChild.checked) { 
                 complectOptionHighlight(element);
+                currentSchemeImg = element.firstElementChild.firstElementChild; //define the choice for reloading page
+                element.attachEvent('onclick', (event) => { complectOptionHighlight(event.currentTarget) }); //highlight complect options
+                element.attachEvent('onclick', changeConstructorScheme); //change scheme
+                detectInformation(currentSchemeImg, 'add');
+                element.dispatchEvent(new Event('click'));
+                return;
             }
             element.attachEvent('onclick', (event) => { complectOptionHighlight(event.currentTarget) }); //highlight complect options
             element.attachEvent('onclick', changeConstructorScheme); //change scheme
@@ -729,14 +773,6 @@ function initiate() {
    constructorBases.forEach((element) => {
        element.src = urlBase + currentKovrikColor + ((rombiImg.checked)? '_rombi' : '_soti') + '_kovrik.png';
    });
-   //Constructor scheme
-   switch(standartImg.checked) {
-        case true:
-            constructorScheme.src = urlBase + currentSchemeImg.dataset.twodscheme;
-            break;
-        case false:
-            constructorScheme.src = urlBase + currentSchemeImg.dataset.threedscheme;
-    }
 
     //Add/remove needing part of constructor images
     arConstructorImg();

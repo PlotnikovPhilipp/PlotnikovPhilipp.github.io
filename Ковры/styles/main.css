@@ -783,11 +783,7 @@ footer::after {
 
 .close-cusov-describing {
     display: none;
-}
-
-.open-cusov-describing {
-    display: inline;
-}   
+}  
 
 .price-section {
     margin-top: 5%;
