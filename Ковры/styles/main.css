@@ -201,6 +201,7 @@ fieldset {border: none}
 */
 .container-of-view {
     display: inline-block;
+    width: 50%;
 }
 
 .view-section, .view-section > * { /*All elements do inline*/
@@ -235,8 +236,6 @@ fieldset {border: none}
 */
 .container-of-shape {
     display: inline-block;
-    margin-left: 5.4027777777777777777777777777778vw;
-    border: 1px solid red;
 }
 
 .shape-section, .shape-section > * { /*All elements do inline*/
