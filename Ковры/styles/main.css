@@ -820,6 +820,15 @@ footer::after {
 
 /*
 
+    Mobile wondow && mobile button control
+
+*/
+.mobile-window, .mobile-window-switch {
+    display: none;
+}
+
+/*
+
     Adaptive Ipad
 
 */
@@ -883,6 +892,7 @@ footer::after {
     */
     .container-of-view {
         display: block;
+        width: auto;
     }
 
     /*
@@ -1214,6 +1224,7 @@ footer::after {
     */
     .container-of-view {
         display: block;
+        width: auto;
     }
 
     /* Install a left margin of group labels of view */
