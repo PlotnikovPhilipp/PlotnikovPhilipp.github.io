@@ -315,14 +315,14 @@ function changeConstructorScheme(event) {
     switch(standartImg.checked) {
         case true:
             if(currentSchemeImg.dataset.twodscheme == 'kovrik_voditelskiy.png') {
-                constructorScheme.style.width = '55%'
+                constructorScheme.style.width = '45%'
             } else {
                 constructorScheme.style.width = '';
             }
             constructorScheme.src = urlBase + currentSchemeImg.dataset.twodscheme;
             break;
         case false:
-            if(currentSchemeImg.dataset.twodscheme == 'kovrik_3d_voditelskiy.png') {
+            if(currentSchemeImg.dataset.threedscheme == 'kovrik_3d_voditelskiy.png') {
                 constructorScheme.style.width = '55%'
             } else {
                 constructorScheme.style.width = '';
