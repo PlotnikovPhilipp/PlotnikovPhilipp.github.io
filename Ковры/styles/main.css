@@ -435,7 +435,7 @@ main .inner-right-side--main .constructor-img-container {
 */
 main .inner-right-side--main > ul > li {
     display: table;
-    padding: 0.31666666666666666666666666666667vw 0.54388888888888888888888888888889vw;
+    padding: 0.31666666666666666666666666666667vw 0.54388888888888888888888888888889vw 0.31666666666666666666666666666667vw 0;
     -webkit-border-radius: 0.5vw;
     -moz-border-radius: 0.5vw;
     -ms-border-radius: 0.5vw;
@@ -444,7 +444,7 @@ main .inner-right-side--main > ul > li {
 }
 
 main .inner-right-side--main > ul > li:not(:first-of-type) {
-    margin-top: 1.3vw;
+    margin-top: 1.2vw;
 }
 
 main .inner-right-side--main > ul > li > div {
@@ -1602,5 +1602,40 @@ footer::after {
         margin-top: 5%;
         font-size: 1rem;
         margin-bottom: 5%;
+    }
+
+    /*
+
+        Mobile wondow && mobile button control
+
+    */
+    .mobile-window, .mobile-window-switch {
+        display: block;
+        position: fixed;
+    }
+    
+    /*
+        Window
+    */
+    .mobile-window {
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 2;
+        padding: 20% 0;
+    }
+
+    /*
+        Button
+    */
+    .mobile-window-switch {
+        bottom: 0;
+        right: 0;
+        -webkit-border-radius: 100vw;
+        -moz-border-radius: 100vw;
+        -ms-border-radius: 100vw;
+        -o-border-radius: 100vw;
+        border-radius: 100vw;
     }
 }
