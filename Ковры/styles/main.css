@@ -607,7 +607,7 @@ main .inner-right-side--main ul select {
     Constructor scheme
 */
 .right-side--main .constructor-scheme-container {
-    height: 23.6vw;
+    height: 25vw;
     width: 50%;
     float: left;
     text-align: right;
@@ -618,7 +618,8 @@ main .inner-right-side--main ul select {
 }
 
 .right-side--main .constructor-scheme-container img {
-    width: 80%;
+    width: 65%;
+    margin-right: 8.3850931677018633540372670807453%;
 }
 
 /*

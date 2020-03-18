@@ -321,14 +321,6 @@ function changeConstructorScheme(event) {
     let plusPrice = null;
     switch(standartImg.checked) {
         case true:
-            if(currentSchemeImg.dataset.twodscheme == 'kovrik_voditelskiy.png') {
-                constructorScheme.style.width = '34.5%';
-                constructorScheme.style.marginRight = '45.5%';
-
-            } else {
-                constructorScheme.style.width = '';
-                constructorScheme.style.marginRight = '';
-            }
 
             //Count price
             plusPrice = parseInt(currentSchemeImg.dataset.price2d);
@@ -336,13 +328,6 @@ function changeConstructorScheme(event) {
             constructorScheme.src = urlBase + currentSchemeImg.dataset.twodscheme;
             break;
         case false:
-            if(currentSchemeImg.dataset.threedscheme == 'kovrik_3d_voditelskiy.png') {
-                constructorScheme.style.width = '42%';
-                constructorScheme.style.marginRight = '38%';
-            } else {
-                constructorScheme.style.width = '';
-                constructorScheme.style.marginRight = '';
-            }
 
             //Count price
             plusPrice = parseInt(currentSchemeImg.dataset.price3d);
