@@ -95,6 +95,7 @@ fieldset {border: none}
 
 .consctructor-wrapper {
     margin: 0 2.7777777777777777777777777777778%;
+    padding-top: 1%;
 }
 
 .consctructor-wrapper::after {
@@ -786,7 +787,7 @@ footer::after {
 }  
 
 .price-section {
-    margin-top: 4%;
+    margin-top: 2%;
 }
 
 .price-container {
@@ -1682,9 +1683,9 @@ footer::after {
         Button
     */
     .mobile-window-switch {
-        bottom: 4%;
+        bottom: 2%;
         background-color: white;
-        padding: 6vw 7vw;
+        padding: 4vw 5vw;
         right: 3%;
         -webkit-border-radius: 100vw;
         -moz-border-radius: 100vw;
