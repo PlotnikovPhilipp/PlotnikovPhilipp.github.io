@@ -237,6 +237,7 @@ fieldset {border: none}
 */
 .container-of-shape {
     display: inline-block;
+    margin-left: 0.9%;
 }
 
 .shape-section, .shape-section > * { /*All elements do inline*/
@@ -294,7 +295,6 @@ fieldset {border: none}
     Main
 
 */
-
 main::after {
     content: ' ';
     display: table;
