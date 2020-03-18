@@ -513,6 +513,25 @@ function detectInformation(element, command) {
 
 /*
 
+    Animate mobile window
+
+*/
+let mobileWindow = null;
+function animateMobileWindow(event) {
+    let listOfClasses = mobileWindow.classList;
+    if(listOfClasses.contains('mobile-window--open')) {
+        listOfClasses.remove('mobile-window--open');
+        listOfClasses.add('mobile-window--close');
+    } else if(listOfClasses.contains('mobile-window--close')) {
+        listOfClasses.remove('mobile-window--close');
+        listOfClasses.add('mobile-window--open');
+    } else {
+        listOfClasses.add('mobile-window--open');
+    }
+}
+
+/*
+
     Initiate the data about website
 
 */
@@ -608,6 +627,10 @@ function initiate() {
    //Define describing container
    describingContainer = document.getElementsByClassName('describing-of-good')[0];
 
+   //Define mobile window && mobile button
+   mobileWindow = document.getElementsByClassName('mobile-window')[0];
+   let mobileButton = document.getElementsByClassName('mobile-window-switch')[0];
+
     /*
     
         Install event handlers
@@ -691,6 +714,9 @@ function initiate() {
             element.addEventListener('change', changeAdditionalItemsOnImg, false);
         });
 
+        //Install event handler for mobile button
+        mobileButton.addEventListener('click', animateMobileWindow, false);
+
     //IE
    } else {
         headerRadioButtons.forEach((element, index) => {
@@ -766,6 +792,8 @@ function initiate() {
             element.attachEvent('onchange', changeAdditionalItemsOnImg);
         });
 
+        //Install event handler for mobile button
+        mobileButton.attachEvent('onclick', animateMobileWindow);
    }
 
    //For reloading page
