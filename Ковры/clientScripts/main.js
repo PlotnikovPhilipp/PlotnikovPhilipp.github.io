@@ -97,10 +97,7 @@ function computeGeometryOfColorCircles() {
    //Laptop
    if(window.innerWidth >= 1280) {
     let space = parseInt(containerOfCircles.offsetWidth * 0.05);
-    let scaleOfCircles = parseInt((containerOfCircles.offsetWidth - space * 7) / 8);
-    console.log('Container: ', containerOfCircles.offsetWidth);
-    console.log('Space: ', space);
-    console.log('scaleOfCircles: ', scaleOfCircles);
+    let scaleOfCircles = parseInt(((containerOfCircles.offsetWidth - 10) - space * 7) / 8);
     colorCicrcles.forEach((element, index) => {
         let styleOfElement = element.style;
         styleOfElement.width = scaleOfCircles + 'px';
