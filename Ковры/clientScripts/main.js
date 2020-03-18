@@ -303,12 +303,22 @@ function arConstructorImg(event) {
 */
 let constructorScheme = null;
 let currentSchemeImg = null;
+let lastPrice = 0;
 function changeConstructorScheme(event) {
     if(event.currentTarget.dataset.type != 'shape') {
+
+        //Remove last scheme
         detectInformation(currentSchemeImg, 'remove');
-        currentSchemeImg = event.currentTarget.firstElementChild.firstElementChild;
+        
+        //Add current scheme
+        currentSchemeImg = event.currentTarget.firstElementChild.firstElementChild;   
         detectInformation(currentSchemeImg, 'add');
     }
+
+    //Count price
+    countPrice(lastPrice, 'minus');
+
+    let plusPrice = null;
     switch(standartImg.checked) {
         case true:
             if(currentSchemeImg.dataset.twodscheme == 'kovrik_voditelskiy.png') {
@@ -316,6 +326,10 @@ function changeConstructorScheme(event) {
             } else {
                 constructorScheme.style.width = '';
             }
+
+            //Count price
+            plusPrice = parseInt(currentSchemeImg.dataset.price2d);
+            countPrice(plusPrice, 'plus');
             constructorScheme.src = urlBase + currentSchemeImg.dataset.twodscheme;
             break;
         case false:
@@ -324,8 +338,13 @@ function changeConstructorScheme(event) {
             } else {
                 constructorScheme.style.width = '';
             }
+
+            //Count price
+            plusPrice = parseInt(currentSchemeImg.dataset.price3d);
+            countPrice(plusPrice, 'plus');
             constructorScheme.src = urlBase + currentSchemeImg.dataset.threedscheme;
     }
+    lastPrice = plusPrice;
 }
 
 /*
@@ -373,6 +392,7 @@ function checkAdditionalItemsOnReload() {
 
 function changeAdditionalItemsOnImg(event) {
     let element = event.currentTarget;
+    let price = parseInt(element.dataset.price);
 
     //Define on/off
     if(element.checked) {
@@ -387,10 +407,14 @@ function changeAdditionalItemsOnImg(event) {
 
                 //Gather infromation for describing good
                 detectInformation(element, 'add');
+
+                //Count price
+                countPrice(price, 'plus');
                 break;
             case 'podpatnik':
                 for(let i = 0; i < additionalPodpatniks.length; i++) {
                     if(additionalPodpatniks[i] != element && additionalPodpatniks[i].checked) {
+                        let otherPrice = parseInt(additionalPodpatniks[i].dataset.price);
                         additionalPodpatniks[i].checked = false;
                         additionalPodpatniks[i].parentNode.parentNode.lastElementChild.style.backgroundColor = '';
                         
@@ -399,6 +423,9 @@ function changeAdditionalItemsOnImg(event) {
 
                         //Gather infromation for describing good
                         detectInformation(additionalPodpatniks[i], 'remove');
+
+                        //Count price
+                        countPrice(otherPrice, 'minus');
                         break;
                     }
                 }
@@ -409,6 +436,9 @@ function changeAdditionalItemsOnImg(event) {
 
                 //Gather infromation for describing good
                 detectInformation(element, 'add');
+
+                //Count price
+                countPrice(price, 'plus');
                 break;
             case 'lapka':
                 if(!standartImg.checked) {
@@ -429,6 +459,9 @@ function changeAdditionalItemsOnImg(event) {
 
                     //Gather infromation for describing good
                     detectInformation(element, 'add');
+
+                    //Count price
+                    countPrice(price, 'plus');
                 }
         }
     } else {
@@ -439,6 +472,9 @@ function changeAdditionalItemsOnImg(event) {
 
         //Gather infromation for describing good
         detectInformation(element, 'remove');
+
+        //Count price
+        countPrice(price, 'minus');
     }
 }
 
@@ -542,6 +578,22 @@ function animateMobileWindow(event) {
 
 /*
 
+    Count result price
+
+*/
+let pricePlace = null;
+function countPrice(price, command) {
+    switch(command) {
+        case 'plus':
+            pricePlace.textContent = price + parseInt(pricePlace.textContent) + ' p.';
+            break;
+        case 'minus':
+            pricePlace.textContent = parseInt(pricePlace.textContent) - price + ' p.';
+    }
+}
+
+/*
+
     Initiate the data about website
 
 */
@@ -636,6 +688,9 @@ function initiate() {
 
    //Define describing container
    describingContainer = document.getElementsByClassName('describing-of-good')[0];
+
+   //Define price place
+   pricePlace = document.getElementsByClassName('self-price')[0];
 
    //Define mobile window && mobile button
    mobileWindow = document.getElementsByClassName('mobile-window')[0];
