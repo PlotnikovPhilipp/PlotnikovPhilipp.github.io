@@ -93,12 +93,12 @@ button, textarea, input, select {
 
 fieldset {border: none}
 
-.consctructor-wrapper {
+.constructor-wrapper {
     margin: 0 2.7777777777777777777777777777778%;
-    padding-top: 1%;
+    padding-top: 2%;
 }
 
-.consctructor-wrapper::after {
+.constructor-wrapper::after {
     content: ' ';
     display: table;
     width: 100%;
@@ -307,7 +307,7 @@ main::after {
 main .left-side--main {
     float: left;
     width: 57%;
-    margin-top: 4.8611111111111111111111111111111vw;
+    margin-top: 3.5vw;
 }
 
 main .inner-left-side--main {
@@ -549,7 +549,7 @@ main .inner-right-side--main ul select {
 .right-side--main {
     width: 43%;
     float: left;
-    margin-top: 2.5694444444444444444444444444444vw
+    margin-top: 3.5vw;
 }
 
 /*
@@ -607,7 +607,6 @@ main .inner-right-side--main ul select {
     Constructor scheme
 */
 .right-side--main .constructor-scheme-container {
-    height: 25vw;
     width: 50%;
     float: left;
     text-align: right;
@@ -618,7 +617,7 @@ main .inner-right-side--main ul select {
 }
 
 .right-side--main .constructor-scheme-container img {
-    width: 65%;
+    width: 63%;
     margin-right: 8.3850931677018633540372670807453%;
 }
 
@@ -627,8 +626,12 @@ main .inner-right-side--main ul select {
     Footer
 
 */
+.constructor-wrapper--footer {
+    padding: 0;
+}
+
 footer {
-    margin-top: 3.1944444444444444444444444444444vw;
+    margin-top: 2.5vw;
     position: relative;
 }
 
@@ -1075,7 +1078,6 @@ footer::after {
         Constructor scheme
     */
     .right-side--main .constructor-scheme-container {
-        height: 43.7vw;
         width: 100%;
         float: none;
         text-align: right;
@@ -1438,7 +1440,6 @@ footer::after {
         Constructor scheme
     */
     .right-side--main .constructor-scheme-container {
-        height: 100vw;
         width: 100%;
         float: none;
         text-align: center;
