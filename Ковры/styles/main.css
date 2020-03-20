@@ -494,7 +494,7 @@ main .inner-right-side--main ul select {
     display: inline-block;
     position: relative;
     margin-left: 1.9977777777777777777777777777778vw;
-    left: 1px;
+    left: 2px;
 } 
 
 .custom-select-list {
@@ -520,7 +520,7 @@ main .inner-right-side--main ul select {
     display: inline-block;
     position: relative;
     margin-left: 1.9977777777777777777777777777778vw;
-    left: 2px;
+    left: 3px;
 }
 
 /*
