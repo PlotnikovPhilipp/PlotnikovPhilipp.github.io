@@ -1423,6 +1423,10 @@ footer::after {
         left: -2%;
         width: 56%;
     }
+
+    .mobile-window .dynamic-3d-kovrik {
+        left: 0;
+    }
     
     .dynamic-shildik {
         top: 48%;
@@ -1432,7 +1436,7 @@ footer::after {
 
     .dynamic-litaya-lapka {
         top: -25%;
-        left: 0;
+        left: 2%;
         width: 45%;
     }
 
