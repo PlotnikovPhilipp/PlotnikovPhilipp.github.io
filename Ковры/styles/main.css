@@ -307,7 +307,7 @@ main::after {
 main .left-side--main {
     float: left;
     width: 57%;
-    margin-top: 3.5vw;
+    margin-top: 3vw;
 }
 
 main .inner-left-side--main {
@@ -380,7 +380,7 @@ main .inner-left-side--main {
     Okantovka
 */
 .color-of-okantovki {
-    margin-top: 6.3194444444444444444444444444444vw;
+    margin-top: 4vw;
 }
 
 .color-of-okantovki ul {
@@ -549,7 +549,7 @@ main .inner-right-side--main ul select {
 .right-side--main {
     width: 43%;
     float: left;
-    margin-top: 3.5vw;
+    margin-top: 3vw;
 }
 
 /*

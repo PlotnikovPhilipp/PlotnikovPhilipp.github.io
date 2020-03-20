@@ -437,9 +437,6 @@ function changeAdditionalItemsOnImg(event) {
                     
                     //Remove the additional items on constructor images
                     removeAdditionalItemsOnImg(element);
-                    
-                    //Gather infromation for describing good
-                    detectInformation(element, 'remove');
                     break;
                 } else {
 
