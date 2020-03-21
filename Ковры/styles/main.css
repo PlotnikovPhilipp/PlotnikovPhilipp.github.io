@@ -95,7 +95,7 @@ fieldset {border: none}
 
 .constructor-wrapper {
     margin: 0 2.7777777777777777777777777777778%;
-    padding-top: 2%;
+    padding-top: 1.2%;
 }
 
 .constructor-wrapper::after {
@@ -631,7 +631,7 @@ main .inner-right-side--main ul select {
 }
 
 footer {
-    margin-top: 2.5vw;
+    margin-top: 2vw;
     position: relative;
 }
 
