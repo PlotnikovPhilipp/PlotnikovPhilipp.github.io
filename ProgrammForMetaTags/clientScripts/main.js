@@ -4,31 +4,30 @@ function changeMetaTag(event) {
     let selfUrl = siteUrl.value; 
     let selfRequest = request.value;
 
-    let headers = selfRequest.match(/\[\w*\]/g);
-    let values = selfRequest.match(/\{\w*\}/g);
-
     //Delete the first and last symbol in headers
-    headers.forEach(element => {
-        return element.substr(1, element.length-1);
-    });
-
+    let headers = selfRequest.match(/\[\w*\]/g).map(element => (element.substr(1, element.length-2)));
+    
     //Delete the first and last symbol in values
-    values.forEach(element => {
-        return element.substr(1, element.length-1);
-    });
-
+    let values = selfRequest.match(/\{\w*\}/g).map(element => (element.substr(1, element.length-2)));  
+ 
+    console.log(headers);
+    
     //Request the server for site   
-    fetch(siteUrl).then((element) => {
+    fetch(selfUrl).then((element) => {
         return element.text();
     }).then((siteCode) => {
 
     //Find the meta tag and change it
     headers.forEach((element, index) => {
-        let pattern = new RegExp('<meta name="' + element + '" >');
-        let copyOfsiteCode = siteCode;
-        console.log(copyOfsiteCode);
-        /*copyOfsiteCode.replace(pattern, '<meta name="' + element + '" content="' + values[index] + '">');
-        console.log(copyOfsiteCode);*/
+        let pattern = new RegExp('<meta name="' + element + '" content="\\w*"/>');
+        siteCode = siteCode.replace(pattern, '<meta name="' + element + '" content="' + values[index] + '"/>');
+    });
+    fetch(selfUrl, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'text/html; charset=UTF-8'
+        },
+        body: siteCode
     });
     });
 }
