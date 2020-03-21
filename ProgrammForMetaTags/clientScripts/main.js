@@ -23,8 +23,12 @@ function changeMetaTag(event) {
     }).then((siteCode) => {
 
     //Find the meta tag and change it
-    console.log(siteCode);
+    headers.forEach((element, index) => {
+        let pattern = new RegExp('<meta name="' + element + '" >');
+        siteCode.replace(pattern, '<meta name="' + element + '" content="' + values[index] + '"');
     });
+    });
+    console.log(siteCode);
 }
 
 //Gather info before draw content on screen
