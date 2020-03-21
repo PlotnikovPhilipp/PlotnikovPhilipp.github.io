@@ -27,8 +27,8 @@ function changeMetaTag(event) {
         let pattern = new RegExp('<meta name="' + element + '" >');
         let copyOfsiteCode = siteCode;
         console.log(copyOfsiteCode);
-        copyOfsiteCode.replace(pattern, '<meta name="' + element + '" content="' + values[index] + '">');
-        console.log(copyOfsiteCode);
+        /*copyOfsiteCode.replace(pattern, '<meta name="' + element + '" content="' + values[index] + '">');
+        console.log(copyOfsiteCode);*/
     });
     });
 }
