@@ -25,10 +25,10 @@ function changeMetaTag(event) {
     //Find the meta tag and change it
     headers.forEach((element, index) => {
         let pattern = new RegExp('<meta name="' + element + '" >');
-        siteCode.replace(pattern, '<meta name="' + element + '" content="' + values[index] + '; charset=utf-8">');
+        siteCode.replace(pattern, '<meta name="' + element + '">');
     });
     });
-    console.log(siteCode);
+    console.log
 }
 
 //Gather info before draw content on screen
