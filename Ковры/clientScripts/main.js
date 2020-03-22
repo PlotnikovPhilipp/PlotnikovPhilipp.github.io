@@ -85,19 +85,20 @@ function closePopup(event) {
 */
 function computeGeometryOfColorCircles() {
     //Color circles
-   let listOfColorCicrcles = document.querySelectorAll('.inner-left-side--main ul li');
+   let listOfColorCicrcles = document.querySelectorAll('.inner-left-side--main ul > li');
    let colorCicrcles = [];
    for(let i = 0; i < listOfColorCicrcles.length; i++) {
     listOfColorCicrcles[i].style.cssText = '';   
     colorCicrcles.push(listOfColorCicrcles[i]);
    }
    let containerOfCircles = document.querySelector('.inner-left-side--main ul');
+   let widthOfContainer = parseInt(containerOfCircles.offsetWidth - 1);
 
    //Define the scale of the screen
    //Laptop
    if(window.innerWidth >= 1280) {
-    let space = parseInt(containerOfCircles.offsetWidth * 0.05);
-    let scaleOfCircles = parseInt(((containerOfCircles.offsetWidth - 10) - space * 7) / 8);
+    let space = parseInt(widthOfContainer * 0.05);
+    let scaleOfCircles = parseInt((widthOfContainer - space * 7) / 8);
     colorCicrcles.forEach((element, index) => {
         let styleOfElement = element.style;
         styleOfElement.width = scaleOfCircles + 'px';
@@ -113,8 +114,8 @@ function computeGeometryOfColorCircles() {
 
     //Ipad
    } else if(window.innerWidth >= 768) {
-    let space = parseInt(containerOfCircles.offsetWidth * 0.04);
-    let scaleOfCircles = parseInt((containerOfCircles.offsetWidth - space * 8) / 9);
+    let space = parseInt(widthOfContainer * 0.04);
+    let scaleOfCircles = parseInt((widthOfContainer - space * 8) / 9);
     colorCicrcles.forEach((element, index) => {
         let styleOfElement = element.style;
         styleOfElement.width = scaleOfCircles + 'px';
@@ -130,8 +131,8 @@ function computeGeometryOfColorCircles() {
 
     //Mobile
    } else {
-    let space = parseInt(containerOfCircles.offsetWidth * 0.04);
-    let scaleOfCircles = parseInt((containerOfCircles.offsetWidth - space * 8) / 9);
+    let space = parseInt(widthOfContainer * 0.04);
+    let scaleOfCircles = parseInt((widthOfContainer - space * 8) / 9);
     colorCicrcles.forEach((element, index) => {
         let styleOfElement = element.style;
         styleOfElement.width = scaleOfCircles + 'px';
@@ -626,7 +627,7 @@ function initiate() {
    }
 
    //Color circles
-   let listOfColorCicrcles = document.querySelectorAll('.inner-left-side--main ul li');
+   let listOfColorCicrcles = document.querySelectorAll('.inner-left-side--main ul > li');
    let colorCicrcles = [];
    for(let i = 0; i < listOfColorCicrcles.length; i++) {
     colorCicrcles.push(listOfColorCicrcles[i]);

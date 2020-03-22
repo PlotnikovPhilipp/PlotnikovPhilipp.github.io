@@ -318,6 +318,7 @@ main .inner-left-side--main {
 /*
     Color
 */
+
 /*
     Kovrik
 */
@@ -356,7 +357,6 @@ main .inner-left-side--main {
 }
 
 .selector-of-color-circle {
-    content: ' ';
     display: none;
     -webkit-border-radius: 100vw;
     -moz-border-radius: 100vw;
