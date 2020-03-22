@@ -674,6 +674,7 @@ footer::after {
     display: table-cell;
     width: 21%;
     position: relative;
+    cursor: pointer;
 }
 
 .range-of-item li:first-of-type {
@@ -697,8 +698,9 @@ footer::after {
     width: 1vw;
     height: 1vw;
     border: 0.1vw solid black;
-    cursor: pointer;
     position: relative;
+    cursor: pointer;
+    pointer-events: none;
 }
 
 .range-of-item li .checkbox-container label img {

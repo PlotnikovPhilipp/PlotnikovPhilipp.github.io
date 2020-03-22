@@ -280,10 +280,10 @@ function arConstructorImg(event) {
             let container = base.parentNode;
             if(container.getElementsByClassName('dynamic-litaya-lapka')[0]) {
                 container.removeChild(container.getElementsByClassName('dynamic-litaya-lapka')[0]);
-                let element = document.querySelector('.range-of-item .checkbox-container input[data-class=\"dynamic-litaya-lapka\"]');
-                element.checked = false;
-                element.dispatchEvent(new Event('change'));
             }
+            let element = document.querySelector('.range-of-item .checkbox-container input[data-class=\"dynamic-litaya-lapka\"]').parentNode.parentNode;
+            element.checked = false;
+            element.dispatchEvent(new Event('click'));
             let image = document.createElement('img');
             image.src = urlBase + '3d_kovrik 1.png';
             image.className = 'dynamic-3d-kovrik';
@@ -367,26 +367,30 @@ function removeAdditionalItemsOnImg(element) {
 
 //For reloading
 function checkAdditionalItemsOnReload() {
-    let listOfFooterInputs = document.querySelectorAll('.range-of-item .checkbox-container input');
-    let footerInputs = [];
-    for(let i = 0; i < listOfFooterInputs.length; i++) {
-        footerInputs.push(listOfFooterInputs[i]);
+    let listOfFooterItems = document.querySelectorAll('.range-of-item > li');
+    let footerItems = [];
+    for(let i = 0; i < listOfFooterItems.length; i++) {
+        footerItems.push(listOfFooterItems[i]);
     }
-    footerInputs.forEach((element) => {
-        if(element.checked) {
-            addAdditionalItemsOnImg(element);
-            element.dispatchEvent(new Event('change'));
+    footerItems.forEach((element) => {
+        if(element.firstElementChild.firstElementChild.checked) {
+            element.firstElementChild.firstElementChild.checked = false;
+            element.dispatchEvent(new Event('click'));
         }
     });
 }
 
 function changeAdditionalItemsOnImg(event) {
-    let element = event.currentTarget;
+    let element = event.currentTarget.firstElementChild.firstElementChild; //Input
     let price = parseInt(element.dataset.price);
+
+    //Define type of event
+    if(event.type == 'click') {
+        element.checked = !element.checked;
+    }
 
     //Define on/off
     if(element.checked) {
-
         //Define type of the image to define the needing logic
         switch(element.dataset.type) {
             case 'shildik':
@@ -432,11 +436,20 @@ function changeAdditionalItemsOnImg(event) {
                 break;
             case 'lapka':
                 if(!standartImg.checked) {
-                    element.checked = false;
-                    element.parentNode.parentNode.lastElementChild.style.backgroundColor = '';
+                    if(element.parentNode.parentNode.lastElementChild.style.backgroundColor != 'rgb(255, 243, 194)') {
                     
-                    //Remove the additional items on constructor images
-                    removeAdditionalItemsOnImg(element);
+                        element.parentNode.parentNode.lastElementChild.style.backgroundColor = '#FFF3C2';
+
+                        //Gather information for describing good
+                        detectInformation(element, 'add');
+
+                        //Count price
+                        countPrice(price, 'plus');
+                    } else {
+
+                        //Remove the additional items on constructor images
+                        removeAdditionalItemsOnImg(element);
+                    }
                     break;
                 } else {
 
@@ -452,6 +465,13 @@ function changeAdditionalItemsOnImg(event) {
                 }
         }
     } else {
+
+        //On 3D mode don't change state
+        if(element.dataset.type == 'lapka' && !standartImg.checked) {
+            element.checked = true;
+            return;
+        }
+
         element.parentNode.parentNode.lastElementChild.style.backgroundColor = '';
 
         //Remove the additional items on constructor images
@@ -660,11 +680,11 @@ function initiate() {
    //Shape of constructor image
    standartImg = document.getElementById('standart');
 
-   //Define footer inputs
-   let listOfFooterInputs = document.querySelectorAll('.range-of-item .checkbox-container input');
-   let footerInputs = [];
-   for(let i = 0; i < listOfFooterInputs.length; i++) {
-    footerInputs.push(listOfFooterInputs[i]);
+   //Define footer items
+   let listOfFooterItems = document.querySelectorAll('.range-of-item > li');
+   let footerItems = [];
+   for(let i = 0; i < listOfFooterItems.length; i++) {
+    footerItems.push(listOfFooterItems[i]);
    }
 
    //Define additional podpatniks
@@ -761,9 +781,9 @@ function initiate() {
             element.addEventListener('click', changeConstructorImg, false);
         });
 
-        //Install event handler for footer inputs
-        footerInputs.forEach((element) => {
-            element.addEventListener('change', changeAdditionalItemsOnImg, false);
+        //Install event handler for footer items
+        footerItems.forEach((element) => {
+            element.addEventListener('click', changeAdditionalItemsOnImg, false);
         });
 
         //Install event handler for mobile button
@@ -839,9 +859,9 @@ function initiate() {
             element.attachEvent('onclick', changeConstructorImg);
         });
 
-        //Install event handler for footer inputs
-        footerInputs.forEach((element) => {
-            element.attachEvent('onchange', changeAdditionalItemsOnImg);
+        //Install event handler for footer items
+        footerItems.forEach((element) => {
+            element.attachEvent('onclick', changeAdditionalItemsOnImg);
         });
 
         //Install event handler for mobile button
