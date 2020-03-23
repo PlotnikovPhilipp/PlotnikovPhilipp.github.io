@@ -291,8 +291,13 @@ function arConstructorImg(event) {
             base.insertAdjacentElement('afterEnd', image);
         });
     } else if(standartImg == element && document.getElementsByClassName('dynamic-3d-kovrik')[0]) {
+        let litLapInput = document.querySelector('.range-of-item .checkbox-container input[data-class=\"dynamic-litaya-lapka\"]');
         constructorBases.forEach((base) => {
             base.parentNode.removeChild(base.parentNode.getElementsByClassName('dynamic-3d-kovrik')[0]);
+            let element = document.createElement('img');
+            element.className = 'dynamic-litaya-lapka';
+            element.src = urlBase + litLapInput.dataset.img;
+            base.parentNode.appendChild(element);
         });
     }
 }
