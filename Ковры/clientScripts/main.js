@@ -92,7 +92,7 @@ function computeGeometryOfColorCircles() {
     colorCicrcles.push(listOfColorCicrcles[i]);
    }
    let containerOfCircles = document.querySelector('.inner-left-side--main ul');
-   let widthOfContainer = parseInt(containerOfCircles.offsetWidth - 10);
+   let widthOfContainer = parseInt(containerOfCircles.offsetWidth - 1);
 
    //Define the scale of the screen
    //Laptop
