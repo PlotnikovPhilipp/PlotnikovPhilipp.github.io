@@ -93,6 +93,13 @@ button, textarea, input, select {
 
 fieldset {border: none}
 
+/*
+    For Tilda
+*/
+.t-records ul {
+    padding-left: 0 !important;
+}
+
 .constructor-wrapper {
     margin: 0 2.7777777777777777777777777777778%;
     padding-top: 1.2%;
