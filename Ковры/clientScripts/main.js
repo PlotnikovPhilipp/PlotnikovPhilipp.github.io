@@ -603,6 +603,7 @@ function countPrice(price, command) {
         case 'minus':
             pricePlace.textContent = parseInt(pricePlace.textContent) - price + ' p.';
     }
+    submitButton.href = '#order:' + nameOfSubmitButton + '=' + parseInt(pricePlace.textContent);
 }
 
 /*
@@ -704,6 +705,9 @@ function initiate() {
 
    //Define price place
    pricePlace = document.getElementsByClassName('self-price')[0];
+
+   //Define submit button
+   submitButton = document.querySelector('footer a[data-name="Eva"]');
 
    //Define mobile window && mobile button
    mobileWindow = document.getElementsByClassName('mobile-window')[0];
@@ -898,7 +902,9 @@ const urlBase = 'https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%
 let rombiImg = null;
 let standartImg = null;
 let describingContainer = null;
-let defaultTitleOfSubscribing = 'Ничего не выбрано';
+const defaultTitleOfSubscribing = 'Ничего не выбрано';
+let submitButton = null;
+const nameOfSubmitButton = 'Eva коврик';
 if(document.addEventListener) {
     flag = true;
     document.addEventListener('DOMContentLoaded', initiate, false);
