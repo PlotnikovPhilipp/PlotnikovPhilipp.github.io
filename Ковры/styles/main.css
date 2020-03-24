@@ -96,8 +96,8 @@ fieldset {border: none}
 /*
     For Tilda
 */
-.t-records ul {
-    padding-left: 0 !important;
+.t-records ul, #allrecords ul {
+    padding: 0 !important;
 }
 
 .constructor-wrapper {
