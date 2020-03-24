@@ -100,7 +100,7 @@ fieldset {border: none}
     padding: 0 !important;
 }
 
-#allrecords a {
+#allrecords a, .t-records a {
     text-decoration: none !important;
     color: white !important;
 }
