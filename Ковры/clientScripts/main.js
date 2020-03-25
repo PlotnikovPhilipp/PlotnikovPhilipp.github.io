@@ -630,6 +630,11 @@ function fadeInMobileWindow() {
     Сheck the size of window for mobile switch
    
 */
+let headerRadioButtons = []; //heeader radio buttons
+let colorCicrcles = []; //color circles
+let complectOptions = []; //complect options
+let footerItems = []; // footer items
+
 function checkSizeForMobileWindow() {
     if(flag) {
         if(window.innerWidth <= 1024) {
@@ -750,7 +755,6 @@ function initiate() {
 
     //Header radio buttons
    let listOfHeaderRadioButtons = document.querySelectorAll('.header .hidden-radio-button');
-   let headerRadioButtons = [];
    for(let i = 0; i < listOfHeaderRadioButtons.length; i++) {
     headerRadioButtons.push(listOfHeaderRadioButtons[i]);
    }
@@ -764,7 +768,6 @@ function initiate() {
 
    //Color circles
    let listOfColorCicrcles = document.querySelectorAll('.inner-left-side--main ul > li');
-   let colorCicrcles = [];
    for(let i = 0; i < listOfColorCicrcles.length; i++) {
     colorCicrcles.push(listOfColorCicrcles[i]);
    }
@@ -777,7 +780,6 @@ function initiate() {
 
    //Complect options
    let listOfComplectOptions = document.querySelectorAll('.inner-right-side--main > ul > li');
-   let complectOptions = [];
    for(let i = 0; i < listOfComplectOptions.length; i++) {
     complectOptions.push(listOfComplectOptions[i]);
    }
@@ -819,7 +821,6 @@ function initiate() {
 
    //Define footer items
    let listOfFooterItems = document.querySelectorAll('.range-of-item > li');
-   let footerItems = [];
    for(let i = 0; i < listOfFooterItems.length; i++) {
     footerItems.push(listOfFooterItems[i]);
    }
