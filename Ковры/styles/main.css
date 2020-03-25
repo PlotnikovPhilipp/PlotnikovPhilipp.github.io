@@ -884,13 +884,10 @@ footer::after {
 
 .mobile-window, .mobile-window-switch {
     display: none;
+    position: fixed;
 }
 
 @media (max-width: 1024px) {
-    .mobile-window, .mobile-window-switch {
-        display: block;
-        position: fixed;
-    }
     
     /*
         Window
@@ -1767,6 +1764,31 @@ footer::after {
         padding: 20% 0;
     }
 
+    /* Additional items */
+    .mobile-window .dynamic-3d-kovrik {
+        top: -19%;
+        left: -1%;
+        width: 54%;
+    }
+    
+    .mobile-window .dynamic-podpatnik {
+        top: 5%;
+        left: 0;
+        width: 100%;
+    }
+
+    .mobile-window .dynamic-shildik {
+        top: 48%;
+        left: 22%;
+        width: 4.2%;
+    }
+
+    .mobile-window .dynamic-litaya-lapka {
+        top: -15%;
+        left: 2%;
+        width: 45%;
+    }
+    
     /*
         Button
     */

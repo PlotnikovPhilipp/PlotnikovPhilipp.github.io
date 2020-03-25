@@ -575,7 +575,6 @@ function detectInformation(element, command) {
     Animate mobile window
 
 */
-let mobileWindow = null;
 function animateMobileWindow(event) {
     let listOfClasses = mobileWindow.classList;
     if(listOfClasses.contains('mobile-window--open')) {
@@ -604,6 +603,137 @@ function countPrice(price, command) {
             pricePlace.textContent = parseInt(pricePlace.textContent) - price + ' p.';
     }
     submitButton.href = '#order:' + nameOfSubmitButton + '=' + parseInt(pricePlace.textContent);
+}
+
+/*
+    Show mobile window with switch
+*/
+let mobileWindow = null;
+let mobileButton = null;
+function fadeOutMobileWindow() {
+    mobileWindow.style.display = 'block';
+    mobileButton.style.display = 'block';
+}
+
+/*
+
+    Hide mobile window with switch
+
+*/
+function fadeInMobileWindow() {
+    mobileWindow.style.display = 'none';
+    mobileButton.style.display = 'none';
+}
+
+/*
+   
+    Сheck the size of window for mobile switch
+   
+*/
+function checkSizeForMobileWindow() {
+    if(flag) {
+        if(window.innerWidth <= 1024) {
+
+            //Add event handler
+
+            //Header buttons
+            headerRadioButtons.forEach( element => {
+                element.addEventListener('change', fadeOutMobileWindow, false);
+            });
+
+            //Colors
+            colorCicrcles.forEach( element => {
+                element.addEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            //Complect options
+            complectOptions.forEach( element => {
+                element.addEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            //Footer buttons
+            footerItems.forEach( element => {
+                element.addEventListener('click', fadeOutMobileWindow, false);
+            });
+
+        } else {
+
+            //Remove event handler
+
+            //Header buttons
+            headerRadioButtons.forEach( element => {
+                element.removeEventListener('change', fadeOutMobileWindow, false);
+            });
+
+            //Colors
+            colorCicrcles.forEach( element => {
+                element.removeEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            //Complect options
+            complectOptions.forEach( element => {
+                element.removeEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            //Footer buttons
+            footerItems.forEach( element => {
+                element.removeEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            fadeInMobileWindow();
+        }
+
+    // IE
+    } else {
+        if(window.innerWidth <= 1024) {
+
+            //Add event handler
+
+            //Header buttons
+            headerRadioButtons.forEach( element => {
+                element.attachEvent('onchange', fadeOutMobileWindow);
+            });
+
+            //Colors
+            colorCicrcles.forEach( element => {
+                element.attachEvent('onclick', fadeOutMobileWindow);
+            });
+
+            //Complect options
+            complectOptions.forEach( element => {
+                element.attachEvent('onclick', fadeOutMobileWindow);
+            });
+
+            //Footer buttons
+            footerItems.forEach( element => {
+                element.attachEvent('onclick', fadeOutMobileWindow);
+            });
+
+        } else {
+
+            //Remove event handler
+
+            //Header buttons
+            headerRadioButtons.forEach( element => {
+                element.detachEvent('onchange', fadeOutMobileWindow);
+            });
+
+            //Colors
+            colorCicrcles.forEach( element => {
+                element.detachEvent('onclick', fadeOutMobileWindow)
+            });
+
+            //Complect options
+            complectOptions.forEach( element => {
+                element.detachEvent('onclick', fadeOutMobileWindow);
+            });
+
+            //Footer buttons
+            footerItems.forEach( element => {
+                element.detachEvent('onclick', fadeOutMobileWindow);
+            });
+        }
+    }   
 }
 
 /*
@@ -711,7 +841,7 @@ function initiate() {
 
    //Define mobile window && mobile button
    mobileWindow = document.getElementsByClassName('mobile-window')[0];
-   let mobileButton = document.getElementsByClassName('mobile-window-switch')[0];
+   mobileButton = document.getElementsByClassName('mobile-window-switch')[0];
 
     /*
     
@@ -761,6 +891,9 @@ function initiate() {
         window.addEventListener('resize', computeGeometryOfColorCircles, false);
         computeGeometryOfColorCircles();
 
+        //Check the size of window when resize for mobile window
+        window.addEventListener('resize', checkSizeForMobileWindow, false);
+
         //Install the event handler for complect options
         complectOptions.forEach((element, index) => {
             if(element.firstElementChild.firstElementChild.checked) {
@@ -798,6 +931,37 @@ function initiate() {
 
         //Install event handler for mobile button
         mobileButton.addEventListener('click', animateMobileWindow, false);
+
+        /*
+   
+            Сheck the size of window for mobile switch
+   
+        */
+        if(window.innerWidth <= 1024) {
+
+            //Add event handler
+
+            //Header buttons
+            headerRadioButtons.forEach( element => {
+                element.addEventListener('change', fadeOutMobileWindow, false);
+            });
+
+            //Colors
+            colorCicrcles.forEach( element => {
+                element.addEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            //Complect options
+            complectOptions.forEach( element => {
+                element.addEventListener('click', fadeOutMobileWindow, false);
+            });
+
+            //Footer buttons
+            footerItems.forEach( element => {
+                element.addEventListener('click', fadeOutMobileWindow, false);
+            });
+
+        }
 
     //IE
    } else {
@@ -839,6 +1003,9 @@ function initiate() {
         window.attachEvent('onresize', computeGeometryOfColorCircles);
         computeGeometryOfColorCircles();
 
+        //Check the size of window when resize for mobile window
+        window.attachEvent('onresize', checkSizeForMobileWindow);
+
         //Install the event handler for complect options
         complectOptions.forEach((element) => {
             if(element.firstElementChild.firstElementChild.checked) { 
@@ -876,6 +1043,37 @@ function initiate() {
 
         //Install event handler for mobile button
         mobileButton.attachEvent('onclick', animateMobileWindow);
+
+        /*
+   
+            Сheck the size of window for mobile switch
+   
+        */
+        if(window.innerWidth <= 1024) {
+
+            //Add event handler
+
+            //Header buttons
+            headerRadioButtons.forEach( element => {
+                element.attachEvent('onchange', fadeOutMobileWindow);
+            });
+
+            //Colors
+            colorCicrcles.forEach( element => {
+                element.attachEvent('onclick', fadeOutMobileWindow);
+            });
+
+            //Complect options
+            complectOptions.forEach( element => {
+                element.attachEvent('onclick', fadeOutMobileWindow);
+            });
+
+            //Footer buttons
+            footerItems.forEach( element => {
+                element.attachEvent('onclick', fadeOutMobileWindow);
+            });
+
+        }
    }
 
    //For reloading page
