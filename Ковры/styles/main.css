@@ -823,7 +823,7 @@ footer::after {
 }
 
 .price-section button {
-    background-color: red;
+    background-color: #a86081;
     font-weight: bold;
     color: white;
     -webkit-border-radius: 100vw;
