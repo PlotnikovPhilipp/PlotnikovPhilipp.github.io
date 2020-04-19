@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+/*
+    Set Fonts
+*/
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.eot");
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.eot?#iefix") format("embedded-opentype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.woff") format("woff"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.ttf") format("truetype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.eot");
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.eot?#iefix") format("embedded-opentype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.woff") format("woff"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.ttf") format("truetype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.eot");
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.eot?#iefix") format("embedded-opentype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.woff") format("woff"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.ttf") format("truetype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.svg") format("svg");
+}
+
+/* 
+
+    Default settings
+
+*/
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-family: Roboto-Regular;
+}
+
+body, html {
+    width: 100%;
+}
+
+html {
+    font-family: Roboto-Regular;
+    font-size: 1.4vw;
+}
+
+/* 
+
+    Main container
+
+*/
+#root {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+
+    Inner common main container
+
+*/
+.main-container {
+    width: 94%;
+    height: 90%;
+    background-image: linear-gradient(to right, white 50%, white 50%);
+    display: flex;
+    flex-direction: row;
+}
+
+/* Left show section */
+.main-container > section[class*="container"]:first-child {
+    width: 64.3%;
+}
+
+/* Right control container */
+.control-container {
+    padding: 0 0 0 4.2%;
+    width: 31.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Slider */
+.slider {
+    -webkit-appearance: none;
+    position: absolute;
+    top: 4.152777777777778vw;
+    right: 20%;
+    margin-right: -1px;
+    cursor: pointer;
+    width: 32.30452674897119%;
+    height: 1.944444444444444vw;
+    outline: 0;
+    background: none;
+}
+
+/* Track */
+.slider::-webkit-slider-runnable-track {
+    width: 100%;
+    background-color: #F0F5F9;
+    height: 100%;
+    -webkit-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.slider::-moz-range-track {
+    width: 100%;
+    background-color: #F0F5F9;
+    height: 100%;
+    -moz-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.slider::-moz-focus-outer {
+    border: none;
+}
+
+.slider::-ms-track {
+    width: 100%;
+    background-color: #F0F5F9;
+    height: 100%;
+    -ms-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+/* Thumb */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    background-image: linear-gradient(to right, white 50%, white 50%);
+    -webkit-border-radius: 100vw;
+    border-radius: 100vw;
+    width: 2.222222222222222vw;
+    height: 2.222222222222222vw;
+}
+
+.slider-middle::-webkit-slider-thumb {
+    background-image: linear-gradient(to right, black 50%, white 50%);
+}
+
+.slider-last::-webkit-slider-thumb {
+    background-image: linear-gradient(to right, black 50%, black 50%);
+}
+
+.slider::-moz-range-thumb  {
+    background-image: linear-gradient(to right, white 50%, white 50%);
+    border: none;
+    width: 2.222222222222222vw;
+    height: 2.222222222222222vw;
+    -moz-border-radius: 100vw;
+    border-radius: 100vw;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.slider-middle::-moz-range-thumb {
+    background-image: linear-gradient(to right, black 50%, white 50%);
+}
+
+.slider-last::-moz-range-thumb {
+    background-image: linear-gradient(to right, black 50%, black 50%);
+}
+
+.slider::-ms-thumb {
+    background-image: linear-gradient(to right, white 50%, white 50%);
+    border: none;
+    width: 2.222222222222222vw;
+    height: 2.222222222222222vw;
+    -moz-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.slider-middle::-ms-thumb {
+    background-image: linear-gradient(to right, black 50%, white 50%);
+}
+
+.slider-last::-ms-thumb {
+    background-image: linear-gradient(to right, black 50%, black 50%);
+}
+
+/* Main inner control container */
+.control-board {
+    width: 100%;
+}
+
+.control-board h4, .control-board h5 {
+    font-size: 1rem;
+}
+
+
+.color-section {
+    margin-top: 7%;
+}
+
+/* Container of buttons */
+.general-color-container {
+    width: 78%;
+    margin-top: 4%;
+}
+
+.general-color-container::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+/* Wrapper of self color buttons */
+.container-of-color-button {
+    float: left;
+    width: 8%;
+    margin-right: 7.25%;
+}
+
+.container-of-color-button:nth-child(7),
+.container-of-color-button:nth-child(14) {
+    margin-right: 0;
+}
+
+.container-of-color-button:nth-child(n + 8) {
+    margin-top: 5.27777777777777%;
+}
+
+.color-button {
+    -webkit-border-radius: 0.25vw;
+    -moz-border-radius: 0.25vw;
+    -ms-border-radius: 0.25vw;
+    -o-border-radius: 0.25vw;
+    border-radius: 0.25vw;
+    cursor: pointer;
+    width: 100%;
+    height: 1.914814814814815vw;
+}
+
+/* Size section */
+.size-section {
+    margin-top: 8%;
+}
+
+/* Inner main size container */
+.general-size-container {
+    margin-top: 4%;
+}
+
+.general-size-container::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.size-button {
+    float: left;
+    border: 0.1vw solid black;
+    width: 1.791666666666667vw;
+    height: 1.791666666666667vw;
+    -webkit-border-radius: 0.25vw;
+    -moz-border-radius: 0.25vw;
+    -ms-border-radius: 0.25vw;
+    -o-border-radius: 0.25vw;
+    border-radius: 0.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5.285412262156448%;
+}
+
+.size-button:last-of-type {
+    margin-right: 0;
+}
+
+.size-button span {
+    text-transform: uppercase;
+    font-size: 0.65rem;
+}
+
+/* Left show container */
+.show-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.constructor-img {
+    width: 80%;
+    display: block;
+}
+
+.constructor-img ~ img {
+    position: absolute;
+    right: 0%;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
