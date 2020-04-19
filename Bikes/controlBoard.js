@@ -21,30 +21,40 @@ export var ControlBoard = function (_React$Component) {
     function ControlBoard(props) {
         _classCallCheck(this, ControlBoard);
 
-        // Color buttons
         var _this = _possibleConstructorReturn(this, (ControlBoard.__proto__ || Object.getPrototypeOf(ControlBoard)).call(this, props));
 
+        _this.currentColor = null;
+        _this.handlerSelector = _this.handlerSelector.bind(_this);
+        // Color buttons
         _this.colorButtons = [];
-        for (var i = 0; i < 14; i++) {
+
+        var _loop = function _loop(i) {
             _this.colorButtons.push(React.createElement(
                 'li',
                 { className: 'container-of-color-button', key: listOfColors[i].key },
+                React.createElement('div', { ref: function ref(_ref) {
+                        if (listOfColors[i].key == 'black') if (_ref) _this.currentColor = _ref;
+                    }, className: 'color-button-selector' }),
                 React.createElement('div', { onClick: function onClick(event) {
-                        return _this.props.changeConstructorImg(event.currentTarget.dataset.img);
+                        _this.handlerSelector(event);_this.props.changeConstructorImg(event.currentTarget.dataset.img);
                     }, 'data-img': './imgs/' + listOfColors[i].img, style: { backgroundColor: listOfColors[i].color, border: listOfColors[i].isBorder ? '0.1vw solid black' : 'none' }, className: 'color-button' })
             ));
+        };
+
+        for (var i = 0; i < 14; i++) {
+            _loop(i);
         }
 
         // Size buttons
         _this.sizeButtons = [];
-        for (var _i = 0; _i < 4; _i++) {
+        for (var i = 0; i < 4; i++) {
             _this.sizeButtons.push(React.createElement(
                 'li',
-                { className: 'size-button', key: listOfSizes[_i].key },
+                { className: 'size-button', key: listOfSizes[i].key },
                 React.createElement(
                     'span',
                     null,
-                    listOfSizes[_i].size
+                    listOfSizes[i].size
                 )
             ));
         }
@@ -52,6 +62,13 @@ export var ControlBoard = function (_React$Component) {
     }
 
     _createClass(ControlBoard, [{
+        key: 'handlerSelector',
+        value: function handlerSelector(event) {
+            this.currentColor.style.display = 'none';
+            this.currentColor = event.currentTarget.previousElementSibling;
+            this.currentColor.style.display = 'block';
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
