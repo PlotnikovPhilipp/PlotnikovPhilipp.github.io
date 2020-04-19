@@ -313,7 +313,6 @@ html {
 
 .constructor-img ~ img {
     position: absolute;
-    right: 0%;
     width: 80%;
     top: 0;
     bottom: 0;
