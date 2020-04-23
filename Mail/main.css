@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Praesens;
+    src: url("./PTC55F.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Praesens-Serif;
+    src: url("./PTF55F.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Praesens-Serif-Bold;
+    src: url("./PTF75F.ttf") format("truetype");
+}
