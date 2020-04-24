@@ -40,6 +40,46 @@
             width: 70%;
             margin: auto;
         }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+        .flex a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        button {
+            color: white;
+            font-weight: bold;
+            font-size: 1.05rem;
+            background-color: red;
+            border-radius: 0.4vw;
+            padding: 1.5vw 2vw;
+            cursor: pointer;
+            border: none;
+            margin-top: 3vw;
+            margin-bottom: 2vw;
+        }
+
+        @media(max-width: 834px) {
+            button {
+                color: white;
+                font-weight: bold;
+                font-size: 1.3rem;
+                background-color: red;
+                border-radius: 0.8vw;
+                padding: 2vw 3vw;
+                cursor: pointer;
+                border: none;
+                margin-top: 5vw;
+                margin-bottom: 4vw;
+            }
+        }
+
         @media(max-width: 400px) {
             html {
                 font-size: 2.8vw;
@@ -51,6 +91,19 @@
 
             div {
                 width: 85%;
+            }
+
+            button {
+                color: white;
+                font-weight: bold;
+                font-size: 1.1rem;
+                background-color: red;
+                border-radius: 0.8vw;
+                padding: 3.5vw 4vw;
+                cursor: pointer;
+                border: none;
+                margin-top: 5vw;
+                margin-bottom: 4vw;
             }
         }
 
@@ -74,9 +127,14 @@
         </p>
         <h4>Литература</h4>
         <ol>
-            <li>Минздрав России обновил рекомендации по лечению COVID-19. — URL: <a href="https://www.rosminzdrav.ru/news/2020/03/27/13601-minzdrav-rossii-obnovil-rekomendatsii-po-lecheniyu-covid-19">https://www.rosminzdrav.ru/news/2020/03/27/13601-minzdrav-rossii-obnovil-rekomendatsii-po-lecheniyu-covid-19.</a></li>
-            <li>ФМБА России представило препарат для лечения коронавирусной инфекции. — URL: <a href="http://fmbaros.ru/press-tsentr/novosti/detail/?ELEMENT_ID=38052">http://fmbaros.ru/press-tsentr/novosti/detail/?ELEMENT_ID=38052.</a></li>
+            <li>Минздрав России обновил рекомендации по лечению COVID-19. — URL: <a href="https://www.rosminzdrav.ru/news/2020/03/27/13601-minzdrav-rossii-obnovil-rekomendatsii-po-lecheniyu-covid-19" target="_blank">https://www.rosminzdrav.ru/news/2020/03/27/13601-minzdrav-rossii-obnovil-rekomendatsii-po-lecheniyu-covid-19.</a></li>
+            <li>ФМБА России представило препарат для лечения коронавирусной инфекции. — URL: <a href="http://fmbaros.ru/press-tsentr/novosti/detail/?ELEMENT_ID=38052" target="_blank">http://fmbaros.ru/press-tsentr/novosti/detail/?ELEMENT_ID=38052.</a></li>
         </ol>
+    </div>
+    <div class="flex">
+        <a href="https://praesens.ru/" target="_blank"><button type="button">
+            Перейти на основную страницу
+        </button></a>
     </div>
 </body>
 </html>

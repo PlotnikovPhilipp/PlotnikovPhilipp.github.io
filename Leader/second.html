@@ -40,6 +40,46 @@
         ol li {
             margin: 2% 0;
         }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+        .flex a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        button {
+            color: white;
+            font-weight: bold;
+            font-size: 1.05rem;
+            background-color: red;
+            border-radius: 0.4vw;
+            padding: 1.5vw 2vw;
+            cursor: pointer;
+            border: none;
+            margin-top: 3vw;
+            margin-bottom: 2vw;
+        }
+        
+        @media(max-width: 834px) {
+            button {
+                color: white;
+                font-weight: bold;
+                font-size: 1.3rem;
+                background-color: red;
+                border-radius: 0.8vw;
+                padding: 2vw 3vw;
+                cursor: pointer;
+                border: none;
+                margin-top: 5vw;
+                margin-bottom: 4vw;
+            }
+        }
+
         @media(max-width: 400px) {
             html {
                 font-size: 2.8vw;
@@ -51,6 +91,19 @@
 
             div {
                 width: 85%;
+            }
+
+            button {
+                color: white;
+                font-weight: bold;
+                font-size: 1.1rem;
+                background-color: red;
+                border-radius: 0.8vw;
+                padding: 3.5vw 4vw;
+                cursor: pointer;
+                border: none;
+                margin-top: 5vw;
+                margin-bottom: 4vw;
             }
         }
         
@@ -67,12 +120,17 @@
     </p>
     <h4>Литература</h4>
     <ol>
-        <li>Менопаузальная гормонотерапия и сохранение здоровья женщин в зрелом возрасте: Письмо Минздрава РФ от 2 октября 2015 года №15-4/10/2-5804. — URL: <a href="https://spnavigator.ru/document/13f5f6d1-54a6-464b-9c7a-2b13534c7182">https://spnavigator.ru/document/13f5f6d1-54a6-464b-9c7a-2b13534c7182.</a></li>
+        <li>Менопаузальная гормонотерапия и сохранение здоровья женщин в зрелом возрасте: Письмо Минздрава РФ от 2 октября 2015 года №15-4/10/2-5804. — URL: <a target="_blank" href="https://spnavigator.ru/document/13f5f6d1-54a6-464b-9c7a-2b13534c7182">https://spnavigator.ru/document/13f5f6d1-54a6-464b-9c7a-2b13534c7182.</a></li>
         <li>Beck K.L., Anderson M.C., Kirk J.K. Transdermal estrogens in the changing landscape of hormone replacement therapy // Postgrad. Med. — 2017. — Vol. 129. — №6. — P. 632–636. [PMID: 28540770]</li>
         <li>Сметник В.П. Заместительная гормонотерапия в климактерии // StatusPraesens. Гинекология, акушерство, бесплодный брак. — 2011. — №2 (5). — С. 50–55.</li>
         <li>Gencel V.B., Benjamin M.M., Bahou S.N. et al. Vascular effects of phytoestrogens and alternative menopausal hormone therapy in cardiovascular disease // Mini Rev. Med. Chem. — 2012. — Vol. 12. — №2. — P. 149–174. [PMID: 22070687]</li>
         <li>Abdi F., Alimoradi Z., Haqi P. et al. Effects of phytoestrogens on bone mineral density during the menopause transition: A systematic review of randomized, controlled trials // Climacteric. — 2016. — Vol. 19. — №6. — P. 535–545. [PMID: 27710141]</li>
     </ol>
+    </div>
+    <div class="flex">
+        <a href="https://praesens.ru/" target="_blank"><button type="button">
+            Перейти на основную страницу
+        </button></a>
     </div>
 </body>
 </html>
