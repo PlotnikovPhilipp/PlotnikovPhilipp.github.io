@@ -1,0 +1,2801 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Ковры</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <style>
+        @charset "utf-8";
+/*
+    Устанавливаем шрифты
+*/
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.eot");
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.eot?#iefix") format("embedded-opentype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.woff") format("woff"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.ttf") format("truetype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Roboto.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.eot");
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.eot?#iefix") format("embedded-opentype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.woff") format("woff"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.ttf") format("truetype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotomedium.svg") format("svg");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.eot");
+    src: url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.eot?#iefix") format("embedded-opentype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.woff") format("woff"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.ttf") format("truetype"),
+        url("https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/fonts/Robotobold.svg") format("svg");
+}
+
+/*
+    Установка дефолтных стилей
+*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    outline: 0;
+    border: none;
+}
+
+body, html {width: 100%}
+
+body {
+    overflow-x: hidden !important;    
+}
+
+html {
+    font-family: Roboto-Regular;
+    font-size: 1vw;
+    background-color: white;
+}
+
+h1, h2, h3, h5, h6 {font-family: Roboto-Regular}
+
+ul, ol {list-style: none}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+small, address {
+    font-style: normal;
+    font-weight: normal;
+}
+
+button, textarea, input, select {
+    border: none;
+    background: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    outline: 0;
+}
+
+button a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+fieldset {border: none}
+
+/*
+
+    Левая часть
+
+*/
+.t706__product-title div strong {
+    font-size: 0.8rem;
+}
+
+.t706__product-title div span {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.wrapper {
+    width: 96%;
+    padding: 1% 0% 0 6.5%;
+    margin-top: 4%;
+}
+
+.wrapper::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.left-section {
+    float: left;
+    width: 50%;
+}
+
+.left-section::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.right-section {
+    width: 50%;
+    float: left;
+}
+
+.right-section::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+header h1 {font-size: 2.5rem}
+
+header {
+    margin-bottom: 2.5%;
+    display: none;
+}
+
+/*
+
+    Вид и форма
+
+*/
+.view {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+}
+
+.view input, .view label {cursor: pointer}
+
+.view h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.left-first-view {
+    float: left;
+    width: 38%;
+    margin-top: 2.5%;
+}
+
+.left-first-view input, .left-second-view input {
+    display: none;
+}
+
+.left-first-view label, .left-second-view label, .left-first-shape label, .left-second-shape label {
+    vertical-align: middle;
+}
+
+.circle-of-first-view, .circle-of-second-view {
+    border: 2px solid black;
+    height: 0.7vw;
+    width: 0.7vw;
+    display: inline-block;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    vertical-align: middle;
+    position: relative;
+}
+
+.circle-of-first-view::after, .circle-of-second-view::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: transparent;
+    height: 0.4vw;
+    width: 0.4vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.left-first-view input:checked + .circle-of-first-view::after,
+.left-second-view input:checked + .circle-of-second-view::after {
+    content: ' ';
+    background-color: black;
+}
+
+.left-second-view {
+    overflow: hidden;
+    margin-top: 2.5%;
+    width: 26.5%;
+    text-align: right;
+}
+
+.shape {
+    width: 50%;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+.shape::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.shape input, .shape label {cursor: pointer}
+
+.shape h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.left-first-shape {
+    float: left;
+    width: 38%;
+    margin-top: 2.5%;
+}
+
+.left-second-shape {
+    margin-top: 2.5%;
+    position: relative;
+    float: left;
+    width: 46.4%;
+    text-align: right;
+}
+
+.left-first-shape input, .left-second-shape input {
+    display: none;
+}
+
+.circle-of-first-shape, .circle-of-second-shape {
+    border: 2px solid black;
+    height: 0.7vw;
+    width: 0.7vw;
+    display: inline-block;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    vertical-align: middle;
+    position: relative;
+}
+
+.circle-of-first-shape::after, .circle-of-second-shape::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: transparent;
+    height: 0.4vw;
+    width: 0.4vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.left-first-shape input:checked + .circle-of-first-shape::after,
+.left-second-shape input:checked + .circle-of-second-shape::after {
+    content: ' ';
+    background-color: black;
+}
+
+.left-second-shape img {
+    width: 1.1vw;
+    vertical-align: middle;
+    margin-left: 0.3vw;
+    cursor: pointer;
+}
+
+.first-pop {
+    position: absolute;
+    font-size: 0.9rem;
+    text-align: left;
+    bottom: 120%;
+    background-color: white;
+    left: 0;
+    padding: 3%;
+    right: 0;
+    word-wrap: normal;
+}
+
+.kovrik, .okantovka {
+    padding-left: 0 !important;
+}
+
+/*
+
+     Комплектация, цвет коврика, цвет окантовки
+
+*/
+.fadap5 {
+    display: none;
+}
+
+.complect {
+    margin-top: 5%;
+    width: 50%;
+    float: left;
+}
+
+.complect ul {
+    padding-left: 0 !important;    
+}
+
+.complect::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
+.complect input, .complect label {cursor: pointer}
+
+.complect select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: 0;
+    font-weight: normal;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: Roboto-Regular;
+    width: 100%;
+}
+
+.complect .select {
+    position: relative;
+    margin: 0;
+    margin-top: 10%;
+    width: 46%;
+    cursor: pointer;
+    float: none;
+}
+
+.complect .select::after {
+    content: " ";
+    pointer-events: none;
+    position: absolute;
+    top: 33%;
+    right: 0;
+    display: inline-block;
+    border: 0.45vw solid transparent;
+    border-top-color: black; 
+}
+
+.complect h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 2.5%;
+}
+
+.complect ul li {
+    position: relative;
+    overflow: hidden;
+}
+
+.complect ul li input {
+    display: none;
+}
+
+.complect ul li label:nth-of-type(2) {
+    overflow: hidden;
+    display: block;
+    margin-left: 6%;
+}
+
+.complect ul li label:nth-of-type(1) {
+    border: 2px solid black;
+    float: left;
+    margin-top: 0.5%;
+    height: 0.7vw;
+    width: 0.7vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    vertical-align: middle;
+    position: relative;
+}
+
+.complect ul li label:nth-of-type(1)::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: transparent;
+    height: 0.4vw;
+    width: 0.4vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.complect ul li input:checked + label::after {
+    content: ' ';
+    background-color: black;
+}
+
+.complect ul li:nth-child(3) {
+    position: relative;
+}
+
+.complect ul li:not(:first-child) {
+    margin-top: 10%;
+}
+
+.color {
+    margin-top: 5%;
+    float: left;
+    width: 50%;
+    clear: both;
+}
+
+.color > div > span {
+    display: inline-block;
+    margin-top: 3%;
+}
+
+.color > div:first-of-type {
+    margin-bottom: 9%;
+}
+
+.color input, .color label {cursor: pointer}
+
+.color h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 4.5%;
+}
+
+.color ul {
+    width: 71%;
+}
+
+.color ul li {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.color ul li:not(:first-of-type):not(:nth-of-type(8)) {
+    margin-left: 5%;
+}
+
+.color > div:nth-of-type(2) li:last-child {
+    margin-left: 0;
+}
+
+.color ul li:nth-of-type(n + 8) {margin-top: 2%}
+
+.color li {
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    position: relative;
+}
+
+.color li div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    width: 1vw;
+    height: 1vw;
+    -webkit-transform: scale(1.9);
+    -moz-transform: scale(1.9);
+    -ms-transform: scale(1.9);
+    -o-transform: scale(1.9);
+    transform: scale(1.9);
+}
+
+.color li.chernyj_kovrik div, .color li.chernaya_okantovka div  {
+    border: 0.5px solid black;
+}
+
+/*
+
+    Акссесуары
+
+*/
+.dop {
+    float: left;
+    width: 100%;
+}
+
+.dop h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 2%;
+}
+
+.dop ul {
+    display: table;
+    width: 100%;
+}
+
+.dop ul li {
+    display: table-cell;
+    width: 20%;
+    position: relative;    
+}
+
+.dop ul li .first-line {
+    position: relative;
+}
+
+.first-line input {
+    display: none;
+}
+
+.first-line label {
+    border: 1px solid black;
+    display: inline-block;
+    width: 0.7vw;
+    vertical-align: middle;
+    height: 0.7vw;
+    cursor: pointer;
+}
+
+.first-line label::after {
+    content: ' ';
+    color: black;
+    display: block;
+    width: 0.7vw;
+    height: 0.7vw;
+    line-height: 0.7vw;
+    font-size: 1.3rem;
+    -webkit-transform: translate(-5%, -12%);
+    -moz-transform: translate(-5%, -12%);
+    -ms-transform: translate(-5%, -12%);
+    -o-transform: translate(-5%, -12%);
+    transform: translate(-5%, -12%);
+}
+
+.first-line input:checked + label::after {
+    content: '\2714';
+}
+
+.third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {
+    position: absolute;
+    font-size: 0.9vw;
+    padding: 3%;
+    background-color: white;
+    bottom: 0;
+    right: 0;
+    word-wrap: normal;
+}
+
+.dop ul li .first-line input {
+    cursor: pointer;
+}
+
+.dop ul li .first-line img {
+    width: 1.1vw;
+    margin-left: 5%;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.dop ul li > img {
+    width: 70%;
+    margin-top: 4%;
+}
+
+.dop ul li:nth-child(2) > img {
+    margin-top: 5%;
+}
+
+.dop ul li > span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.dop ul li:not(:last-child) > span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*
+
+    Правая часть
+
+*/
+.right-section > * {
+    margin-left: 21%;
+}
+
+.right-section > h6 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.right-section > img {
+    height: 13vw;
+    margin-top: 2%;
+}
+
+.image-area {
+    position: relative;
+    width: 82%;
+    -webkit-transform: translateX(-4.5%);
+    -moz-transform: translateX(-4.5%);
+    -ms-transform: translateX(-4.5%);
+    -o-transform: translateX(-4.5%);
+    transform: translateX(-4.5%);
+}
+
+.image-area img {
+    width: 65%;
+}
+
+.image-area .shaper {
+    position: absolute;
+    top: 2%;
+    left: -10%;
+    width: 33%;
+}
+
+.image-area .shild {
+    position: absolute;
+    top: 14%;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .alum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .plast {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .resin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+}
+
+.image-area .bigCircle {
+    position: absolute;
+    top: -4%;
+    left: -7%;
+    width: 80%;
+}
+
+.image-area img:first-of-type {
+    position: absolute;
+}
+
+.description {
+    width: 60%;
+    position: relative;
+    margin-top: 3.4%;
+    padding-left: 3%;
+}
+
+.last-line {
+    margin-top: 2%;
+    width: 100%;
+}
+
+.description div[role="contentinfo"] {
+    line-height: 1.5;
+    height: 7.5rem;
+}
+
+.description h6 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.last-line span {
+    font-family: Roboto-Bold;
+    font-size: 2.3rem;
+    width: 7.9rem;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.description button {
+    color: white;
+    font-family: Roboto-Bold;
+    background-color: red;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+    font-size: 1rem;
+    padding: 2.9% 6.5%;
+    cursor: pointer;
+    vertical-align: bottom;
+    margin-left: 6%;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    background-color: black;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    border-radius: 100vw;
+}
+
+.fadap, .fadap3, .fadap6, .fadap7, .fadap8 {
+    display: none;
+}
+
+/*
+
+    Адаптив
+
+*/
+@media(max-width: 1024px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        padding-top: 2%;
+        padding-bottom: 5%;
+        overflow: hidden;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    header h1 {
+        font-size: 3.4rem;
+        font-family: Roboto-Medium;
+        font-weight: normal;
+    }
+
+    .view, .shape {
+        width: 100%;
+        float: none;
+    }
+
+    .first-pop {
+        font-size: 2.1rem;
+        text-align: left;
+        top: 120%;
+        left: -70%;
+        padding: 10%;
+        bottom: auto;
+        right: -70%;
+    }
+
+    .view::after {
+        content: ' ';
+        display: table;
+        width: 100%;
+    }
+
+    .view h6, .shape h6 {
+        font-size: 3rem;
+    }
+
+    .view > div, .shape > div {
+        font-size: 2.2rem;
+    }
+
+    .view h6, .shape h6, .view > div, .shape > div {
+        display: inline-block;
+        float: none;
+        width: auto;
+        vertical-align: bottom;
+    }
+
+    .circle-of-first-view, .circle-of-second-view {
+        width: 1.9vw;
+        height: 1.9vw;
+    }
+
+    .circle-of-first-view::after, .circle-of-second-view::after {
+        width: 1vw;
+        height: 1vw;
+    }
+
+    .left-first-view {
+        margin-left: 15%;
+    }
+
+    .left-second-view {
+        margin-left: 10%;
+    }
+
+    .shape {
+        margin-top: 4%;
+    }
+
+    .circle-of-first-shape, .circle-of-second-shape {
+        width: 1.9vw;
+        height: 1.9vw;
+    }
+
+    .circle-of-first-shape::after, .circle-of-second-shape::after {
+        width: 1vw;
+        height: 1vw;
+    }
+
+    .left-first-shape {
+        margin-left: 9%;
+    }
+
+    .left-second-shape {
+        margin-left: 10%;
+        z-index: 1;
+    }
+
+    .left-second-shape img {
+        width: 2.9vw;
+        margin-left: 0.6vw;
+        vertical-align: top;
+    }
+
+    /*
+    
+        Цвет, комплектация
+    
+    */
+    .complect {
+        float: none;
+    }
+
+    .color {
+        float: none;
+        width: 100%;
+        margin-top: 8%;
+    }
+
+    .color h6 {
+        margin-bottom: 8%;
+        word-spacing: 6rem;
+    }
+
+    .color::after {
+        content: ' ';
+        display: table;
+        width: 100%;
+    }
+
+    .color > div {
+        width: 50%;
+        float: left;
+    }
+
+    .color > div:first-of-type {
+        margin-bottom: 0;
+        width: 50%;
+    }
+
+    .color > div:last-of-type h6, .color > div:last-of-type span {
+        display: inline-block;
+        margin-left: 20%;
+    }
+
+    .color > div:last-of-type ul {
+        margin-left: 20%;
+    }
+
+    .color > div:first-of-type {margin: none}
+
+    .color h6 {
+        font-size: 3rem;
+    }
+
+    .color ul {
+        width: 80%;
+    }
+
+    .color li {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .color ul li:not(:first-of-type):not(:nth-of-type(8)) {
+        margin-left: 0;
+    }
+
+    .color ul li:not(:first-of-type):not(:nth-of-type(5)):not(:nth-of-type(9)):not(:nth-of-type(13)) {
+        margin-left: 8%;
+    }
+
+    .color ul li:nth-of-type(n + 5) {margin-top: 5%}
+
+    .color > div > span {
+        display: inline-block;
+        margin-top: 8%;
+        font-size: 2.3rem;
+    }
+
+    .color li div {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    .complect {
+        margin-top: 10%;
+        width: 100%;
+        float: none;
+        font-size: 2.2rem;
+    }
+
+    .complect ul li:not(:first-child) {
+        margin-top: 13%;
+    }
+
+    .complect .select {
+        margin-top: 13%;
+    }
+
+    .complect h6 {
+        font-size: 2.9rem;
+        font-weight: normal;
+        margin-bottom: 4.5%;
+    }
+
+    .complect ul li label:nth-of-type(1) {
+        width: 1.9vw;
+        height: 1.9vw;
+    }
+
+    .complect ul li label:nth-of-type(2) {
+        margin-left: 7.5%;
+    }
+
+    .complect ul li label:nth-of-type(1)::after {
+        width: 1vw;
+        height: 1vw;
+    }
+
+    .complect select {
+        font-size: 2.2rem;
+    }
+
+    .complect .select::after {
+        content: " ";
+        pointer-events: none;
+        position: absolute;
+        top: 33%;
+        right: 0;
+        display: inline-block;
+        border: 0.7vw solid transparent;
+        border-top-color:black;
+    }
+    /*
+    
+        Правая часть
+
+    */
+    .image-area img {
+        width: 100%;
+    }
+
+    .right-section > h6 {
+        display: none;
+    }
+
+    .right-section > * {
+        margin-left: 5%;
+    }
+
+    .image-area {
+        width: 95%;
+    }
+
+    .right-section {
+        text-align: center;
+    }
+
+    /*
+    
+        Центр
+    
+    */
+    .fadap1, .fadap2 {
+        display: none;
+    }
+
+    .fadap, .fadap3 {
+        display: block;
+        margin-top: 2%;
+    }
+
+    .right-section > img {
+        height: 24.7vw;
+        margin-top: 77%;
+        margin-left: 0;
+    }
+
+    .dop {
+        float: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .dop h6 {
+        font-size: 2.9rem;
+        margin-top: 5%;
+        float: left;
+        width: 100%;
+        margin-bottom: 3%;
+        clear: both;
+    }
+
+    .first-line label {
+        width: 1.9vw;
+        height: 1.9vw;
+    }
+
+    .first-line label::after {
+        content: ' ';
+        width: 1.9vw;
+        height: 1.9vw;
+        line-height: 1.9vw;
+        font-size: 3.5rem;
+    }
+
+    .dop ul li .first-line img {
+        width: 2.9vw;
+    }
+
+    .dop ul li > span {
+        font-size: 2.2rem;
+        top: 110%;
+    }
+
+    .third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {
+        font-size: 2.1vw;
+        padding: 5%;
+    }
+
+    .image-area {
+        position: relative;
+        width: 82%;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+}
+
+    .image-area .shaper {
+        width: 50%;
+    }
+
+    .image-area .shild {
+        top: 30%;
+        left: 4%;
+        width: 70%;
+    }
+
+    .image-area .alum {
+        top: 5%;
+        left: 8%;
+        width: 84%;
+    }
+
+    .image-area .plast {
+        top: 5%;
+        left: 8%;
+        width: 84%;
+    }
+    
+    .image-area .resin {
+        top: 5%;
+        left: 8%;
+        width: 84%;
+    }
+
+    .image-area .bigCircle {
+        top: -4%;
+        left: -7%;
+        width: 120%;
+    }
+
+    .fadap3 {
+        display: block;
+        width: 100%;
+        margin-top: 17%;
+    }
+
+    .description {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .description div[role="contentinfo"] {
+        font-size: 2.5rem;
+        height: 26.5rem;
+    }
+
+    .description h6 {
+        font-size: 2.2rem;
+        vertical-align: middle;
+    }
+
+    .last-line span {
+        font-size: 4rem;
+        width: 16rem;
+        vertical-align: middle;
+    }
+
+    .description button {
+        font-size: 2.2rem;
+        padding: 2.4% 6%;
+        vertical-align: middle;
+    }
+
+    .fadap, .dop {
+        width: 100%;
+    }
+
+    /*
+    
+        Кнопка
+
+    */
+    .fadap7 {
+        display: none;
+        position: fixed;
+        bottom: 3%;
+        right: 6%;
+        text-align: center;
+        width: 15vw;
+        height: 15vw;
+        background-color: red;
+        -webkit-border-radius: 100vw;
+        -moz-border-radius: 100vw;
+        -ms-border-radius: 100vw;
+        -o-border-radius: 100vw;
+        border-radius: 100vw;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .fadap7 img {
+        width: 48%;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 5%;
+        margin: auto;
+    }
+    
+    .fadap7 span {
+        font-size: 3rem;
+        margin-top: 10%;
+        font-weight: bold;
+        color: white;
+        display: inline-block;
+    }
+
+    @keyframes animate1 {
+        from {
+            -webkit-transform: translateY(-130%);
+            -moz-transform: translateY(-130%);
+            -ms-transform: translateY(-130%);
+            -o-transform: translateY(-130%);
+            transform: translateY(-130%);
+        }
+        to {
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+            -o-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes animate2 {
+        from {
+            -webkit-transform: translateY(0%);
+            -moz-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+            -o-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+        to {
+            -webkit-transform: translateY(-130%);
+            -moz-transform: translateY(-130%);
+            -ms-transform: translateY(-130%);
+            -o-transform: translateY(-130%);
+            transform: translateY(-130%);
+        }
+    }
+
+    .fadap8 {
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        -webkit-transform: translateY(-130%);
+        -moz-transform: translateY(-130%);
+        -ms-transform: translateY(-130%);
+        -o-transform: translateY(-130%);
+        transform: translateY(-130%);
+        left: 0;
+        background-color: white;
+        padding: 11% 0;
+        z-index: 999;
+    }
+
+    .animate-open-frame {
+        -webkit-animation: animate1 1.2s 1 ease-in-out;
+        animation: animate1 1s 1 ease-in-out;
+        animation-fill-mode: both;
+    }
+
+    .animate-close-frame {
+        -webkit-animation: animate2 1.2s 1 ease-in-out;
+        animation: animate2 1s 1 ease-in-out;
+        animation-fill-mode: both;
+    }
+
+    .fadap8 .image-area {
+        width: 60%;
+        margin: auto;
+        
+    }
+    .t706__product-title div strong {
+    font-size: 2.5rem;
+    }
+
+    .t706__product-title div span {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    body, html {overflow-x: hidden !important;}
+    
+    .wrapper {
+        padding-left: 7%;
+        width: 93%;
+        overflow: hidden !important;
+    }
+
+    .fadap4 {
+        display: none;
+    }
+
+    .fadap5 {
+        margin: auto;
+        display: block;
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .left-section {
+        width: 100%;
+        float: none;
+    }
+
+    .left-section h1 {
+        font-size: 7rem;
+    }
+
+    .view h6, .shape h6 {
+        font-size: 5.5rem;
+    }
+
+    .view label:last-of-type, .shape label:last-of-type {
+        font-size: 4.2rem
+    }
+
+    .circle-of-first-view, .circle-of-second-view {
+        width: 3.5vw;
+        height: 3.5vw;
+        vertical-align: top;
+    }
+
+    .circle-of-first-view::after, .circle-of-second-view::after {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
+
+    .circle-of-first-shape, .circle-of-second-shape {
+        width: 3.5vw;
+        height: 3.5vw;
+        vertical-align: top;
+    }
+
+    .circle-of-first-shape::after, .circle-of-second-shape::after {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
+
+    .left-second-shape img {
+        width: 5vw;
+    }
+
+    /*
+    
+        Цвет, комплектация
+    
+    */
+    .color {
+        width: 100%;
+    }
+
+    .color > div {
+        float: none;
+        width: 90%;
+    }
+
+    .color > div:first-of-type {
+        margin-bottom: 0;
+        width: 90%;
+    }
+
+    .color h6 {
+        margin-bottom: 5%;
+        word-spacing: initial;
+        font-size: 5.5rem;
+    }
+
+    .color ul {
+        width: 100%;
+    }
+
+    .color > div > span {
+        display: inline-block;
+        margin-top: 6%;
+        font-size: 4.2rem;
+    }
+
+    .color > div:last-of-type ul {
+        margin-left: 0;
+    }
+
+    .color li {
+        width: 7.9vw;
+        height: 7.9vw;
+    }
+
+    .color li div {
+        width: 5.6vw;
+        height: 5.6vw;
+    }
+
+    .color > div:last-of-type h6, .color > div:last-of-type span {
+        display: inline-block;
+        margin-left: 0%;
+    }
+
+    .color ul li:not(:first-of-type):not(:nth-of-type(8)) {
+        margin-left: 5% !important;
+    }
+
+    .color ul li:nth-of-type(8), .color ul li:first-of-type {
+        margin-left: 0 !important;
+    }
+
+    .color div:nth-of-type(2) ul li:last-of-type {
+        margin-left: 0 !important;
+    }
+
+    .color > div:first-of-type {
+        margin-bottom: 8%;
+    }
+
+    .color ul li:nth-of-type(n - 7) {margin-top: 0}
+
+    .color ul li:nth-of-type(n + 8) {margin-top: 6%}
+
+    /*
+    
+        Комплектация
+    
+    */
+    .complect {
+        font-size: 4.2rem;
+        width: 98%;
+    }
+
+    .complect h6 {
+        font-size: 5.5rem;
+    }
+
+    .complect ul li:first-of-type {
+        width: 88%;
+    }
+    
+    .complect ul li label:nth-of-type(1) {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .complect ul li label:nth-of-type(1)::after {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
+
+    .complect select {
+        font-size: 4.2rem;
+    }
+
+    .complect .select::after {
+        border: 1.6vw solid transparent;
+        border-top-color: black; 
+    }
+
+    .fadap6 {
+        display: block;
+        width: 100%;
+    }
+
+    .right-section {
+        margin: 0;
+        width: 100%;
+        float: none;
+        text-align: center;
+        float: none;
+        margin-left: -4%;
+    }
+
+    .right-section > * {
+        margin-left: 0;
+    }
+
+    .right-section > img {
+        height: 47vw;
+        margin-top: 7%;
+    }
+    
+    .fadap6 > h6 {
+        text-align: left;
+        display: block !important;
+        font-size: 5.5rem;
+        font-weight: normal;
+        margin-top: 5%;
+    }
+
+    /*
+    
+        Dop
+    
+    */
+    .fadap {
+        width: 100%;
+    }
+
+    .dop {
+        width: 100%;
+        margin-top: 6%;
+    }
+
+    .dop h6 {
+        font-size: 5.5rem;
+        margin-bottom: 4%;
+    }
+
+    .dop ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: -7%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .dop ul li {
+        width: 40%;
+    }
+
+    .dop ul li:nth-of-type(2n):not(:last-of-type) {
+        margin-left: 10%;
+    }
+
+    .dop ul li:nth-of-type(n + 3) {
+        margin-top: 19%;
+    }
+
+    .first-line label {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
+
+    .first-line label::after {
+        content: ' ';
+        -webkit-transform: translate(-17%, -20%);
+        -moz-transform: translate(-17%, -20%);
+        -ms-transform: translate(-17%, -20%);
+        -o-transform: translate(-17%, -20%);
+        transform: translate(-17%, -20%);
+}
+    
+    .first-line label::after {
+        content: ' ';
+        width: 4vw;
+        height: 4vw;
+        line-height: 4vw;
+        font-size: 7rem;
+    }
+
+    .dop ul li .first-line img {
+        width: 5vw;
+        margin-left: 9%;
+    }
+
+    .dop ul li > span {
+        font-size: 4.2rem;
+    }
+
+    .description h6 {
+        font-size: 4.9rem;
+    }
+
+    .description div[role="contentinfo"] {
+        font-size: 4.5rem;
+        width: 80%;
+        display: block;
+        margin: auto;
+        height: 62rem;
+    }
+
+    .fadap3 {
+        width: 107%;
+        margin-left: -7%;
+    }
+
+    .last-line span {
+        font-size: 7.2rem;
+        width: 25rem;
+        display: inline-block;
+        margin-left: 5%;
+    }
+
+    .description button {
+        font-size: 4.4rem;
+        padding: 3% 8%;
+        margin: 0;
+        margin-top: 4%;
+        vertical-align: middle;
+    }
+
+    .last-line {
+        text-align: center;
+    }
+
+    .third-pop, .fourth-pop, .fifth-pop, .sixth-pop, .seventh-pop {
+        font-size: 4vw;
+        padding: 12%;
+    }
+
+    .first-pop, .second-pop {
+        font-size: 4rem;
+    }
+
+    /*
+    
+        Button
+
+    */
+    .fadap7 {
+        bottom: 3%;
+        right: 6%;
+        width: 22vw;
+        height: 22vw;
+        cursor: pointer;
+    }
+
+    .fadap7 span {
+        font-size: 4rem;
+    }
+    
+    .fadap8 {
+        width: 100%;
+        top: 0;
+        -webkit-transform: translateY(-130%);
+        -moz-transform: translateY(-130%);
+        -ms-transform: translateY(-130%);
+        -o-transform: translateY(-130%);
+        transform: translateY(-130%);
+        padding: 11% 0;
+    }
+
+    .fadap8 .image-area {
+        width: 80%;
+        margin: auto;
+        
+    }
+    
+    .t706__product-title div strong {
+    font-size: 4rem;
+    }
+
+    .t706__product-title div span {
+        font-size: 4rem;
+    }
+}
+    </style>
+</head>
+<body ontouchstart="">
+    <div class="wrapper">
+    <!--
+        Левая часть
+    -->
+        <section class="left-section">
+            <header>
+                <h1>Подобрать EVA коврики</h1>
+            </header>
+
+    <!--
+        Вид и форма
+    -->
+            <div class="view">
+                <h6>Вид</h6>
+                <div class="left-first-view">
+                    <input checked name="view" id="firstView" type="radio"/>
+                    <label for="firstView" class="circle-of-first-view"></label>
+                    <label for="firstView">Ромбы</label>
+                </div>
+                <div class="left-second-view">
+                    <input name="view" id="secondView" type="radio"/>
+                    <label for="secondView" class="circle-of-second-view"></label>
+                    <label for="secondView">Соты</label>
+                </div>
+            </div>
+            <div class="shape">
+                <h6>Форма</h6>
+                <div class="left-first-shape">
+                    <input checked id="firstShape" name="shape" type="radio"/>
+                    <label for="firstShape" class="circle-of-first-shape"></label>
+                    <label for="firstShape">Стандарт</label>
+                </div>
+                <div class="left-second-shape">
+                    <input name="shape" id="secondShape" type="radio"/>
+                    <label for="secondShape" class="circle-of-second-shape"></label>
+                    <label for="secondShape">3D</label> <img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                    <div class="first-pop">
+                        <p>
+                            За счёт бортиков и литой лапки лучше защищает напольное ковровое покрытие от пыли и грязи.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        <!--
+            Цвет коврика, цвет окантовки, комплектация
+        -->
+            <div class="image-area fadap5">
+                    <img class="selfOkantovka" alt="" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/chernaya_okantovka.png"/>
+                    <img class="selfKovrik" alt="" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/chernyj_kovrik_romby.png"/>      
+            </div>
+            <div class="color">
+                <div>
+                    <h6>Цвет коврика</h6>
+                    <ul class="kovrik">
+                        <li style="background-color: #000000;" class="chernyj_kovrik" data-color="Чёрный"><div></div></li><li data-color="Серый" style="background-color: #A29D9D;" class="seryi_kovrik"><div></div></li><li data-color="Бежевый" style="background-color: #E1A063;" class="bejevyj_kovrik"><div></div></li><li data-color="Коричневый" style="background-color: #934E30;" class="korichnevyi_kovrik"><div></div></li><li data-color="Кофейный" style="background-color: #652D21;" class="koveinyi_kovrik"><div></div></li><li data-color="Красный" style="background-color: #FA0404;" class="krasnyi_kovrik"><div></div></li><li data-color="Оранжевый" style="background-color: #F45B05;" class="oranjevyi_kovrik"><div></div></li><li data-color="Тёмно-зеленый" style="background-color: #113E0A;" class="temno_zelenyi_kovrik"><div></div></li><li data-color="Лаймовый" style="background-color: #54D33F;" class="laimovyi_kovrik"><div></div></li><li data-color="Голубой" style="background-color: #8FD0E4;" class="goluboi_kovrik"><div></div></li><li data-color="Синий" style="background-color: #1850E1;" class="sinij_kovrik"><div></div></li><li data-color="Тёмно-синий" style="background-color: #0F39CE;" class="temno_sinij_kovrik"><div></div></li><li data-color="Фиолетовый" style="background-color: #87129A;" class="fioletovyi_kovrik"><div></div></li>
+                    </ul>
+                    <span id="colorOfKovrika">Чёрный</span>
+                </div>
+                <div>
+                    <h6>Цвет окантовки</h6>
+                    <ul class="okantovka">
+                        <li data-color="Тёмно-зеленый" style="background-color: #2C7340;" class="temno_zelyonaya_okantovka"><div></div></li><li data-color="Фиолетовый" style="background-color: #7925A1;" class="fioletovaya_okantovka"><div></div></li><li data-color="Чёрный" style="background-color: #000000;" class="chernaya_okantovka"><div></div></li><li data-color="Тёмно-синий" style="background-color: #181A4A;" class="temno_sinyaya_okantovka"><div></div></li><li data-color="Синий" style="background-color: #3F54C2;" class="sinyaya_okantovka"><div></div></li><li data-color="Голубой" style="background-color: #5DCFE8;" class="golubaya_okantovka"><div></div></li><li data-color="Красный" style="background-color: #FF0505;" class="krasnaya_okantovka"><div></div></li><li data-color="Изумрудный" style="background-color: #21351A;" class="izumrudnaya_okantovka"><div></div></li><li data-color="Красно-Чёрный" style="background-color: #8F1A1A;" class="krasno_chernaya_okantovka"><div></div></li><li data-color="Бордовый" style="background-color: #D31515;" class="bordovaya_okantovka"><div></div></li><li data-color="Оранжевый" style="background-color: #F7700D;" class="oranjevaya_okantovka"><div></div></li><li data-color="Жёлтый" style="background-color: #F8E006;" class="jeltaya_okantovka"><div></div></li><li data-color="Бежевый" style="background-color: #EAA96C;" class="bejevaya_okantovka"><div></div></li><li data-color="Тёмно-серый" style="background-color: #828181;" class="temno_seraya_okantovka"><div></div></li><li data-color="Светло серый" style="background-color: #C4C4C4;" class="svetlo_seraya_okantovka"><div></div></li>
+                    </ul>
+                    <span id="colorOfOkantovki">Чёрный</span>
+                </div>
+            </div>
+
+            <div class="complect">
+                <h6>Комплектация</h6>
+                <ul>
+                    <li>
+                        <input checked id="firstComplect" data-price1="2300" data-price2="2800" name="complect" type="radio"/>
+                        <label for="firstComplect"></label>
+                        <label for="firstComplect">Комплект ковриков на весь салон с&nbsp;перемычкой</label>
+                    </li>
+                    <li>
+                        <input id="secondComplect" data-price1="750" data-price2="1000" name="complect" type="radio"/>
+                        <label for="secondComplect"></label>
+                        <label for="secondComplect">Коврик водительский</label>
+                    </li>
+                    <li>
+                        <input id="thirdComplect" data-price1="1500" data-price2="2000" name="complect" type="radio"/>
+                        <label for="thirdComplect"></label>
+                        <label for="thirdComplect">Коврик водительский и пассажирский</label>
+                    </li>
+                    <li>
+                        <input id="fourthComplect" data-price1="1750" name="complect" type="radio"/>
+                        <label for="fourthComplect"></label>
+                        <label for="fourthComplect">Коврик в багажник</label>
+                        <div class="select">
+                            <select name="cusov1">
+                                <option value="false">Выберите кузов</option>
+                                <option value="Sedan">Седан</option>
+                                <option value="Xechbeck">Хэчбек</option>
+                                <option value="Kupe">Купэ</option>
+                                <option value="Universal">Универсал</option>
+                                <option value="Other">Другое</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <input id="fifthComplect" data-price1="3750" data-price2="4550" name="complect" type="radio"/>
+                        <label for="fifthComplect"></label>
+                        <label for="fifthComplect">Комплект на весь салон с перемычкой +&nbsp;в&nbsp;багажник</label>
+                        <div class="select">
+                            <select name="cusov1"><option value="false">Выберите кузов</option>
+                                <option value="Sedan">Седан</option>
+                                <option value="Xechbeck">Хэчбек</option>
+                                <option value="Kupe">Купэ</option>
+                                <option value="Universal">Универсал</option>
+                                <option value="Other">Другое</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <section class="right-section fadap6">
+                <h6>Схема комплектации</h6>
+                <img alt="" id="selfComplect2" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy.png"/>
+            </section>
+        
+
+        <!--
+            Аксессуары
+        -->
+            <div class="dop fadap1">
+                <h6>Дополнительно</h6>
+                <ul role="menu">
+                    <li>
+                        <div class="first-line">
+                            <input data-price="200" id="shildyk" name="shildyk" type="checkbox"/><label for="shildyk"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="third-pop">
+                                <p>
+                                    Металлический, крепится на болтики. На любые марки автомобиля.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/shildyk_2.png" alt=""/><br/>
+                        <span>Шильдик</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" id="podpyannyk_aluminievyi" name="podpyannyk_aluminievyi" type="checkbox"/><label for="podpyannyk_aluminievyi"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="fourth-pop">
+                                <p>
+                                    Толщина 1 мм.<br/>
+                                    Размер 15*22 см.<br/>
+                                    Нержавеющий крепёж.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/aluminievyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Алюминиевый подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" id="podpyannyk_plastikovyi" name="podpyannyk_plastikovyi" type="checkbox"/><label for="podpyannyk_plastikovyi"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="fifth-pop">
+                                <p>
+                                    Размер 23 * 15 см<br/>
+                                    Толщина 3,5 см
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/plastikovyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Пластиковый подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" id="podpyannyk_rezinovyi" name="podpyannyk_rezinovyi" type="checkbox"/><label for="podpyannyk_rezinovyi"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="sixth-pop">
+                                <p>
+                                    Размер 20*15 см.<br/>
+                                    Толщина 6 мм.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/rezinovyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Резиновый подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="100" id="litaya_lapka" name="litaya_lapka" type="checkbox"/><label for="litaya_lapka"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="seventh-pop">
+                                <p>
+                                    Повторяет форму зоны для отдыха левой ноги в автомобиле. Защищает от попадания пыли и грязи под педали.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/litaya_lapka_1.png" alt=""/><br/>
+                        <span>Литая лапка</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    <!--
+        Правая часть
+    -->
+        <section class="right-section fadap4">
+            <div class="image-area">
+                <img class="selfOkantovka" alt="" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/chernaya_okantovka.png"/>
+                <img class="selfKovrik" alt="" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/chernyj_kovrik_romby.png"/>      
+            </div>
+            <h6>Схема комплектации</h6>
+            <img alt="" id="selfComplect1" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy.png"/>
+            <div class="description fadap2">
+                <div class="line"></div>
+                <div role="contentinfo">
+                    <strong>Вид: </strong><span id="view1">Ромбы;</span>
+                    <strong>Форма: </strong><span id="shape1">Стандарт;</span>
+                    <strong>Комплектация: </strong><span id="compl1">Комплект ковриков на весь салон с&nbsp;перемычкой;</span>
+                    <strong></strong><span id="cusov1"></span>
+                    <strong>Цвет&nbsp;коврика: </strong><span id="colorK1">Чёрный;</span>
+                    <strong>Цвет окантовки: </strong><span id="colorO1">Чёрный;</span>
+                    <strong>Дополнительно: </strong><span id="dopo1">Нет</span>
+                </div>
+                <div class="last-line">
+                    <h6>Цена</h6>
+                    <span id="price1">2300 р.</span>
+                    <button type="button"><a data-name="Eva" href="#order:Eva коврик=2300"></a>Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+
+        <!--
+
+            Адаптив
+
+        -->
+        <section class="fadap">
+            <div class="dop">
+                <h6>Аксессуары</h6>
+                <ul role="menu">
+                    <li>
+                        <div class="first-line">
+                            <input data-price="200" id="shildyk2" name="shildyk" type="checkbox"/><label for="shildyk2"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="third-pop">
+                                <p>
+                                    Металлический, крепится на болтики. На любые марки автомобиля.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/shildyk_2.png" alt=""/><br/>
+                        <span>Шильдик</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" id="podpyannyk_aluminievyi2" name="podpyannyk_aluminievyi" type="checkbox"/><label for="podpyannyk_aluminievyi2"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="fourth-pop">
+                                <p>
+                                    Толщина 1 мм.<br/>
+                                    Размер 15*22 см.<br/>
+                                    Нержавеющий крепёж.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/aluminievyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Алюминиевый<br/>подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" id="podpyannyk_plastikovyi2" name="podpyannyk_plastikovyi" type="checkbox"/><label for="podpyannyk_plastikovyi2"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="fifth-pop">
+                                <p>
+                                    Размер 23 * 15 см<br/>
+                                    Толщина 3,5 см
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/plastikovyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Пластиковый<br/>подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="600" id="podpyannyk_rezinovyi2" name="podpyannyk_rezinovyi" type="checkbox"/><label for="podpyannyk_rezinovyi2"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="sixth-pop">
+                                <p>
+                                    Размер 20*15 см.<br/>
+                                    Толщина 6 мм.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/rezinovyi_podpyatnik_1.png" alt=""/><br/>
+                        <span>Резиновый<br/>подпятник</span>
+                    </li>
+                    <li>
+                        <div class="first-line">
+                            <input data-price="150" id="litaya_lapka2" name="litaya_lapka" type="checkbox"/><label for="litaya_lapka2"></label><img class="pop" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="seventh-pop">
+                                <p>
+                                    Повторяет форму зоны для отдыха левой ноги в автомобиле. Защищает от попадания пыли и грязи под педали.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/litaya_lapka_1.png" alt=""/><br/>
+                        <span>Литая лапка</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="fadap3">
+            <div class="description">
+                <div role="contentinfo">
+                    <strong>Вид: </strong><span id="view2">Ромбы;</span><br/>
+                    <strong>Форма: </strong><span id="shape2">Стандарт;</span><br/>
+                    <strong>Комплектация: </strong><span id="compl2">Комплект ковриков на весь салон с&nbsp;перемычкой;</span><br>
+                    <strong></strong><span id="cusov2"></span>
+                    <strong>Цвет&nbsp;коврика: </strong><span id="colorK2">Чёрный;</span><br/>
+                    <strong>Цвет&nbsp;окантовки: </strong><span id="colorO2">Чёрный;</span><br/>
+                    <strong>Дополнительно: </strong><span id="dopo2">Нет</span>
+                </div>
+                <div class="last-line">
+                    <h6>Цена</h6>
+                    <span id="price2">2300 р.</span>
+                    <button type="button"><a data-name="Eva" href="#order:Eva коврик=2300"></a>Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            
+            Кнопка у адаптива
+
+        -->
+        <button type="button" class="fadap7" id="fixedButton">
+            <img src="https://plotnikovphilipp.github.io/Ковры/imgs/eye.svg" alt=""/>
+            <span>Эскиз</span>
+        </button>
+        <div id="fixedFrame" class="fadap8">
+            <div class="image-area">
+                <img class="selfOkantovka" alt="" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/chernaya_okantovka.png"/>
+                <img class="selfKovrik" alt="" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/chernyj_kovrik_romby.png"/>      
+            </div>
+        </div>
+    </div>
+    <script>
+    function changeColorOfKovrik(e) {
+    colorOfKovrika.textContent = e.currentTarget.dataset.color;
+    colorK.textContent = e.currentTarget.dataset.color + ';';
+    currentColorOfKovrik.firstElementChild.style.border = "0px";
+    e.currentTarget.firstElementChild.style.border = "0.5px solid black";
+    currentColorOfKovrik = e.currentTarget;
+    if(firstView.checked) {
+        selfKovriks.forEach((element) => {element.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/" + e.currentTarget.className + "_romby" + ".png";});
+    } else {
+        selfKovriks.forEach((element) => {element.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/" + e.currentTarget.className + "_soty" + ".png";});
+    }
+}
+
+function changeGeneralImage(e) {
+    let middleResult = null;
+    let sum = parseInt(price.textContent);
+    if(e.currentTarget.checked) {
+        switch(e.currentTarget.name) {
+            case 'shildyk':
+                if(dopo.textContent == 'Нет' && !document.getElementsByClassName('shild')[0]) {
+                    dopo.textContent = 'Шильдик'
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' р.';
+                } else if(!document.getElementsByClassName('shild')[0]) {
+                    dopo.textContent += ', Шильдик';
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' p.';
+                }
+                if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/shildik.png";
+                    element1.className = "shild";
+                    element.parentNode.appendChild(element1);
+                });
+                break;
+            case 'podpyannyk_aluminievyi':
+                flagAl = true;
+                if(flagPlast) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('plast')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_plastikovyi')[indexOfElement].checked = false;
+                    let firstPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? dopo.textContent.indexOf(', Пластиковый подпятник') : dopo.textContent.indexOf('Пластиковый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
+                    middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Пластиковый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    sum = sum - 600 + ' р.';
+                    flagPlast = false;
+                } else if(flagRes) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('resin')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_rezinovyi')[indexOfElement].checked = false;
+                    let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 21 : firstPosition + 19;
+                    middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Резиновый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    sum = sum - 600 + ' р.';
+                    flagRes = false;
+                } else {
+                    middleResult = dopo.textContent;
+                }
+                if(middleResult == 'Нет' && !document.getElementsByClassName('alum')[0]) {
+                    dopo.textContent = 'Алюминиевый подпятник';
+                    price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
+                } else if(!document.getElementsByClassName('alum')[0]) {
+                    dopo.textContent = middleResult + ', Алюминиевый подпятник';
+                    price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' p.';
+                }
+                if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/aluminievyi_podpyatnik.png";
+                    element1.className = "alum";
+                    element.parentNode.appendChild(element1);
+                });
+                break;
+            case 'podpyannyk_plastikovyi':
+                flagPlast = true;
+                if(flagAl) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('alum')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_aluminievyi')[indexOfElement].checked = false;
+                    let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
+                    middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Алюминиевый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    sum = sum - 600 + ' р.';
+                    flagAl = false;
+                } else if(flagRes) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('resin')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_rezinovyi')[indexOfElement].checked = false;
+                    let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 21 : firstPosition + 19;
+                    middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Резиновый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    sum = sum - 600 + ' р.';
+                    flagRes = false;
+                } else {
+                    middleResult = dopo.textContent;
+                }
+                if(middleResult == 'Нет' && !document.getElementsByClassName('plast')[0]) {
+                    dopo.textContent = 'Пластиковый подпятник';
+                    price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
+                } else if(!document.getElementsByClassName('plast')[0]) {
+                    dopo.textContent = middleResult + ', Пластиковый подпятник';
+                    price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
+                }
+                if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/plastikovyi_podpyatnik.png";
+                    element1.className = "plast";
+                    element.parentNode.appendChild(element1);
+                });
+                break;
+            case 'podpyannyk_rezinovyi':
+                flagRes = true;
+                if(flagAl) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('alum')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_aluminievyi')[indexOfElement].checked = false;
+                    let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
+                    middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Алюминиевый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    sum = sum - 600 + ' р.';
+                    flagAl = false;
+                } else if(flagPlast) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('plast')[0]);
+                    });
+                    document.getElementsByName('podpyannyk_plastikovyi')[indexOfElement].checked = false;
+                    let firstPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? dopo.textContent.indexOf(', Пластиковый подпятник') : dopo.textContent.indexOf('Пластиковый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
+                    middleResult  = (dopo.textContent.slice(0, lastPosition + 1) != 'Пластиковый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    sum = sum - 600 + ' р.';
+                    flagPlast = false;
+                } else {
+                    middleResult = dopo.textContent;
+                }
+                if(middleResult == 'Нет' && !document.getElementsByClassName('resin')[0]) {
+                    dopo.textContent = 'Резиновый подпятник';
+                    price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
+                } else if(!document.getElementsByClassName('resin')[0]) {
+                    dopo.textContent = middleResult + ', Резиновый подпятник';
+                    price.textContent = parseInt(sum) + parseInt(e.currentTarget.dataset.price) + ' р.';
+                }
+                if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                selfKovriks.forEach((element) => {
+                    let element1 = document.createElement('img');
+                    element1.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/rezinovyi_podpyatnik.png";
+                    element1.className = "resin";
+                    element.parentNode.appendChild(element1);
+                });
+                break;
+            case 'litaya_lapka':
+                if(firstShape.checked) {
+                    if(dopo.textContent == 'Нет' && !document.getElementsByClassName('bigCircle')[0]) {
+                        dopo.textContent = 'Литая лапка';
+                        price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' p.';
+                    } else if(!document.getElementsByClassName('bigCircle')[0]) {
+                        dopo.textContent += ', Литая лапка';
+                        price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price) + ' p.';
+                    }
+                    if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                    ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+                    selfKovriks.forEach((element) => {
+                        let element1 = document.createElement('img');
+                        element1.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/litaya_lapka_krug.png";
+                        element1.className = "bigCircle";
+                        element.parentNode.appendChild(element1);
+                    });
+                } else {
+                    e.currentTarget.checked = false;
+                }
+        }
+            
+    } else {
+        switch(e.currentTarget.name) {
+            case 'shildyk':
+                if(document.getElementsByClassName('shild')[0]) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('shild')[0]);
+                    });
+                    let firstPosition = (dopo.textContent.indexOf(', Шильдик') != -1)? dopo.textContent.indexOf(', Шильдик') : dopo.textContent.indexOf('Шильдик');
+                    let lastPosition = (dopo.textContent.indexOf(', Шильдик') != -1)? firstPosition + 9 : firstPosition + 7;
+                    dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Шильдик')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                    price.textContent = parseInt(price.textContent) - parseInt(e.currentTarget.dataset.price) + ' p.';
+                }
+                ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+                break;
+            case 'podpyannyk_aluminievyi':
+                if(flagAl) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('alum')[0]);
+                    });
+                    let firstPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? dopo.textContent.indexOf(', Алюминиевый подпятник') : dopo.textContent.indexOf('Алюминиевый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Алюминиевый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
+                    dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Алюминиевый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    flagAl = false;
+                    if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                    price.textContent = parseInt(price.textContent) - parseInt(e.currentTarget.dataset.price) + ' p.';
+                }
+                break;
+            case 'podpyannyk_plastikovyi':
+                if(flagPlast) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('plast')[0]);
+                    });
+                    let firstPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? dopo.textContent.indexOf(', Пластиковый подпятник') : dopo.textContent.indexOf('Пластиковый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Пластиковый подпятник') != -1)? firstPosition + 23 : firstPosition + 21;
+                    dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Пластиковый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    flagPlast = false;
+                    if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                    price.textContent = parseInt(price.textContent) - parseInt(e.currentTarget.dataset.price) + ' p.';
+                }
+                break;
+            case 'podpyannyk_rezinovyi':
+                if(flagRes) {
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('resin')[0]);
+                    });
+                    let firstPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? dopo.textContent.indexOf(', Резиновый подпятник') : dopo.textContent.indexOf('Резиновый подпятник');
+                    let lastPosition = (dopo.textContent.indexOf(', Резиновый подпятник') != -1)? firstPosition + 21 : firstPosition + 19;
+                    dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Резиновый подпятник')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                    flagRes = false;
+                    price.textContent = parseInt(price.textContent) - parseInt(e.currentTarget.dataset.price) + ' p.';
+                }
+                break;
+            case 'litaya_lapka':
+                if(document.getElementsByClassName('bigCircle')[0]) {
+                    let firstPosition = (dopo.textContent.indexOf(', Литая лапка') != -1)? dopo.textContent.indexOf(', Литая лапка') : dopo.textContent.indexOf('Литая лапка');
+                    let lastPosition = (dopo.textContent.indexOf(', Литая лапка') != -1)? firstPosition + 13 : firstPosition + 11;
+                    dopo.textContent = (dopo.textContent.slice(0, lastPosition + 1) != 'Литая лапка')? (firstPosition == 0)? dopo.textContent.slice(lastPosition + 1) : dopo.textContent.slice(0, firstPosition) + dopo.textContent.slice(lastPosition) : 'Нет';
+                    if(dopo.textContent == '' || dopo.textContent == ' ') dopo.textContent = 'Нет';
+                    selfKovriks.forEach((element) => {
+                        element.parentNode.removeChild(element.parentNode.getElementsByClassName('bigCircle')[0]);
+                    });
+                    price.textContent = parseInt(price.textContent) - parseInt(e.currentTarget.dataset.price) + ' p.';
+                    ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+                }
+        }
+    }
+  }
+
+function changeColorOfOkantovki(e) {
+    currentColorOfOkanatovka.firstElementChild.style.border = "0px";
+    e.currentTarget.firstElementChild.style.border = "0.5px solid black";
+    currentColorOfOkanatovka = e.currentTarget;
+    colorOfOkantovki.textContent = e.currentTarget.dataset.color;
+    colorO.textContent = e.currentTarget.dataset.color + ';';
+    selfOkantovkas.forEach((element) => {element.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/" + e.currentTarget.className + ".png";});
+}
+
+function changeView(e) {
+    let a = selfKovriks[0].src.slice(0, selfKovriks[0].src.lastIndexOf('_'));
+    selfKovriks.forEach((element) => {element.src = a + ((firstView.checked)? '_romby.png' : '_soty.png');});
+    view.textContent = (firstView.checked)? 'Ромбы;' : 'Соты;'
+}
+
+function changeShape() {
+    if(secondShape.checked && !document.getElementsByClassName('shaper')[0]) {
+        selfKovriks.forEach((element) => {
+            let element2 = document.createElement('img');
+            element2.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/3d_kovrik 1.png";
+            element2.className = "shaper";
+            element.parentNode.appendChild(element2);
+        });
+        shape.textContent = (firstShape.checked)? 'Стандарт;' : '3D;';
+        if(document.getElementsByClassName('bigCircle')[0]) {
+            document.getElementsByName('litaya_lapka')[indexOfElement].checked = false;
+            document.getElementsByName('litaya_lapka')[indexOfElement].dispatchEvent(new Event('click'));
+        }
+        document.querySelector('.complect ul').style.height = document.querySelector('.complect ul').offsetHeight + 'px';
+        for(let i = 0; i < document.querySelectorAll('.complect ul li:nth-of-type(n + 4)').length - 1; i++) {
+            document.querySelectorAll('.complect ul li:nth-of-type(n + 4)')[i].style.display = 'none';
+        }
+        currentComplect.dispatchEvent(new Event('click'));
+    } else if(firstShape.checked && document.getElementsByClassName('shaper')[0]) {
+        selfKovriks.forEach((element) => {
+            element.parentNode.removeChild(element.parentNode.getElementsByClassName('shaper')[0]);
+        });
+        shape.textContent = (firstShape.checked)? 'Стандарт;' : '3D;';
+        for(let i = 0; i < document.querySelectorAll('.complect ul li:nth-of-type(n + 4)').length; i++) {
+            document.querySelectorAll('.complect ul li:nth-of-type(n + 4)')[i].style.display = 'block';
+        }
+        document.querySelector('.complect ul').style.height = 'auto';
+        currentComplect.dispatchEvent(new Event('click'));
+    }
+}
+
+function changeComplects(e) {
+    switch(e.currentTarget.id) {
+        case 'firstComplect':
+            if(flagCusov) {
+                cusov.previousElementSibling.textContent = "";
+                cusov.innerHTML = '';
+                flagCusov = false;
+            }
+            compl.innerHTML = "Комплект ковриков на весь салон с&nbsp;перемычкой;";
+            if(firstShape.checked) {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - ((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = false;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy.png";
+            } else {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_3d__na ves_salon_s_peremychkoy.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price2) - ((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = true;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_3d__na ves_salon_s_peremychkoy.png";
+            }
+            ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+            break;
+        case 'secondComplect':
+            if(flagCusov) {
+                cusov.previousElementSibling.textContent = "";
+                cusov.innerHTML = '';
+                flagCusov = false;
+            }
+            compl.textContent = "Коврик видительский;";
+            if(firstShape.checked) {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_voditelskiy.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = false;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_voditelskiy.png";
+            } else {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_3d_voditelskiy.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price2) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = true;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_3d_voditelskiy.png";
+            }
+            ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+            break;
+        case 'thirdComplect':
+            if(flagCusov) {
+                cusov.previousElementSibling.textContent = "";
+                cusov.innerHTML = '';
+                flagCusov = false;
+            }
+            compl.textContent = "Коврик водительский и пассажирский;";
+            if(firstShape.checked) {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_voditelskiy_i_passajirskiy.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = false;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_voditelskiy_i_passajirskiy.png";
+            } else {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_3d_voditelskiy_i_passajirskiy.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price2) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = true;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_3d_voditelskiy_i_passajirskiy.png";     
+            }
+            ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+            break;
+        case 'fourthComplect':
+            if(!flagCusov) {
+                cusov.previousElementSibling.textContent = "Кузов: ";
+                cusov.innerHTML = 'Не выбран;' + dopStr;
+            }   
+            compl.textContent = "Коврик в багажник;";
+            if(firstShape.checked) {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_v_bagajnik.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = false;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_v_bagajnik.png";
+            } else {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_v_bagajnik.png") {
+                    price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price2) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = true;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/kovrik_v_bagajnik.png";
+            }
+            ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+            break;
+        case 'fifthComplect':
+            if(!flagCusov) {
+                cusov.previousElementSibling.textContent = "Кузов: ";
+                cusov.innerHTML = 'Не выбран' + dopStr;
+            } 
+            compl.innerHTML = "Комплект на весь салон с&nbsp;перемычкой + в багажник;";
+            if(firstShape.checked) {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png") {
+                price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price1) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+            }
+                flag3D = false;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png";
+            } else {
+                if(selfComplect.src != "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png") {
+                price.textContent = parseInt(price.textContent) + parseInt(e.currentTarget.dataset.price2) - parseInt((currentComplect.dataset.price2 && flag3D)? currentComplect.dataset.price2 : currentComplect.dataset.price1) + ' p.';
+                }
+                flag3D = true;
+                selfComplect.src = "https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png";
+            }
+            
+            ourLinks.forEach((element) => {element.href = "#order:Eva коврик=" + parseInt(price.textContent)});
+    }
+    currentComplect = e.currentTarget;
+}
+
+function changePop(e1) {
+    if(e1.target.nextElementSibling.style.display == 'none') {
+        if(!flagPop) {
+            return;
+        }
+        flagPop = false;
+        currentPop = e1.target;
+        e1.target.nextElementSibling.style.display = 'block';
+        document.addEventListener('click', function self(e) {
+            if(e.target != currentPop && e.target != currentPop.nextElementSibling && e.target != currentPop.nextElementSibling.firstElementChild) {
+                currentPop.nextElementSibling.style.display = 'none';
+                flagPop = true;
+                document.removeEventListener('click', self);
+            }
+        }, false);
+    }
+}
+
+function changeSelect(e) {
+    if(e.currentTarget.value != 'false') {
+        e.currentTarget.parentNode.parentNode.firstElementChild.checked = true;
+        e.currentTarget.parentNode.parentNode.firstElementChild.dispatchEvent(new Event('click'));
+        cusov.previousElementSibling.textContent = "Кузов: ";
+        cusov.innerHTML = e.currentTarget.options[e.currentTarget.selectedIndex].textContent + ';' + dopStr;
+        flagCusov = true;
+    } else if(flagCusov) {
+        cusov.innerHTML = 'Не выбран;' + dopStr;
+    }
+}
+
+function catchChange() {
+    price = (window.innerWidth > 1024)? price1 : price2;
+    selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
+    view = (window.innerWidth > 1024)? view1 : view2;
+    shape = (window.innerWidth > 1024)? shape1 : shape2;
+    compl = (window.innerWidth > 1024)? compl1 : compl2;
+    cusov = (window.innerWidth > 1024)? cusov1: cusov2;
+    colorK = (window.innerWidth > 1024)? colorK1 : colorK2;
+    colorO = (window.innerWidth > 1024)? colorO1 : colorO2;
+    dopo = (window.innerWidth > 1024)? dopo1 : dopo2;
+    dopStr = (window.innerWidth > 1024)? '' : '<br/>';
+    if(window.innerWidth <= 1024) {
+        document.getElementsByClassName('wrapper')[0].addEventListener('click', () => {fixedButton.style.display = 'block'});
+    }
+}
+
+function changeStore(e) {
+  let index = JSON.parse(localStorage['tcart']).products.length - 1;
+  let object = JSON.parse(localStorage['tcart']);
+  object.products[index].name = 'Eva Коврик';
+  var selfNode = e.target.parentNode.parentNode.previousElementSibling;
+  if(window.innerWidth > 1024) {
+    var copyNode = e.target.parentNode.parentNode.previousElementSibling.cloneNode(true);
+    let spans = copyNode.getElementsByTagName('span');
+    let listsOfStrong = copyNode.getElementsByTagName('strong');
+    copyNode.removeChild(listsOfStrong[0]);
+    if(listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent.indexOf('Литая лапка') == -1) {
+        copyNode.removeChild(listsOfStrong[listsOfStrong.length-1].nextElementSibling);
+        copyNode.removeChild(listsOfStrong[listsOfStrong.length-1]);
+    } else {
+        let firstPosition = listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent.indexOf('Литая лапка');
+        let lastPosition = firstPosition + 11;
+        listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent = listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent.slice(firstPosition, lastPosition);
+    }
+    for(let i = 0; i < spans.length; i++) {
+      if(spans[i] == spans[3]) continue;
+      spans[i].insertAdjacentHTML('afterEnd', '<br/>');
+    }
+  } else {
+        var copyNode = e.target.parentNode.parentNode.previousElementSibling.cloneNode(true);
+        let spans = copyNode.getElementsByTagName('span');
+        let listsOfStrong = copyNode.getElementsByTagName('strong');
+    copyNode.removeChild(listsOfStrong[0]);
+    if(listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent.indexOf('Литая лапка') == -1) {
+        copyNode.removeChild(listsOfStrong[listsOfStrong.length-1].nextElementSibling);
+        copyNode.removeChild(listsOfStrong[listsOfStrong.length-1]);
+    } else {
+        let firstPosition = listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent.indexOf('Литая лапка');
+        let lastPosition = firstPosition + 11;
+        listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent = listsOfStrong[listsOfStrong.length-1].nextElementSibling.textContent.slice(firstPosition, lastPosition);
+    }
+    }
+  object.products[index].options = [{'option': '<strong>Вид</strong>', 'variant': copyNode.innerHTML, 'price': 0}];
+  object.products[index].img = 'https://static.tildacdn.com/tild3030-6262-4361-b966-333132356535/carpet.png';
+  object.products[index].img1 = document.getElementsByClassName('selfOkantovka')[0].src;
+  object.products[index].img2 = document.getElementsByClassName('selfKovrik')[0].src;
+  localStorage['tcart'] = JSON.stringify(object);
+  let needingText = selfNode.getElementsByTagName('strong')[selfNode.getElementsByTagName('strong').length - 1].nextElementSibling;
+  
+  if(needingText.textContent.indexOf('Шильдик') != -1) {
+    document.getElementsByClassName('t-btn_sm')[14].dispatchEvent(new Event('click'));
+    document.getElementsByClassName('t-popup')[0].style.display = 'none'; 
+    document.getElementsByClassName('t-body')[0].style.overflow = 'auto'
+    document.getElementsByClassName('t-store__prod-popup__btn')[0].dispatchEvent(new Event('click'));
+  }
+  if (needingText.textContent.indexOf('подпятник') != -1) {
+    if(needingText.textContent.indexOf('Шильдик') != -1) {
+        setTimeout(changeStore2, 1000, needingText);
+    } else {
+        changeStore2(needingText)
+    }
+  }
+  
+  
+}
+
+function changeStore2(needingText) {
+    document.getElementsByClassName('t-btn_sm')[15].dispatchEvent(new Event('click'));
+    document.getElementsByClassName('t-popup')[0].style.display = 'none'; 
+    document.getElementsByClassName('t-body')[0].style.overflow = 'auto';
+    let letter = needingText.textContent[needingText.textContent.indexOf('подпятник') - 6];
+    switch(letter) {
+        case 'и':
+            document.getElementsByClassName('js-product-edition-option-variants')[14].selectedIndex = 0;
+            document.getElementsByClassName('js-product-edition-option t-product__option')[14].dispatchEvent(new Event('change'));
+            break;
+        case 'к':
+            document.getElementsByClassName('js-product-edition-option-variants')[14].selectedIndex = 1;
+            document.getElementsByClassName('js-product-edition-option t-product__option')[14].dispatchEvent(new Event('change'));
+            break;
+        case 'н':
+            document.getElementsByClassName('js-product-edition-option-variants')[14].selectedIndex = 2;
+            document.getElementsByClassName('js-product-edition-option t-product__option')[14].dispatchEvent(new Event('change'));
+    }
+    document.getElementsByClassName('t-store__prod-popup__btn')[0].dispatchEvent(new Event('click'));
+}
+
+function wrapper1(e) {setTimeout(changeStore, 6, e)}
+
+
+
+function openStore(e) {
+    let dels = document.getElementsByClassName('t706__product-del');
+    for(let i = 0; i < dels.length; i++) {
+    if(flag) { 
+        dels[i].addEventListener('click', openStore, false);
+    } else {
+        dels.attachEvent('onclick', openStore)
+    }
+}
+  let elements = document.getElementsByClassName('t706__product-title');
+  for(let i = 0; i < elements.length; i++) {
+    if(elements[i].firstChild.textContent == 'Eva Коврик') {
+      let object = JSON.parse(localStorage['tcart']).products[elements[i].parentNode.dataset.cartProductI]; 
+      elements[i].parentNode.firstChild.firstChild.style.backgroundImage = "url(\"" + object.img1 + "\"), url(\"" + object.img2 + "\")";
+    }
+  }
+}
+
+function wrapper2(e) {setTimeout(openStore, 5, e)}
+
+function initiate() {
+    ourLinks = [];
+        let listOfLinks = document.links;
+        let j = 0
+        for(let i = 0; i < listOfLinks.length; i++) {
+            if(listOfLinks[i].dataset.name == 'Eva') {
+                ourLinks[j] = listOfLinks[i];
+                j++;
+            }
+        }
+    for(let i = 0; i < ourLinks.length; i++) {
+        ourLinks[i].addEventListener('click', wrapper1, false);
+    }
+    document.getElementsByClassName('t706__carticon-wrapper')[0].addEventListener('click', wrapper2, false);
+    price = (window.innerWidth > 1024)? price1 : price2;
+    selfComplect = (window.innerWidth > 400)? selfComplect1 : selfComplect2;
+    view = (window.innerWidth > 1024)? view1 : view2;
+    shape = (window.innerWidth > 1024)? shape1 : shape2;
+    compl = (window.innerWidth > 1024)? compl1 : compl2;
+    cusov = (window.innerWidth > 1024)? cusov1: cusov2;
+    colorK = (window.innerWidth > 1024)? colorK1 : colorK2;
+    colorO = (window.innerWidth > 1024)? colorO1 : colorO2;
+    dopo = (window.innerWidth > 1024)? dopo1 : dopo2;
+    dopStr = (window.innerWidth > 1024)? '' : '<br/>';
+    if(window.innerWidth <= 1024) {
+        document.getElementsByClassName('wrapper')[0].addEventListener('click', () => {fixedButton.style.display = 'block'});
+    }
+    if(Array.from) {
+        selfKovriks = Array.from(document.getElementsByClassName('selfKovrik'));
+        selfOkantovkas = Array.from(document.getElementsByClassName('selfOkantovka'));
+    } else {
+        selfKovriks = [], g = document.getElementsByClassName('selfKovrik');
+        selfOkantovkas = [], h = document.getElementsByClassName('selfOkantovka');
+        for(let i = 0; i < g.length; i++) {
+            selfKovriks.push(g[i]);
+        }
+        for(let i = 0; i < h.length; i++) {
+            selfOkantovkas.push(h[i]);
+        }
+    }
+    if(flag) {
+        if(Array.from) {
+            colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'))
+            colorsOfOkantovki = Array.from(document.querySelectorAll('.okantovka li'));
+            dopElements = Array.from(document.querySelectorAll('.first-line input'));
+            complects = Array.from(document.querySelectorAll('.complect input'));
+            pops = Array.from(document.getElementsByClassName('pop'));
+            cusovs = Array.from(document.getElementsByName('cusov1'));
+        } else {
+            colorsOfKovrik = [], a = document.querySelectorAll('.kovrik li');
+            colorsOfOkantovki = [], b = document.querySelectorAll('.okantovka li');
+            dopElements = [], c = document.querySelectorAll('.first-line input');
+            complects = [], d = document.querySelectorAll('.complect input');
+            pops = [], e = document.getElementsByClassName('pop');
+            cusovs = [], f = document.getElementsByName('cusov1');
+            for(let i = 0; i < a.length; i++) {
+                colorsOfKovrik.push(a[i]);
+            }
+            for(let i = 0; i < b.length; i++) {
+                colorsOfKovrik.push(b[i]);
+            }
+            for(let i = 0; i < c.length; c++) {
+                dopElements.push(c[i]);
+            }
+            for(let i = 0; i < d.length; c++) {
+                complects.push(d[i]);
+            }
+            for(let i = 0; i < e.length; c++) {
+                pops.push(e[i]);
+            }
+            for(let i = 0; i < f.length; i++) {
+                cusovs.push(f[i]);
+            }
+        }
+        currentColorOfKovrik = colorsOfKovrik[0];
+        currentColorOfOkanatovka = colorsOfOkantovki[2];
+        currentComplect = complects[0];
+        firstView.addEventListener('click', changeView, false);
+        secondView.addEventListener('click', changeView, false);
+        firstShape.addEventListener('click', changeShape, false);
+        secondShape.addEventListener('click', changeShape, false);
+        fixedButton.addEventListener('click', function() {
+            if(!buttonFlag ) {
+                fixedFrame.classList.add('animate-open-frame');
+                fixedFrame.classList.remove('animate-close-frame');
+                buttonFlag = true;
+            } else {
+                fixedFrame.classList.add('animate-close-frame');
+                fixedFrame.classList.remove('animate-open-frame');
+                buttonFlag = false;
+            }
+        }, false);
+        colorsOfKovrik.forEach((element, index, arr) => {
+            element.addEventListener('click', changeColorOfKovrik, false);
+        });
+        colorsOfOkantovki.forEach((element, index, arr) => {
+            element.addEventListener('click', changeColorOfOkantovki, false);
+        });
+        dopElements.forEach((element, index, arr) => {
+            element.addEventListener('click', changeGeneralImage, false);
+        });
+        complects.forEach((element, index, arr) => {
+            element.addEventListener('click', changeComplects, false);
+        });
+        pops.forEach((element, index, arr) => {
+            element.nextElementSibling.style.display = 'none';
+            element.addEventListener('click', changePop, false);
+        });
+        cusovs.forEach((element, index, arr) => {
+            element.addEventListener('change', changeSelect, false);
+        });
+    } else {
+        if(Array.from) {
+            colorsOfKovrik = Array.from(document.querySelectorAll('.kovrik li'));
+            colorsOfOkantovki = Array.from(document.querySelectorAll('.okantovka li'));
+            dopElements = Array.from(document.querySelectorAll('.first-line input'));
+            complects = Array.from(document.querySelectorAll('.complect input'));
+            pops = Array.from(document.getElementsByClassName('pop'));
+            cusovs = Array.from(document.getElementsByName('cusov1'));
+        } else {
+            colorsOfKovrik = [], a = document.querySelectorAll('.kovrik li');
+            colorsOfOkantovki = [], b = document.querySelectorAll('.okantovka li');
+            dopElements = [], c = document.querySelectorAll('.first-line input');
+            complects = [], d = document.querySelectorAll('.complect input');
+            pops = [], e = document.getElementsByClassName('pop');
+            cusovs = [], f = document.getElementsByName('cusov1');
+            for(let i = 0; i < a.length; i++) {
+                colorsOfKovrik.push(a[i]);
+            }
+            for(let i = 0; i < b.length; i++) {
+                colorsOfKovrik.push(b[i]);
+            }
+            for(let i = 0; i < c.length; c++) {
+                dopElements.push(c[i]);
+            }
+            for(let i = 0; i < d.length; c++) {
+                complects.push(d[i]);
+            }
+            for(let i = 0; i < e.length; c++) {
+                pops.push(e[i]);
+            }
+            for(let i = 0; i < f.length; i++) {
+                cusovs.push(f[i]);
+            }
+        }
+        currentColorOfKovrik = colorsOfKovrik[0];
+        currentColorOfOkanatovka = colorsOfOkantovki[2];
+        currentComplect = complects[0];
+        firstView.attachEvent('onclick', changeView);
+        secondView.attachEvent('onclick', changeView);
+        firstShape.attachEvent('onclick', changeShape);
+        secondShape.attachEvent('onclick', changeShape);
+        colorsOfKovrik.forEach((element, index, arr) => {
+            element.attachEvent('onclick', changeColorOfKovrik);
+        });
+        colorsOfOkantovki.forEach((element, index, arr) => {
+            element.attachEvent('onclick', changeColorOfOkantovki);
+        });
+        dopElements.forEach((element, index, arr) => {
+            element.addEventListener('onclick', changeGeneralImage);
+        });
+        complects.forEach((element, index, arr) => {
+            element.addEventListener('click', changeComplects, false);
+        });
+        pops.forEach((element, index, arr) => {
+            element.nextElementSibling.style.display = 'none';
+            element.attachEvent('onclick', changePop);
+        });
+        cusovs.forEach((element, index, arr) => {
+            element.attachEvent('onchange', changeSelect);
+        });
+    }
+}
+
+var flagAl = false;
+var flagPlast = false;
+var flagRes = false;
+var flag3D = false;
+var flagPop = true;
+var flagCusov = false;
+var buttonFlag = false;
+var indexOfElement = (window.innerWidth > 1024)? 0 : 1;
+if(window.addEventListener) {
+    var flag = true;
+    document.addEventListener('DOMContentLoaded', initiate, false);
+    window.addEventListener('resize', catchChange, false);
+    window.addEventListener('orientationchange', catchChange, false);
+} else {
+    var flag = false;
+    document.attachEvent('onDOMContentLoaded', initiate);
+    window.attachEvent('onresize', catchChange);
+    window.attachEvent('onorientationchange', catchChange);
+}
+
+window.onload = function() {
+    if(Array.from) {
+        Array.from(document.getElementsByTagName('input')).forEach((element) => {element.checked = element.defaultChecked});
+        Array.from(document.getElementsByTagName('select')).forEach((element) => {element.selectedIndex = 0});
+    } else {
+        let a = [], b = document.getElementsByTagName('input');
+        let c = [], d = document.getElementsByTagName('select');
+        for(let i = 0; i < b.length; i++) {
+            a[i] = b[i];
+        }
+        for(let i = 0; i < d.length; i++) {
+            c[i] = d[i];
+        }
+        a.forEach((element) => {element.checked = element.defaultChecked});
+        c.forEach((element) => {element.selectedIndex = 0});
+    }
+};
+    </script>
+</body>
+</html>

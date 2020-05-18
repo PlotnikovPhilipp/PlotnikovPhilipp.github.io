@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор ковриков</title>
+    <meta name="author" content="PlotnikovPhilipp"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="Коврики"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" type="text/css" href="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/styles/main.css"/>
+    <script src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/clientScripts/main.js" language="javascript" type="text/javascript"></script>
+    <!--[if lt IE9]>
+            <script language="javascript" type="text/javascript" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/clientScripts/compatibilityOfIE8WithHTML5.js"></script>
+    <![endif]-->
+</head>
+<body ontouchstart="">
+    <div class="constructor-wrapper">
+
+        <!--
+
+            Header
+
+        -->
+        <header class="header">
+            <!--
+                Left side
+            -->
+            <section class="left-side--header">
+
+                <!--
+            
+                    View Container
+
+                -->
+                <div class="container-of-view">
+                    <h5>Вид</h5><section class="view-section">
+
+                        <div class="first-view-group">
+                            <input data-value="Ромбы;" class="hidden-radio-button" data-describingclass="view-describing" data-type="view" checked type="radio" name="view" id="rombView"/><label class="radio-button" for="rombView"></label><label for="rombView">Ромбы</label>
+                        </div>
+
+                        <div class="second-view-group">
+                            <input data-value="Соты;" class="hidden-radio-button" data-describingclass="view-describing" data-type="view" type="radio" name="view" id="sotiView"/><label class="radio-button" for="sotiView"></label><label for="sotiView">Соты</label>
+                        </div>
+                    </section>
+                </div><div class="container-of-shape"> <!-- Shape Container -->
+                    <h5>Форма</h5><section class="shape-section">
+
+                        <div class="first-shape-group">
+                            <input data-value="Стандарт;" class="hidden-radio-button" data-describingclass="shape-describing" data-type="shape" checked type="radio" name="shape" id="standart"/><label class="radio-button" for="standart"></label><label for="standart">Стандарт</label>
+                        </div>
+
+                        <div class="second-shape-group">
+                            <input data-value="3D;" class="hidden-radio-button" data-describingclass="shape-describing" data-type="shape" type="radio" name="shape" id="3D"/><label class="radio-button" for="3D"></label><label for="3D">3D</label><img class="pop-icon" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="constructor-popup constructor-popup--header">
+                                <p>
+                                    За счёт бортиков и литой лапки лучше защищает напольное ковровое покрытие от пыли и грязи.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <!--
+                Right side
+            -->
+            <section class="right-side--header">
+                <!--
+                    Sketch and schemes
+                -->
+                <h5>
+                    Эскиз
+                </h5><h5>
+                    Схема комплектации
+                </h5>
+            </section>
+        </header>
+        
+        <!--
+
+            Main
+
+        -->
+        <main role="main">
+            
+            <!--
+                Left side
+            -->
+            <section class="left-side--main">
+
+                <!--
+                    Color
+                -->
+                <section class="inner-left-side--main">
+                    <section class="color-of-kovrika">
+                        <header><h5 class="header-of-color">Цвет коврика</h5><span class="location-of-name-color">Чёрный</span></header>
+                        <ul>
+                            <li data-title="Чёрный" data-value="Чёрный;" data-describingclass="base-color-carpet-describing" data-color="#000000" data-type="kovrik" data-img="black"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Серый" data-value="Серый;" data-describingclass="base-color-carpet-describing" data-color="#A29D9D" data-type="kovrik" data-img="gray"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Бежевый" data-value="Бежевый;" data-describingclass="base-color-carpet-describing" data-color="#E1A063" data-type="kovrik" data-img="beige"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Коричневый" data-value="Коричневый;" data-describingclass="base-color-carpet-describing" data-color="#934E30" data-type="kovrik" data-img="brown"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Кофейный" data-value="Кофейный;" data-describingclass="base-color-carpet-describing" data-color="#652D21" data-type="kovrik" data-img="coffee"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Красный" data-value="Красный;" data-describingclass="base-color-carpet-describing" data-color="#FA0404" data-type="kovrik" data-img="red"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Оранжевый" data-value="Оранжевый;" data-describingclass="base-color-carpet-describing" data-color="#F45B05" data-type="kovrik" data-img="orange"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Тёмно-зеленый" data-value="Тёмно-зеленый;" data-describingclass="base-color-carpet-describing" data-color="#113E0A" data-type="kovrik" data-img="darkGreen"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Лаймовый" data-value="Лаймовый;" data-describingclass="base-color-carpet-describing" data-color="#54D33F" data-type="kovrik" data-img="lime"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Голубой" data-value="Голубой;" data-describingclass="base-color-carpet-describing" data-color="#8FD0E4" data-type="kovrik" data-img="blue"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Синий" data-value="Синий;" data-describingclass="base-color-carpet-describing" data-color="#1850E1" data-type="kovrik" data-img="cyan"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Тёмно-синий" data-value="Тёмно-синий;" data-describingclass="base-color-carpet-describing" data-color="#0F39CE" data-type="kovrik" data-img="darkCyan"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Фиолетовый" data-value="Фиолетовый;" data-describingclass="base-color-carpet-describing" data-color="#87129A" data-type="kovrik" data-img="purple"><div class="selector-of-color-circle"></div></li>
+                        </ul>
+                    </section>
+
+                    <section class="color-of-okantovki">
+                        <header><h5 class="header-of-color">Цвет окантовки</h5><span class="location-of-name-color">Чёрный</span></header>
+                        <ul>
+                            <li data-title="Тёмно-зеленый" data-value="Тёмно-зеленый;" data-describingclass="color-okantovka-describing" data-color="#2C7340" data-type="okantovka" data-img="darkGreen"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Фиолетовый" data-value="Фиолетовый;" data-describingclass="color-okantovka-describing" data-color="#7925A1" data-type="okantovka" data-img="purple"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Чёрный" data-value="Чёрный;" data-describingclass="color-okantovka-describing" data-color="#000000" data-type="okantovka" data-img="black"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Тёмно-синий" data-value="Тёмно-синий;" data-describingclass="color-okantovka-describing" data-color="#181A4A" data-type="okantovka" data-img="darkCyan"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Синий" data-value="Синий;" data-describingclass="color-okantovka-describing" data-color="#3F54C2" data-type="okantovka" data-img="cyan"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Голубой" data-value="Голубой;" data-describingclass="color-okantovka-describing" data-color="#5DCFE8" data-type="okantovka" data-img="blue"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Красный" data-value="Красный;" data-describingclass="color-okantovka-describing" data-color="#FF0505" data-type="okantovka" data-img="red"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Изумрудный" data-value="Изумрудный;" data-describingclass="color-okantovka-describing" data-color="#21351A" data-type="okantovka" data-img="emerald"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Красно-тёмный" data-value="Красно-тёмный;" data-describingclass="color-okantovka-describing" data-color="#8F1A1A" data-type="okantovka" data-img="darkRed"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Бордовый" data-value="Бордовый;" data-describingclass="color-okantovka-describing" data-color="#D31515" data-type="okantovka" data-img="maroon"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Оранжевый" data-value="Оранжевый;" data-describingclass="color-okantovka-describing" data-color="#F7700D" data-type="okantovka" data-img="orange"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Жёлтый" data-value="Жёлтый;" data-describingclass="color-okantovka-describing" data-color="#F8E006" data-type="okantovka" data-img="yellow"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Бежевый" data-value="Бежевый;" data-describingclass="color-okantovka-describing" data-color="#EAA96C" data-type="okantovka" data-img="beige"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Тёмно-серый" data-value="Тёмно-серый;" data-describingclass="color-okantovka-describing" data-color="#828181" data-type="okantovka" data-img="darkGray"><div class="selector-of-color-circle"></div></li>
+                            <li data-title="Светло-серый" data-value="Светло-серый;" data-describingclass="color-okantovka-describing" data-color="#C4C4C4" data-type="okantovka" data-img="lightGray"><div class="selector-of-color-circle"></div></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <!--
+                    Complects
+                -->
+                <section class="inner-right-side--main">
+                    <div class="constructor-img-container">
+                        <h5><span>Эскиз</span></h5>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/black_okantovka.png" alt=""/>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/black_rombi_kovrik.png" alt=""/>
+                    </div>
+                    <h5>Комплектация</h5>
+                    <ul class="complect-option-container">
+
+                        <!--First-->
+                        <li>
+                            <div>
+                                <input data-price2D="2300" data-price3D="2800" data-value="Комплект на весь салон с перемычкой;" data-describingclass="complect-describing" data-cusov="false" data-twoDScheme="komplekt_na ves_salon_s_peremychkoy.png" data-threeDScheme="komplekt_na ves_salon_s_peremychkoy_3D.png" class="hidden-radio-button" checked id="complectType1" name="complectType" type="radio"/><label class="radio-button" for="complectType1"></label>
+                            </div>
+                            <div>
+                                <label for="complectType1">Комплект на весь салон с перемычкой</label>
+                            </div>
+                        </li>
+
+                        <!--Second-->
+                        <li>
+                            <div>
+                                <input data-price2D="750" data-price3D="1000" data-value="Водительский;" data-describingclass="complect-describing" data-cusov="false" data-twoDScheme="kovrik_voditelskiy.png" data-threeDScheme="kovrik_3d_voditelskiy.png" class="hidden-radio-button" id="complectType2" name="complectType" type="radio"/><label class="radio-button" for="complectType2"></label>
+                            </div>
+                            <div>
+                                <label for="complectType2">Водительский</label>
+                            </div>
+                        </li>
+
+                        <!--Third-->
+                        <li>
+                            <div>
+                                <input data-price2D="1500" data-price3D="2000" data-value="Водительский и пассажирский;" data-describingclass="complect-describing" data-cusov="false" data-twoDScheme="komplekt_voditelskiy_i_passajirskiy.png" data-threeDScheme="komplekt_3d_voditelskiy_i_passajirskiy.png" class="hidden-radio-button" id="complectType3" name="complectType" type="radio"/><label class="radio-button" for="complectType3"></label>
+                            </div>
+                            <div>
+                                <label for="complectType3">Водительский и пассажирский</label>
+                            </div>
+                        </li>
+
+                        <!--Fourth-->
+                        <li>
+                            <div>
+                                <input data-price2D="1750" data-price3D="1750" data-value="В багажник;" data-describingclass="complect-describing" data-cusov="true" data-twoDScheme="kovrik_v_bagajnik.png" data-threeDScheme="kovrik_v_bagajnik_3D.png" class="hidden-radio-button" id="complectType4" name="complectType" type="radio"/><label class="radio-button" for="complectType4"></label>
+                            </div>
+                            <div>
+                                <label for="complectType4">В багажник</label>
+                                <select name="typeOfTrunk">
+                                    <option value="Седан">Седан</option>
+                                    <option value="Хэчбек">Хэчбэк</option>
+                                    <option value="Купэ">Купэ</option>
+                                    <option value="Универсал">Универсал</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                                <div data-state="close" class="custom-select-container">
+                                    <span class="custom-select-title">Выберите кузов</span>
+                                    <div class="custom-select-arrow"></div>
+                                    <ul class="custom-select-list">
+                                        <li data-index="0" data-value="Седан"><span>Седан</span></li>
+                                        <li data-index="1" data-value="Хэчбек"><span>Хэчбек</span></li>
+                                        <li data-index="2" data-value="Купэ"><span>Купэ</span></li>
+                                        <li data-index="3" data-value="Универсал"><span>Универсал</span></li>
+                                        <li data-index="4" data-value="Другое"><span>Другое</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Fifth-->
+                        <li>
+                            <div>
+                                <input data-price2D="3750" data-price3D="3750" data-value="Комплект на весь салон с перемычкой + в багажник;" data-describingclass="complect-describing" data-cusov="true" data-twoDScheme="komplekt_na ves_salon_s_peremychkoy_plus_bagajnik.png" data-threeDScheme="komplekt_na ves_salon_s_peremychkoy_plus_bagajnik_3D.png" class="hidden-radio-button" id="complectType5" name="complectType" type="radio"/><label class="radio-button" for="complectType5"></label>
+                            </div>
+                            <div>
+                                <label for="complectType5">Комплект на весь салон с перемычкой + в&nbsp;багажник</label>
+                                <select name="typeOfTrunk">
+                                    <option value="Седан">Седан</option>
+                                    <option value="Хэчбек">Хэчбэк</option>
+                                    <option value="Купэ">Купэ</option>
+                                    <option value="Универсал">Универсал</option>
+                                    <option value="Другое">Другое</option>
+                                </select>
+                                <div data-state="close" class="custom-select-container">
+                                    <span class="custom-select-title">Выберите кузов</span>
+                                    <div class="custom-select-arrow"></div>
+                                    <ul class="custom-select-list">
+                                        <li data-index="0" data-value="Седан"><span>Седан</span></li>
+                                        <li data-index="1" data-value="Хэчбек"><span>Хэчбек</span></li>
+                                        <li data-index="2" data-value="Купэ"><span>Купэ</span></li>
+                                        <li data-index="3" data-value="Универсал"><span>Универсал</span></li>
+                                        <li data-index="4" data-value="Другое"><span>Другое</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <!--
+                Right side
+            -->
+            <section class="right-side--main">
+                
+                <!--
+                    Inner left side
+                -->
+                <div class="constructor-img-container">
+                    <h5><span>Эскиз</span></h5>
+                    <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/black_okantovka.png" alt=""/>
+                    <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/black_rombi_kovrik.png" alt=""/>
+                </div>
+
+                <!--
+                    Inner right side
+                -->
+                <div class="constructor-scheme-container">
+                    <h5><span>Схема комплектации</span></h5>
+                    <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/komplekt_na ves_salon_s_peremychkoy.png" alt=""/>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+     <!--
+
+        Footer/additional
+
+    -->
+    <hr/>
+    <div class="constructor-wrapper constructor-wrapper--footer">
+        <footer>
+            <h5 class="title-of-footer">Дополнительно <span>*Увеличить количество аксессуаров можно в корзине</span></h5>
+
+            <!--
+                Left side
+            -->
+            <div class="left-footer-side">
+                <ul class="range-of-item">
+
+                    <!--
+                        First
+                    -->
+                    <li class="shiladik-container">
+
+                        <!--
+                            Checkbox
+                        -->
+                        <div class="checkbox-container">
+                            <input data-price="200" data-value="Шильдик;" data-describingclass="additional-describing" data-type="shildik" data-img="shildik2.png" data-class="dynamic-shildik" type="checkbox" id="shildik"/><label for="shildik"><img class="tick" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/tick.svg" alt=""/></label><img class="pop-icon pop-icon--footer" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="constructor-popup constructor-popup--footer">
+                                <p>
+                                    Металлический, крепится на болтики. На любые марки автомобиля.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/shildyk_2.png" alt=""/>
+                        <span>Шильдик</span>
+                    </li>
+
+                    <!--
+                        Second
+                    -->
+                    <li class="podpatnik-container">
+
+                        <!--
+                            Checkbox
+                        -->
+                        <div class="checkbox-container">
+                            <input data-price="600" data-value="Алюминиевый подпятник;" data-describingclass="additional-describing" data-type="podpatnik" data-img="aluminievyi_podpyatnik.png" data-class="dynamic-podpatnik" type="checkbox" id="alPodpatnik"/><label for="alPodpatnik"><img class="tick" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/tick.svg" alt=""/></label><img class="pop-icon pop-icon--footer" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="constructor-popup constructor-popup--footer">
+                                <p>
+                                    Толщина 1 мм.<br/>
+                                    Размер 15*22 см.<br/>
+                                    Нержавеющий крепёж.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/podpyannyk_aluminievyi.png" alt=""/>
+                        <span>Алюминиевый подпятник</span>
+                    </li>
+
+                    <!--
+                        Third
+                    -->
+                    <li class="podpatnik-container">
+
+                        <!--
+                            Checkbox
+                        -->
+                        <div class="checkbox-container">
+                            <input data-price="600" data-value="Пластиковый подпятник;" data-describingclass="additional-describing" data-type="podpatnik" data-img="plastikovyi_podpyatnik.png" data-class="dynamic-podpatnik" type="checkbox" id="plastPodpatnik"/><label for="plastPodpatnik"><img class="tick" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/tick.svg" alt=""/></label><img class="pop-icon pop-icon--footer" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="constructor-popup constructor-popup--footer">
+                                <p>
+                                    Размер 23*15 см.<br/>
+                                    Толщина 3,5 мм. 
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/podpyannyk_plastikovyi.png" alt=""/>
+                        <span>Пластиковый подпятник</span>
+                    </li>
+
+                    <!--
+                        Fourth
+                    -->
+                    <li class="podpatnik-container">
+
+                        <!--
+                            Checkbox
+                        -->
+                        <div class="checkbox-container">
+                            <input data-price="600" data-value="Рeзиновый подпятник;" data-describingclass="additional-describing" data-type="podpatnik" data-img="rezinovyi_podpyatnik.png" data-class="dynamic-podpatnik" type="checkbox" id="resPodpatnik"/><label for="resPodpatnik"><img class="tick" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/tick.svg" alt=""/></label><img class="pop-icon pop-icon--footer" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="constructor-popup constructor-popup--footer">
+                                <p>
+                                    Размер 20*15 см<br/>
+                                    Толщина 6 см
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/podpyannyk_rezinovyi.png" alt=""/>
+                        <span>Рeзиновый подпятник</span>
+                    </li>
+
+                    <!--
+                        Fifth
+                    -->
+                    <li class="lapka-container">
+
+                        <!--
+                            Checkbox
+                        -->
+                        <div class="checkbox-container">
+                            <input data-price="200" data-value="Литая лапка;" data-describingclass="additional-describing" data-type="lapka" data-img="litaya_lapka2.png" data-class="dynamic-litaya-lapka" type="checkbox" id="litayaLapka"/><label for="litayaLapka"><img class="tick" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/tick.svg" alt=""/></label><img class="pop-icon pop-icon--footer" alt="Доп. информация" src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/info.svg"/>
+                            <div class="constructor-popup constructor-popup--footer">
+                                <p>
+                                    Повторяет форму зоны для отдыха левой ноги в автомобиле. Защищает от попадания пыли и грязи под педали.
+                                </p>
+                            </div>
+                        </div>
+                        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/litaya_lapka_1.png" alt=""/>
+                        <span>Литая лапка</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!--
+                Right side
+            -->
+
+            <!--
+                Describing
+            -->
+            <div class="right-footer-side">
+                <div class="describing-of-good">
+                    <span class="view-describing"><b>Вид:</b></span>
+                    <span class="shape-describing"><b>Форма:</b></span>
+                    <span class="complect-describing"><b>Комплектация:</b></span>
+                    <span class="cusov-describing close-cusov-describing"><b>Кузов:</b></span>
+                    <span class="base-color-carpet-describing"><b>Цвет&nbsp;коврика:</b> Чёрный;</span>
+                    <span class="color-okantovka-describing"><b>Цвет&nbsp;окантовки:</b> Чёрный;</span>
+                    <span class="additional-describing"><b>Дополнительно:</b> Ничего не выбрано</span>
+                </div>
+
+                <!--
+                    Button
+                -->
+                <div class="price-section">
+                    <span class="price-container">Цена <span class="self-price">0 р.</span></span><button><a data-name="Eva" href="#order:Eva коврик=0">Добавить в корзину</a></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--
+
+        Up window for mobile devices
+
+    -->
+    <div class="mobile-window">
+        <div class="constructor-img-container">
+            <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/black_okantovka.png" alt=""/>
+            <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/black_rombi_kovrik.png" alt=""/>
+        </div>
+    </div>
+
+    <!--
+        Button control mobile window
+    -->
+    <button class="mobile-window-switch">
+        <img src="https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/eye.svg" alt=""/>
+        <h6>Эскиз</h6>
+    </button>
+</body>
+</html>
