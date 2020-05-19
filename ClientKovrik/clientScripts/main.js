@@ -732,11 +732,11 @@ function checkSizeForMobileWindow() {
 // Install the chosen options in the bin
 function initComplectOptions(options) {
     openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    openWindow.style.display = 'none';
     openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
     openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
     openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
-    openWindow.style.display = 'none';
 }
 
 function addToBin() {
@@ -764,7 +764,7 @@ function addToBin() {
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
 
-            setTimeout(initComplectOptions, 2000, goodOptions);
+            setTimeout(initComplectOptions, 1000, goodOptions);
     //         break;
     //     case 'Водительский и пассажирский':
     //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
