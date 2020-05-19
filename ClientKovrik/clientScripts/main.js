@@ -754,7 +754,6 @@ function addToBin() {
     goodOptions.okantovkaColor = options[3];
     goodOptions.accessory = options[4];
 
-    console.log(goodOptions);
     // Add complects with choden options
     let openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
     let complectCard = null;
@@ -899,7 +898,7 @@ function initiate() {
    pricePlace = document.getElementsByClassName('self-price')[0];
 
    //Define submit button
-   submitButton = document.querySelector('footer a[data-name="Eva"]').parentNode;
+   submitButton = document.querySelector('footer span[data-name="Eva"]').parentNode;
 
    //Define mobile window && mobile button
    mobileWindow = document.getElementsByClassName('mobile-window')[0];
