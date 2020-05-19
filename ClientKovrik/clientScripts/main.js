@@ -752,6 +752,8 @@ function initComplectOptions(options, openWindow) {
     }
     
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+    openWindow.style.display = 'none';
+    openWindow.style.visibility = '';
 }
 
 function addToBin() {
