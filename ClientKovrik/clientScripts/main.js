@@ -733,6 +733,7 @@ function checkSizeForMobileWindow() {
 function initComplectOptions(options) {
     openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
     openWindow.style.display = 'none';
+    document.body.style.overflow = 'auto';
     openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
     openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
     openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
@@ -763,6 +764,7 @@ function addToBin() {
     //     case 'Водительский':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
+            document.body.style.overflow = 'scroll';
             setTimeout(initComplectOptions, 40, goodOptions);
     //         break;
     //     case 'Водительский и пассажирский':
