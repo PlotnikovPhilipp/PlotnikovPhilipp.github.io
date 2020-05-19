@@ -754,6 +754,7 @@ function addToBin() {
     goodOptions.okantovkaColor = options[3];
     goodOptions.accessory = options[4];
 
+    console.log(goodOptions);
     // Add complects with choden options
     let openWindow = null;
     let complectCard = null;
