@@ -763,25 +763,26 @@ function initComplectOptions(options, openWindow) {
         openWindow.style.visibility = '';
         
         // Add the accessories if they are
+        let openPodpatnikWindow = null;
+        let openShildikWindow = null;
         if(options.accessory != 'Ничего не выбрано') {
             let items = options.accessory.split('; ');
             for(let i = 0; i < items.length; i++) {
                 let [key, value] = items[i].split(' ');
-                let openAccessoryWindow = null;
                 if(key == 'Подпятник') {
                     complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
                     complectCard.dispatchEvent(new Event('click'));
                     document.body.style.overflow = 'scroll';
-                    openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
-                    openAccessoryWindow.style.visibility = 'hidden';
-                    setTimeout(initAccessory, 500, value, openAccessoryWindow);
+                    openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
+                    openPodpatnikWindow.style.visibility = 'hidden';
+                    setTimeout(initAccessory, 500, value, openPodpatnikWindow);
                 } else {
                     complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
                     complectCard.dispatchEvent(new Event('click'));
                     document.body.style.overflow = 'scroll';
-                    openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
-                    openAccessoryWindow.style.visibility = 'hidden';
-                    setTimeout(initAccessory, 500, value, openAccessoryWindow);
+                    openShildikWindow = document.getElementsByClassName('t-popup')[0];
+                    openShildikWindow.style.visibility = 'hidden';
+                    setTimeout(initAccessory, 500, value, openShildikWindow);
                 }
             }
         }
