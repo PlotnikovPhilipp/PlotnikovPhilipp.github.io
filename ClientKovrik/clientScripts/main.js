@@ -759,7 +759,33 @@ function initComplectOptions(options, openWindow) {
     
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
     openWindow.classList.remove('t-popup_show');
-    setTimeout(() => openWindow.style.visibility = '', 500);
+    setTimeout(() => {
+        openWindow.style.visibility = '';
+        
+        // Add the accessories if they are
+        if(options.accessory != 'Ничего не выбрано') {
+            let items = options.accessory.split('; ');
+            for(let i = 0; i < items.length; i++) {
+                let [key, value] = items[i].split(' ');
+                let openAccessoryWindow = null;
+                if(key == 'Подпятник') {
+                    complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
+                    complectCard.dispatchEvent(new Event('click'));
+                    document.body.style.overflow = 'scroll';
+                    openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
+                    openAccessoryWindow.style.visibility = 'hidden';
+                    setTimeout(initAccessory, 500, value, openAccessoryWindow);
+                } else {
+                    complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
+                    complectCard.dispatchEvent(new Event('click'));
+                    document.body.style.overflow = 'scroll';
+                    openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
+                    openAccessoryWindow.style.visibility = 'hidden';
+                    setTimeout(initAccessory, 500, value, openAccessoryWindow);
+                }
+            }
+        }
+    }, 500);
 }
 
 // Install the chosen options in the bin
@@ -847,31 +873,6 @@ function addToBin() {
             openWindow.style.visibility = 'hidden';
             setTimeout(initComplectOptions, 500, goodOptions, openWindow);
     }
-
-    // Add the accessories if they are
-    let openAccessoryWindow = null;
-    if(goodOptions.accessory != 'Ничего не выбрано') {
-        let items = goodOptions.accessory.split('; ');
-        for(let i = 0; i < items.length; i++) {
-            let [key, value] = items[i].split(' ');
-            if(key == 'Подпятник') {
-                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
-                complectCard.dispatchEvent(new Event('click'));
-                document.body.style.overflow = 'scroll';
-                openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
-                openAccessoryWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openAccessoryWindow);
-            } else {
-                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
-                complectCard.dispatchEvent(new Event('click'));
-                document.body.style.overflow = 'scroll';
-                openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
-                openAccessoryWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openAccessoryWindow);
-            }
-        }
-    }
-
 }
 
 /*
