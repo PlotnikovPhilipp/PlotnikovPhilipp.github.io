@@ -849,6 +849,7 @@ function addToBin() {
     }
 
     // Add the accessories if they are
+    let openAccessoryWindow = null;
     if(goodOptions.accessory != 'Ничего не выбрано') {
         let items = goodOptions.accessory.split('; ');
         for(let i = 0; i < items.length; i++) {
@@ -857,16 +858,16 @@ function addToBin() {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
-                openWindow = document.getElementsByClassName('t-popup')[0];
-                openWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openWindow);
+                openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
+                openAccessoryWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openAccessoryWindow);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
-                openWindow = document.getElementsByClassName('t-popup')[0];
-                openWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openWindow);
+                openAccessoryWindow = document.getElementsByClassName('t-popup')[0];
+                openAccessoryWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openAccessoryWindow);
             }
         }
     }
