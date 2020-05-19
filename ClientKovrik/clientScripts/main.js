@@ -801,9 +801,7 @@ function initAccessory(value, openWindow, options) {
         let openPodpatnikWindow = null;
         let openShildikWindow = null;
         if(options.length != 1) {
-            let items = options.split('; ');
-            
-            let [key, value] = items[1].split(' ');
+            let [key, value] = options[1].split(' ');
             if(key == 'Подпятник') {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
                 complectCard.dispatchEvent(new Event('click'));
