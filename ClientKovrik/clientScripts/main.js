@@ -1174,10 +1174,11 @@ const nameOfSubmitButton = 'Eva коврик';
 // Items of kovriks
 const DRIVER = 0;
 const DRIVER_AND_PASSENGER = 1;
-const ALL_SALON = 2;
-const ALL_SALON_PLUS_BAGAGE = 3;
-const ALL_SALON_THREE_RANGE_PLUS_BAGAGE = 4;
-const BAGAGE = 5;
+const BAGAGE = 2;
+const ALL_SALON = 3;
+const ALL_SALON_PLUS_BAGAGE = 4;
+const ALL_SALON_THREE_RANGE_PLUS_BAGAGE = 6;
+
 const PODPATNIK = 6;
 const SHILDIK = 7;
 
