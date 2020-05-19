@@ -760,6 +760,8 @@ function addToBin() {
     // Add complects with choden options
     let openWindow = null;
     let complectCard = null;
+    console.log(goodOptions.complect);
+    console.log(complectOptions.complect == 'Водительскй');
     switch(goodOptions.complect) {
         case 'Водительский':
             сonsole.log('Водительский');
