@@ -801,7 +801,7 @@ function initAccessory(value, openWindow, options) {
         let openPodpatnikWindow = null;
         let openShildikWindow = null;
         if(options.length != 1) {
-            let items = options.accessory.split('; ');
+            let items = options.split('; ');
             
             let [key, value] = items[1].split(' ');
             if(key == 'Подпятник') {
