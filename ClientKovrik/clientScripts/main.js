@@ -764,7 +764,7 @@ function addToBin() {
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
 
-            setTimeout(initComplectOptions, 1000, goodOptions);
+            initComplectOptions(goodOptions);
     //         break;
     //     case 'Водительский и пассажирский':
     //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
