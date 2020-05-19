@@ -757,48 +757,48 @@ function addToBin() {
     // Add complects with choden options
     let openWindow = null;
     let complectCard = null;
-    switch(goodOptions.complect) {
-        case 'Водительский':
+    // switch(goodOptions.complect) {
+    //     case 'Водительский':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
             openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
-            // openWindow.style.display = 'none';
+            openWindow.style.display = 'none';
             initComplectOptions(openWindow, goodOptions);
-            break;
-        case 'Водительский и пассажирский':
-            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
-            complectCard.dispatchEvent(new Event('click'));
-            openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
-            // openWindow.style.display = 'none';
-            initComplectOptions(openWindow, goodOptions);;
-            break;
-        case 'Комплект на весь салон':
-            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON];
-            complectCard.dispatchEvent(new Event('click'));
-            openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
-            // openWindow.style.display = 'none';
-            initComplectOptions(openWindow, goodOptions);;
-            break;
-        case 'Комплект на весь салон с перемычкой + в багажник':
-            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
-            complectCard.dispatchEvent(new Event('click'));
-            openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
-            // openWindow.style.display = 'none';
-            initComplectOptions(openWindow, goodOptions);
-            break;
-        case 'Комплект на весь салон в три ряда + в багажник':
-            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
-            complectCard.dispatchEvent(new Event('click'));
-            openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
-            // openWindow.style.display = 'none';
-            initComplectOptions(openWindow, goodOptions);;
-            break;
-        case 'Багажник':
-            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
-            complectCard.dispatchEvent(new Event('click'));
-            openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
-            // openWindow.style.display = 'none';
-    }
+    //         break;
+    //     case 'Водительский и пассажирский':
+    //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
+    //         complectCard.dispatchEvent(new Event('click'));
+    //         openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    //         // openWindow.style.display = 'none';
+    //         initComplectOptions(openWindow, goodOptions);;
+    //         break;
+    //     case 'Комплект на весь салон':
+    //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON];
+    //         complectCard.dispatchEvent(new Event('click'));
+    //         openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    //         // openWindow.style.display = 'none';
+    //         initComplectOptions(openWindow, goodOptions);;
+    //         break;
+    //     case 'Комплект на весь салон с перемычкой + в багажник':
+    //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
+    //         complectCard.dispatchEvent(new Event('click'));
+    //         openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    //         // openWindow.style.display = 'none';
+    //         initComplectOptions(openWindow, goodOptions);
+    //         break;
+    //     case 'Комплект на весь салон в три ряда + в багажник':
+    //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
+    //         complectCard.dispatchEvent(new Event('click'));
+    //         openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    //         // openWindow.style.display = 'none';
+    //         initComplectOptions(openWindow, goodOptions);;
+    //         break;
+    //     case 'Багажник':
+    //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
+    //         complectCard.dispatchEvent(new Event('click'));
+    //         openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    //         // openWindow.style.display = 'none';
+    // }
 
     // Add the accessories if they are
 
