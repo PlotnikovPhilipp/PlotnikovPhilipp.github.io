@@ -742,7 +742,7 @@ function checkSizeForMobileWindow() {
 // Install the chosen options in the bin
 function initComplectOptions(options, openWindow) {
     document.body.style.overflow = 'auto';
-    if(options.complect != 'Багажник' || options.complect != 'Комплект на весь салон в три ряда + в багажник') {
+    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник') {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
@@ -815,7 +815,7 @@ function addToBin() {
             openWindow.style.visibility = 'hidden';
             setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
-        case 'Багажник':
+        case 'В багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
             complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
