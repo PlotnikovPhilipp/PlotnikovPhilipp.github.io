@@ -293,12 +293,22 @@ function arConstructorImg() {
     // Change the number of schemes
     if(standartImg.checked) {
         complectOptions[complectOptions.length - 1].style.visibility = 'visible';
+        complectOptions[complectOptions.length - 2].style.visibility = 'visible';
+
         complectOptions[complectOptions.length - 1].getElementsByTagName('input')[0].disabled = false;
+        complectOptions[complectOptions.length - 2].getElementsByTagName('input')[0].disabled = false;
     } else {
         complectOptions[complectOptions.length - 1].style.visibility = 'hidden';
+        complectOptions[complectOptions.length - 2].style.visibility = 'hidden';
+
         complectOptions[complectOptions.length - 1].getElementsByTagName('input')[0].checked = false;
+        complectOptions[complectOptions.length - 2].getElementsByTagName('input')[0].checked = false;
+
         complectOptions[complectOptions.length - 1].getElementsByTagName('input')[0].disabled = true;
+        complectOptions[complectOptions.length - 2].getElementsByTagName('input')[0].disabled = true;
+
         complectOptions[complectOptions.length - 1].style.backgroundColor = '';
+        complectOptions[complectOptions.length - 2].style.backgroundColor = '';
     }
 }
 
@@ -734,9 +744,15 @@ function initComplectOptions(options) {
     openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
     openWindow.style.display = 'none';
     document.body.style.overflow = 'auto';
-    openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
-    openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
-    openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    if(options.complect != 'Багажник' || options.complect != 'Комплект на весь салон в три ряда + в багажник') {
+        openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    } else {
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR - 1].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR - 1].value = options.okantovkaColor;
+    }
+    
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
 }
 
