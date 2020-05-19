@@ -763,7 +763,7 @@ function addToBin() {
             complectCard.dispatchEvent(new Event('click'));
             openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
             openWindow.style.display = 'none';
-            initComplectOptions(openWindow, goodOptions);
+            setTimeout(initComplectOptions, 2000, openWindow, goodOptions);
     //         break;
     //     case 'Водительский и пассажирский':
     //         complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
