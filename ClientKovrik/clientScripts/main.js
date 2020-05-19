@@ -753,7 +753,7 @@ function initComplectOptions(options, openWindow) {
     
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
     openWindow.classList.remove('t-popup_show');
-    openWindow.style.visibility = '';
+    setTimeout(() => openWindow.style.visibility = '', 150);
 }
 
 function addToBin() {
