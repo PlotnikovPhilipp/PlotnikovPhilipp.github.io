@@ -746,7 +746,7 @@ function addToBin() {
     
     //Delete not needing words and spaces
     for(let i = 0; i < options.length; i++) {
-        options[i] = options[i].split(': ').splice(1).map((element) => element.trim());
+        options[i] = options[i].split(': ').splice(1).map((element) => element.trim()).join(' ');
     }
 
     // Create the store of result options
