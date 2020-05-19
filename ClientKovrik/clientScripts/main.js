@@ -761,7 +761,7 @@ function addToBin() {
         case 'Водительский':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
-            openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+            setTimeout(() => openWindow = document.getElementsByClassName('t-popup t-popup_show')[0], 5000);
             openWindow.style.display = 'none';
             initComplectOptions(openWindow, goodOptions);
             break;
