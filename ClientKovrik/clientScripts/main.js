@@ -754,11 +754,10 @@ function addToBin() {
     goodOptions.okantovkaColor = options[3];
     goodOptions.accessory = options[4];
 
-    console.log(goodOptions);
     // Add complects with choden options
     let openWindow = null;
     let complectCard = null;
-    switch(goodOptions.shape) {
+    switch(goodOptions.complect) {
         case 'Водительский':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
