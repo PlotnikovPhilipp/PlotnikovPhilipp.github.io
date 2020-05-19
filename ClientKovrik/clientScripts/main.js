@@ -250,7 +250,7 @@ function changeConstructorImg(event) {
 /*
 
     Append/remove the needing parts of constructor image
-    This section of code should change the main image and change the amount of complects
+
 */
 function arConstructorImg() {    
     constructorBases.forEach((base) => {
@@ -729,6 +729,75 @@ function checkSizeForMobileWindow() {
     }   
 }
 
+// Install the chosen options in the bin
+function initComplectOptions(openWindow, options) {
+    openWindow.getElementsByTagName('select')[SHAPE].value = options[shape];
+    openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
+    openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+}
+
+function addToBin() {
+    //Define the items and their options to add to the bin
+    let options = describingContainer.textContent.split(';');
+    
+    //Delete not needing words and spaces
+    for(let i = 0; i < options.length; i++) {
+        options[i] = options[i].split(': ').splice(1).map((element) => element.trim());
+    }
+
+    // Create the store of result options
+    let goodOptions = {};
+    goodOptions.shape = options[0];
+    goodOptions.complect = options[1];
+    goodOptions.kovrikColor = options[2];
+    goodOptions.okantovkaColor = options[3];
+    goodOptions.accessory = options[4];
+
+    // Add complects with choden options
+    let openWindow = document.getElementsByClassName('t-popup t-popup_show')[0];
+    let complectCard = null;
+    switch(goodOptions.shape) {
+        case 'Водительский':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
+            complectCard.dispatchEvent(new Event('click'));
+            openWindow.style.display = 'none';
+            initComplectOptions(openWindow, goodOptions);
+            break;
+        case 'Водительский и пассажирский':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
+            complectCard.dispatchEvent(new Event('click'));
+            openWindow.style.display = 'none';
+            initComplectOptions(openWindow, goodOptions);;
+            break;
+        case 'Комплект на весь салон':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON];
+            complectCard.dispatchEvent(new Event('click'));
+            openWindow.style.display = 'none';
+            initComplectOptions(openWindow, goodOptions);;
+            break;
+        case 'Комплект на весь салон с перемычкой + в багажник':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
+            complectCard.dispatchEvent(new Event('click'));
+            openWindow.style.display = 'none';
+            initComplectOptions(openWindow, goodOptions);
+            break;
+        case 'Комплект на весь салон в три ряда + в багажник':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
+            complectCard.dispatchEvent(new Event('click'));
+            openWindow.style.display = 'none';
+            initComplectOptions(openWindow, goodOptions);;
+            break;
+        case 'Багажник':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
+            complectCard.dispatchEvent(new Event('click'));
+            openWindow.style.display = 'none';
+    }
+
+    // Add the accessories if they are
+
+}
+
 /*
 
     Initiate the data about website
@@ -829,7 +898,7 @@ function initiate() {
    pricePlace = document.getElementsByClassName('self-price')[0];
 
    //Define submit button
-   submitButton = document.querySelector('footer a[data-name="Eva"]');
+   submitButton = document.querySelector('footer a[data-name="Eva"]').parentNode;
 
    //Define mobile window && mobile button
    mobileWindow = document.getElementsByClassName('mobile-window')[0];
@@ -910,6 +979,9 @@ function initiate() {
         footerItems.forEach((element) => {
             element.addEventListener('click', changeAdditionalItemsOnImg, false);
         });
+
+        //Install event handker for submit button
+        submitButton.addEventListener('click', addToBin, false);
 
         /*
    
@@ -1014,6 +1086,9 @@ function initiate() {
             element.attachEvent('onclick', changeAdditionalItemsOnImg);
         });
 
+        //Install event handker for submit button
+        submitButton.attachEvent('onclick', addToBin);
+
         /*
    
             Сheck the size of window for mobile switch
@@ -1065,16 +1140,31 @@ function initiate() {
 /*
 
     Install the event handler of initiate
-    'https://plotnikovphilipp.github.io/%D0%9A%D0%BE%D0%B2%D1%80%D1%8B/imgs/'
 
 */
 let flag;
-const urlBase = './imgs/';
+const urlBase = 'https://plotnikovphilipp.github.io/ClientKovrik/imgs/';
 let standartImg = null;
 let describingContainer = null;
 const defaultTitleOfSubscribing = 'Ничего не выбрано';
 let submitButton = null;
 const nameOfSubmitButton = 'Eva коврик';
+
+// Items of kovriks
+const DRIVER = 0;
+const DRIVER_AND_PASSENGER = 1;
+const ALL_SALON = 2;
+const ALL_SALON_PLUS_BAGAGE = 3;
+const ALL_SALON_THREE_RANGE_PLUS_BAGAGE = 4;
+const BAGAGE = 5;
+const PODPATNIK = 6;
+const SHILDIK = 7;
+
+
+// Options
+const SHAPE = 0;
+const KOVRIK_COLOR = 1;
+const OKANTOVKA_COLOR = 2;
 if(document.addEventListener) {
     flag = true;
     document.addEventListener('DOMContentLoaded', initiate, false);
