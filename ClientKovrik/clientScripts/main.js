@@ -762,6 +762,15 @@ function initComplectOptions(options, openWindow) {
     setTimeout(() => openWindow.style.visibility = '', 500);
 }
 
+// Install the chosen options in the bin
+function initAccessory(option, openWindow) {
+    document.body.style.overflow = 'auto';
+    openWindow.getElementsByTagName('select')[0].value = option;
+    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+    openWindow.classList.remove('t-popup_show');
+    setTimeout(() => openWindow.style.visibility = '', 500);
+}
+
 function addToBin() {
     //Define the items and their options to add to the bin
     let options = describingContainer.textContent.split(';');
@@ -771,6 +780,12 @@ function addToBin() {
         options[i] = options[i].split(': ').splice(1).map((element) => element.trim()).join(' ');
     }
 
+    // Define two items in accessory or not
+    if(options[options.length - 1] == '') {
+        options[options.length - 2] = options[options.length - 2] + '; ' + describingContainer.textContent.split(';')[options.length - 1].trim();
+    }
+    delete options[options.length - 1];
+    
     // Create the store of result options
     let goodOptions = {};
     goodOptions.shape = options[0];
@@ -834,6 +849,27 @@ function addToBin() {
     }
 
     // Add the accessories if they are
+    if(goodOptions.accessory != 'Ничего не выбрано') {
+        let items = goodOptions.accessory.split('; ');
+        for(let i = 0; i < items.length; i++) {
+            let [key, value] = items[i].split(' ');
+            if(key == 'Подпятник') {
+                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
+                complectCard.dispatchEvent(new Event('click'));
+                document.body.style.overflow = 'scroll';
+                openWindow = document.getElementsByClassName('t-popup')[0];
+                openWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openWindow);
+            } else {
+                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
+                complectCard.dispatchEvent(new Event('click'));
+                document.body.style.overflow = 'scroll';
+                openWindow = document.getElementsByClassName('t-popup')[0];
+                openWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openWindow);
+            }
+        }
+    }
 
 }
 
@@ -1197,8 +1233,8 @@ const ALL_SALON = 3;
 const ALL_SALON_PLUS_BAGAGE = 4;
 const ALL_SALON_THREE_RANGE_PLUS_BAGAGE = 6;
 
-const PODPATNIK = 6;
-const SHILDIK = 7;
+const PODPATNIK = 7;
+const SHILDIK = 8;
 
 
 // Options
