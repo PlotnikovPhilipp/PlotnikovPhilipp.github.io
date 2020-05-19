@@ -740,7 +740,7 @@ function checkSizeForMobileWindow() {
 }
 
 // Install the chosen options in the bin
-function initComplectOptions(options) {
+function initComplectOptions(options, openWindow) {
     document.body.style.overflow = 'auto';
     if(options.complect != 'Багажник' || options.complect != 'Комплект на весь салон в три ряда + в багажник') {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
@@ -781,7 +781,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 500, goodOptions);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Водительский и пассажирский':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
@@ -789,7 +789,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 500, goodOptions);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON];
@@ -797,7 +797,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 500, goodOptions);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон с перемычкой + в багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
@@ -805,7 +805,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 500, goodOptions);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон в три ряда + в багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
@@ -813,7 +813,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 500, goodOptions);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
@@ -821,7 +821,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 500, goodOptions);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
     }
 
     // Add the accessories if they are
