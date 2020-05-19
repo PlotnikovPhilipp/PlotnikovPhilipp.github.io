@@ -746,9 +746,15 @@ function initComplectOptions(options, openWindow) {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    } else if(options.complect == 'В багажник') {
+        openWindow.getElementsByTagName('select')[BAGAGE_TYPE].value = options.bagage;
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
     } else {
-        openWindow.getElementsByTagName('select')[KOVRIK_COLOR - 1].value = options.kovrikColor;
-        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR - 1].value = options.okantovkaColor;
+        openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
+        penWindow.getElementsByTagName('select')[BAGAGE_TYPE + 1].value = options.bagage;
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR + 1].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR + 1].value = options.okantovkaColor;
     }
     
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
@@ -769,6 +775,7 @@ function addToBin() {
     let goodOptions = {};
     goodOptions.shape = options[0];
     goodOptions.complect = options[1];
+    if(goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник') goodOptions.bagage = options[2];
     goodOptions.kovrikColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[3] : options[2];
     goodOptions.okantovkaColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[4] : options[3];
     goodOptions.accessory = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[5] : options[4];
@@ -1196,6 +1203,7 @@ const SHILDIK = 7;
 
 // Options
 const SHAPE = 0;
+const BAGAGE_TYPE = 0;
 const KOVRIK_COLOR = 1;
 const OKANTOVKA_COLOR = 2;
 if(document.addEventListener) {
