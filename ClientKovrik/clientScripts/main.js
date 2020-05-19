@@ -762,36 +762,42 @@ function addToBin() {
     let complectCard = null;
     switch(goodOptions.complect) {
         case 'Водительский':
+            сonsole.log('Водительский');
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER];
             complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
             setTimeout(initComplectOptions, 50, goodOptions);
             break;
         case 'Водительский и пассажирский':
+            сonsole.log('Водительский и пассажирский');
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
             complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
             setTimeout(initComplectOptions, 50, goodOptions);
             break;
         case 'Комплект на весь салон':
+            сonsole.log('Комплект на вест салон');
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON];
             complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
             setTimeout(initComplectOptions, 50, goodOptions);
             break;
         case 'Комплект на весь салон с перемычкой + в багажник':
+            сonsole.log('Комплект на весь салон с перемычкой + в багажник');
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
             ccomplectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
             setTimeout(initComplectOptions, 50, goodOptions);
             break;
         case 'Комплект на весь салон в три ряда + в багажник':
+            сonsole.log('Комплект на весь салон в три ряда + в багажник');
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
             complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
             setTimeout(initComplectOptions, 50, goodOptions);
             break;
         case 'Багажник':
+            сonsole.log('Багажник');
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
             complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
