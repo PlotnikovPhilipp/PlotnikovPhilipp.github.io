@@ -808,14 +808,14 @@ function initAccessory(value, openWindow, options) {
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
                 openPodpatnikWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
+                setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openShildikWindow = document.getElementsByClassName('t-popup')[0];
                 openShildikWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openShildikWindow, items);
+                setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
             }
         }
     }, 500);
