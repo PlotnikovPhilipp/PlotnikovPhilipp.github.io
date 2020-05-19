@@ -769,9 +769,9 @@ function addToBin() {
     let goodOptions = {};
     goodOptions.shape = options[0];
     goodOptions.complect = options[1];
-    goodOptions.kovrikColor = options[2];
-    goodOptions.okantovkaColor = options[3];
-    goodOptions.accessory = options[4];
+    goodOptions.kovrikColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[3] : options[2];
+    goodOptions.okantovkaColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[4] : options[3];
+    goodOptions.accessory = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[5] : options[4];
 
     // Add complects with choden options
     let openWindow = null;
