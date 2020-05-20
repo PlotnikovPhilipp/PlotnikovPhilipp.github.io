@@ -82,7 +82,7 @@ function computeGeometryOfColorCircles() {
    //Define the scale of the screen
    //Laptop
    if(window.innerWidth >= 1280) {
-    let space = parseInt(widthOfContainer * 0.05);
+    let space = parseInt(widthOfContainer * 0.06);
     let scaleOfCircles = parseInt((widthOfContainer - space * 7) / 8);
     colorCicrcles.forEach((element, index) => {
         let styleOfElement = element.style;
