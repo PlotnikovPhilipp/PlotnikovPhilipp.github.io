@@ -320,7 +320,7 @@ main .inner-left-side--main {
 .location-of-name-color {
     background-color: #FFF3C2;
     display: inline-block;
-    padding: 0 0.56388888888888888888888888888889vw;
+    margin-left: 0.56388888888888888888888888888889vw;
 }
 
 .color-of-kovrika ul {
