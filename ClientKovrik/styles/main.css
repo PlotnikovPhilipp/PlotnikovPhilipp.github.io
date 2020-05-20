@@ -99,6 +99,9 @@ fieldset {border: none}
     width: 100%;
 }
 
+.t706__product {
+    pointer-events: auto !important;
+}
 
 /*
 
