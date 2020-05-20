@@ -846,7 +846,7 @@ function initComplectOptions(options, openWindow) {
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR - 1].value = options.okantovkaColor;
     } else {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
-        penWindow.getElementsByTagName('select')[BAGAGE_TYPE + 1].value = options.bagage;
+        openWindow.getElementsByTagName('select')[BAGAGE_TYPE + 1].value = options.bagage;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR + 1].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR + 1].value = options.okantovkaColor;
     }
