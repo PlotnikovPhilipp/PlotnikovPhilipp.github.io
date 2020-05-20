@@ -739,88 +739,6 @@ function checkSizeForMobileWindow() {
     }   
 }
 
-// Install the chosen options in the bin
-function initComplectOptions(options, openWindow) {
-    document.body.style.overflow = 'auto';
-    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник') {
-        openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
-        openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
-        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
-    } else if(options.complect == 'В багажник') {
-        openWindow.getElementsByTagName('select')[BAGAGE_TYPE].value = options.bagage;
-        openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
-        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
-    } else {
-        openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
-        penWindow.getElementsByTagName('select')[BAGAGE_TYPE + 1].value = options.bagage;
-        openWindow.getElementsByTagName('select')[KOVRIK_COLOR + 1].value = options.kovrikColor;
-        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR + 1].value = options.okantovkaColor;
-    }
-    
-    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
-    openWindow.classList.remove('t-popup_show');
-    setTimeout(() => {
-        openWindow.style.visibility = '';
-        
-        // Add the accessories if they are
-        let openPodpatnikWindow = null;
-        let openShildikWindow = null;
-        if(options.accessory != 'Ничего не выбрано') {
-            let items = options.accessory.split('; ');
-            
-            let [key, value] = items[0].split(' ');
-            if(key == 'Подпятник') {
-                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
-                complectCard.dispatchEvent(new Event('click'));
-                document.body.style.overflow = 'scroll';
-                openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
-                openPodpatnikWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
-            } else {
-                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
-                complectCard.dispatchEvent(new Event('click'));
-                document.body.style.overflow = 'scroll';
-                openShildikWindow = document.getElementsByClassName('t-popup')[0];
-                openShildikWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openShildikWindow, items);
-            }
-        }
-    }, 500);
-}
-
-// Install the chosen options in the bin
-function initAccessory(value, openWindow, options) {
-    document.body.style.overflow = 'auto';
-    openWindow.getElementsByTagName('select')[0].value = value;
-    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
-    openWindow.classList.remove('t-popup_show');
-    setTimeout(() => {
-        openWindow.style.visibility = '';
-
-        // Add the accessories if they are
-        let openPodpatnikWindow = null;
-        let openShildikWindow = null;
-        if(options.length != 1) {
-            let [key, value] = options[1].split(' ');
-            if(key == 'Подпятник') {
-                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
-                complectCard.dispatchEvent(new Event('click'));
-                document.body.style.overflow = 'scroll';
-                openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
-                openPodpatnikWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
-            } else {
-                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
-                complectCard.dispatchEvent(new Event('click'));
-                document.body.style.overflow = 'scroll';
-                openShildikWindow = document.getElementsByClassName('t-popup')[0];
-                openShildikWindow.style.visibility = 'hidden';
-                setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
-            }
-        }
-    }, 500);
-}
-
 function addToBin() {
     //Define the items and their options to add to the bin
     let options = describingContainer.textContent.split(';');
@@ -897,6 +815,94 @@ function addToBin() {
             openWindow.style.visibility = 'hidden';
             setTimeout(initComplectOptions, 500, goodOptions, openWindow);
     }
+}
+
+// Install the chosen options in the bin
+function initComplectOptions(options, openWindow) {
+    document.body.style.overflow = 'auto';
+    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник') {
+        openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    } else if(options.complect == 'В багажник') {
+        openWindow.getElementsByTagName('select')[BAGAGE_TYPE].value = options.bagage;
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    } else {
+        openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
+        penWindow.getElementsByTagName('select')[BAGAGE_TYPE + 1].value = options.bagage;
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR + 1].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR + 1].value = options.okantovkaColor;
+    }
+    
+    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+    openWindow.classList.remove('t-popup_show');
+    document.getElementsByClassName('t706')[0].style.display = 'none'; 
+    setTimeout(() => {
+        openWindow.style.visibility = '';
+        
+        // Add the accessories if they are
+        let openPodpatnikWindow = null;
+        let openShildikWindow = null;
+        if(options.accessory != 'Ничего не выбрано') {
+            let items = options.accessory.split('; ');
+            
+            let [key, value] = items[0].split(' ');
+            if(key == 'Подпятник') {
+                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
+                complectCard.dispatchEvent(new Event('click'));
+                document.body.style.overflow = 'scroll';
+                openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
+                openPodpatnikWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
+            } else {
+                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
+                complectCard.dispatchEvent(new Event('click'));
+                document.body.style.overflow = 'scroll';
+                openShildikWindow = document.getElementsByClassName('t-popup')[0];
+                openShildikWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openShildikWindow, items);
+            }
+        } else {
+                document.getElementsByClassName('t706')[0].style.display = '';
+        }
+    }, 500);
+}
+
+// Install the chosen options in the bin
+function initAccessory(value, openWindow, options) {
+    document.body.style.overflow = 'auto';
+    openWindow.getElementsByTagName('select')[0].value = value;
+    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+    openWindow.classList.remove('t-popup_show');
+    document.getElementsByClassName('t706')[0].style.display = 'none'; 
+    setTimeout(() => {
+        openWindow.style.visibility = '';
+
+        // Add the accessories if they are
+        let openPodpatnikWindow = null;
+        let openShildikWindow = null;
+        if(options.length != 1) {
+            let [key, value] = options[1].split(' ');
+            if(key == 'Подпятник') {
+                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
+                complectCard.dispatchEvent(new Event('click'));
+                document.body.style.overflow = 'scroll';
+                openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
+                openPodpatnikWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
+            } else {
+                complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
+                complectCard.dispatchEvent(new Event('click'));
+                document.body.style.overflow = 'scroll';
+                openShildikWindow = document.getElementsByClassName('t-popup')[0];
+                openShildikWindow.style.visibility = 'hidden';
+                setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
+            }
+        } else {
+            document.getElementsByClassName('t706')[0].style.display = '';
+        }
+    }, 500);
 }
 
 /*
