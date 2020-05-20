@@ -862,7 +862,7 @@ function initComplectOptions(options, openWindow) {
         let openPodpatnikWindow = null;
         let openShildikWindow = null;
 
-        if(options.accessory !== undefined) {
+        if(options.accessory !== 'Ничего не выбрано') {
             let items = options.accessory.split('; ');
             
             let [key, value] = items[0].split(' ');
