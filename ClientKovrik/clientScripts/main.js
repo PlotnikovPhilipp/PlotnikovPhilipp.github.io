@@ -871,6 +871,7 @@ function initComplectOptions(options, openWindow) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
+                openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = value[0].toUpperCase() + value.slice(1); // Define the price
                 openPodpatnikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
             } else {
@@ -909,6 +910,7 @@ function initAccessory(value, openWindow, options) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
+                openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = value[0].toUpperCase() + value.slice(1); // Define the price
                 openPodpatnikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
             } else {
