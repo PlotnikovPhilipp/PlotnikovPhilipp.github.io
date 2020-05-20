@@ -311,6 +311,7 @@ main .inner-left-side--main {
 .header-of-color {
     display: inline-block;
     font-size: 1.3rem;
+    font-family: Circle-Regular;
 }
 
 .location-of-name-color {
