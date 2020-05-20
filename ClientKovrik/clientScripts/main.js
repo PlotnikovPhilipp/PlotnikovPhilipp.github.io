@@ -798,7 +798,7 @@ function addToBin() {
             break;
         case 'Комплект на весь салон с перемычкой + в багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
-            ccomplectCard.dispatchEvent(new Event('click'));
+            complectCard.dispatchEvent(new Event('click'));
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
