@@ -294,21 +294,27 @@ function arConstructorImg() {
     if(standartImg.checked) {
         complectOptions[complectOptions.length - 1].style.visibility = 'visible';
         complectOptions[complectOptions.length - 2].style.visibility = 'visible';
+        complectOptions[complectOptions.length - 3].style.visibility = 'visible';
 
         complectOptions[complectOptions.length - 1].getElementsByTagName('input')[0].disabled = false;
         complectOptions[complectOptions.length - 2].getElementsByTagName('input')[0].disabled = false;
+        complectOptions[complectOptions.length - 3].getElementsByTagName('input')[0].disabled = false;
     } else {
         complectOptions[complectOptions.length - 1].style.visibility = 'hidden';
         complectOptions[complectOptions.length - 2].style.visibility = 'hidden';
+        complectOptions[complectOptions.length - 3].style.visibility = 'hidden';
 
         complectOptions[complectOptions.length - 1].getElementsByTagName('input')[0].checked = false;
         complectOptions[complectOptions.length - 2].getElementsByTagName('input')[0].checked = false;
+        complectOptions[complectOptions.length - 3].getElementsByTagName('input')[0].checked = false;
 
         complectOptions[complectOptions.length - 1].getElementsByTagName('input')[0].disabled = true;
         complectOptions[complectOptions.length - 2].getElementsByTagName('input')[0].disabled = true;
+        complectOptions[complectOptions.length - 3].getElementsByTagName('input')[0].disabled = true;
 
         complectOptions[complectOptions.length - 1].style.backgroundColor = '';
         complectOptions[complectOptions.length - 2].style.backgroundColor = '';
+        complectOptions[complectOptions.length - 3].style.backgroundColor = '';
     }
 }
 
@@ -799,6 +805,14 @@ function addToBin() {
             openWindow.style.visibility = 'hidden';
             setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
+        case 'Комплект на весь салон в три ряда':
+            complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE];
+            complectCard.dispatchEvent(new Event('click'));
+            document.body.style.overflow = 'scroll';
+            openWindow = document.getElementsByClassName('t-popup')[0];
+            openWindow.style.visibility = 'hidden';
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
+            break;
         case 'Комплект на весь салон в три ряда + в багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
             complectCard.dispatchEvent(new Event('click'));
@@ -820,7 +834,7 @@ function addToBin() {
 // Install the chosen options in the bin
 function initComplectOptions(options, openWindow) {
     document.body.style.overflow = 'auto';
-    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник') {
+    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник' && options.complect != 'Комплект на весь салон в три ряда') {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
@@ -828,6 +842,9 @@ function initComplectOptions(options, openWindow) {
         openWindow.getElementsByTagName('select')[BAGAGE_TYPE].value = options.bagage;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
+    } else if(options.complect == 'Комплект на весь салон в три ряда') {
+        openWindow.getElementsByTagName('select')[KOVRIK_COLOR - 1].value = options.kovrikColor;
+        openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR - 1].value = options.okantovkaColor;
     } else {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
         penWindow.getElementsByTagName('select')[BAGAGE_TYPE + 1].value = options.bagage;
@@ -1266,6 +1283,7 @@ const DRIVER_AND_PASSENGER = 1;
 const BAGAGE = 2;
 const ALL_SALON = 3;
 const ALL_SALON_PLUS_BAGAGE = 4;
+const ALL_SALON_THREE_RANGE = 5;
 const ALL_SALON_THREE_RANGE_PLUS_BAGAGE = 6;
 
 const PODPATNIK = 7;
