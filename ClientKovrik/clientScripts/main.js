@@ -872,7 +872,7 @@ function initComplectOptions(options, openWindow) {
 // Install the chosen options in the bin
 function initAccessory(value, openWindow, options) {
     document.body.style.overflow = 'auto';
-    openWindow.getElementsByTagName('select')[0].value = value;
+    openWindow.getElementsByTagName('select')[0].value = value[0].toUpperCase() + value.slice(1);
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
     openWindow.classList.remove('t-popup_show');
     document.getElementsByClassName('t706')[0].style.display = 'none'; 
@@ -884,6 +884,7 @@ function initAccessory(value, openWindow, options) {
         let openShildikWindow = null;
         if(options.length != 1) {
             let [key, value] = options[1].split(' ');
+
             if(key == 'Подпятник') {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
                 complectCard.dispatchEvent(new Event('click'));
@@ -896,6 +897,7 @@ function initAccessory(value, openWindow, options) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openShildikWindow = document.getElementsByClassName('t-popup')[0];
+                openShildikWindow.getElementsByTagName('select')[0].value = value[0].toUpperCase() + value.slice(1);
                 openShildikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
             }
