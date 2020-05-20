@@ -301,7 +301,7 @@ main .left-side--main {
 
 main .inner-left-side--main {
     float: left;
-    width: 50%;
+    width: 45%;
 }
 
 /*
@@ -360,8 +360,8 @@ main .inner-left-side--main {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 2.2vw;
+    height: 2.2vw;
     border: 0.10435vw solid black;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
