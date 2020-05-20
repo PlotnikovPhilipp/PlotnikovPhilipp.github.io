@@ -762,7 +762,7 @@ footer::after {
 }
 
 .pop-icon--footer {
-    vertical-align: bottom;
+    vertical-align: middle;
     cursor: pointer;
 }
 
