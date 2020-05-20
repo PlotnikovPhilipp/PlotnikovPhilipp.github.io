@@ -708,7 +708,7 @@ footer::after {
 }
 
 .left-footer-section h4 {
-    font-family: Arial-Bold;
+    font-family: Circle-Regular;
     font-size: 1.2rem;
     margin-bottom: 0.5vw;
 }
@@ -727,7 +727,7 @@ footer::after {
 
 .right-footer-section__header h4 {
     display: inline-block;
-    font-family: Arial-Bold;
+    font-family: Circle-Regular;
     font-size: 1.2rem;
 }
 
