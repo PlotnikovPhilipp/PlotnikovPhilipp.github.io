@@ -860,6 +860,7 @@ function initComplectOptions(options, openWindow) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openShildikWindow = document.getElementsByClassName('t-popup')[0];
+                openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = SHILDIK_PRICE[value[0].toUpperCase() + value.slice(1)]; // Define the price
                 openShildikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openShildikWindow, items);
             }
@@ -897,7 +898,7 @@ function initAccessory(value, openWindow, options) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openShildikWindow = document.getElementsByClassName('t-popup')[0];
-                openShildikWindow.getElementsByTagName('select')[0].value = value[0].toUpperCase() + value.slice(1);
+                openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = SHILDIK_PRICE[value[0].toUpperCase() + value.slice(1)]; // Define the price
                 openShildikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
             }
@@ -1270,12 +1271,19 @@ const ALL_SALON_THREE_RANGE_PLUS_BAGAGE = 6;
 const PODPATNIK = 7;
 const SHILDIK = 8;
 
-
 // Options
 const SHAPE = 0;
 const BAGAGE_TYPE = 0;
 const KOVRIK_COLOR = 1;
 const OKANTOVKA_COLOR = 2;
+
+// Prices
+const SHILDIK_PRICE = {
+    'Большой': 250,
+    'Средний': 200,
+    'Малый': 150
+};
+
 if(document.addEventListener) {
     flag = true;
     document.addEventListener('DOMContentLoaded', initiate, false);
