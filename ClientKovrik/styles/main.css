@@ -251,7 +251,7 @@ fieldset {border: none}
 
 .pop-icon {
     width: 1.3vw;
-    vertical-align: baseline;
+    vertical-align: bottom;
     margin-left: 0.6vw;
 }
 
