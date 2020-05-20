@@ -344,6 +344,7 @@ main .inner-left-side--main {
     float: left;
     cursor: pointer;
     position: relative;
+    box-sizing: border-box;
 }
 
 .color-of-kovrika ul li[data-color="#FFFFFF"] {
@@ -398,6 +399,7 @@ main .inner-left-side--main {
     float: left;
     cursor: pointer;
     position: relative;
+    box-sizing: border-box;
 }
 
 .color-of-okantovki ul li[data-color="#FFFFFF"] {
