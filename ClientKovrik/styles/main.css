@@ -648,7 +648,7 @@ main .inner-right-side--main ul select {
 }
 
 footer {
-    margin-top: 3vw;
+    margin-top: 2vw;
     position: relative;
 }
 
@@ -673,7 +673,7 @@ footer::after {
 .left-footer-side {
     width: 56%;
     float: left;
-    margin-top: 2.1527777777777777777777777777778vw;
+    margin-top: 2vw;
 }
 
 .range-of-item {
@@ -837,13 +837,13 @@ footer::after {
     margin-left: 2%;
     width: 40%;
     padding-left: 1.7%;
-    margin-top: 2.1527777777777777777777777777778vw;
+    margin-top: 2vw;
     border-left: 0.2vw solid black;
 }
 
 .describing-of-good {
     line-height: 1.7;
-    height: 7vw;
+    height: 6vw;
 }
 
 .close-cusov-describing {
@@ -1141,7 +1141,7 @@ footer::after {
 
     .pop-icon {
         width: 2.5vw;
-        vertical-align: middle;
+        vertical-align: baseline;
         margin-left: 1.2vw;
     }
 
