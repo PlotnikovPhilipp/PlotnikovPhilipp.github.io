@@ -424,7 +424,7 @@ function changeAdditionalItemsOnImg(event) {
             case 'shildik':
                 for(let i = 0; i < additionalShildiks.length; i++) {
                     if(additionalShildiks[i] != element && additionalShildiks[i].checked) {
-                        let otherPrice = parseInt(additionalPodpatniks[i].dataset.price);
+                        let otherPrice = parseInt(additionalShildiks[i].dataset.price);
                         additionalShildiks[i].checked = false;
                         additionalShildiks[i].parentNode.parentNode.firstElementChild.style.backgroundColor = '';
                         
@@ -606,7 +606,6 @@ function countPrice(price, command) {
         case 'minus':
             pricePlace.textContent = parseInt(pricePlace.textContent) - price + ' p.';
     }
-    submitButton.href = '#order:' + nameOfSubmitButton + '=' + parseInt(pricePlace.textContent);
 }
 
 /*
