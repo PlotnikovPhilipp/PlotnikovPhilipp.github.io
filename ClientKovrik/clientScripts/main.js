@@ -757,8 +757,8 @@ function addToBin() {
     // Define two items in accessory or not
     if(options[options.length - 1] == '') {
         options[options.length - 2] = options[options.length - 2] + '; ' + describingContainer.textContent.split(';')[options.length - 1].trim();
+        delete options[options.length - 1];
     }
-    delete options[options.length - 1];
     
     // Create the store of result options
     let goodOptions = {};
@@ -871,7 +871,6 @@ function initComplectOptions(options, openWindow) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
-                openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = value[0].toUpperCase() + value.slice(1); // Define the price
                 openPodpatnikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
             } else {
@@ -910,7 +909,6 @@ function initAccessory(value, openWindow, options) {
                 complectCard.dispatchEvent(new Event('click'));
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
-                openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = value[0].toUpperCase() + value.slice(1); // Define the price
                 openPodpatnikWindow.style.visibility = 'hidden';
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
             } else {
