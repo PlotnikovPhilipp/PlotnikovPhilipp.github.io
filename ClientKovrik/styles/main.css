@@ -585,7 +585,7 @@ main .inner-right-side--main ul select {
     position: absolute;
     top: 34%;
     left: 22%;
-    width: 14%;
+    width: 12%;
     transform: rotate(-210deg);
     -webkit-transform: rotate(-210deg);
     -moz-transform: rotate(-210deg);
@@ -596,8 +596,8 @@ main .inner-right-side--main ul select {
 .dynamic-podpatnik {
     position: absolute;
     top: 15%;
-    left: 27%;
-    width: 45%;
+    left: 31%;
+    width: 39%;
     -webkit-transform: rotate(-3deg);
     -moz-transform: rotate(-3deg);
     -ms-transform: rotate(-3deg);
@@ -606,9 +606,9 @@ main .inner-right-side--main ul select {
 }
 
 .dynamic-3D-podpatnik {
-    width: 34%;
-    top: 23%;
-    left: 41%;
+    width: 27%;
+    top: 24%;
+    left: 52%;
     transform: rotate(4deg);
     -webkit-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
@@ -1280,12 +1280,12 @@ footer::after {
     .dynamic-shildik {
         position: absolute;
         top: 50%;
-        left: 13%;
-        width: 15%;
+        left: 14%;
+        width: 13%;
     }
 
     .dynamic-3D-shildik {
-        width: 13%;
+        width: 11%;
         top: 46%;
         left: 28%
     }
@@ -1293,15 +1293,15 @@ footer::after {
     .dynamic-podpatnik {
         position: absolute;
         top: 29%;
-        left: 35%;
-        width: 40%;
+        left: 37%;
+        width: 35%;
     }
 
     .dynamic-3D-podpatnik {
         position: absolute;
-        top: 36%;
-        left: 55%;
-        width: 28%;
+        top: 40%;
+        left: 54%;
+        width: 24%;
     }
 
     /*
@@ -1629,7 +1629,7 @@ footer::after {
     }
     
     .dynamic-shildik {
-        top: 47%;
+        top: 45%;
         left: 14%;
         width: 13%;
     }
@@ -1637,18 +1637,19 @@ footer::after {
     .dynamic-3D-shildik {
         top: 31%;
         left: 30%;
-        width: 12%;
+        width: 9%;
     }
 
     .dynamic-podpatnik {
-        width: 37%;
+        width: 35%;
         left: 32%;
-        top: 18%
+        top: 16%
     }
 
     .dynamic-3D-podpatnik {
-        width: 27%;
-        left: 48%;
+        top: 25%;
+        width: 23%;
+        left: 50%;
     }
 
     /*
@@ -1846,7 +1847,7 @@ footer::after {
     .mobile-window .dynamic-shildik {
         top: 45%;
         left: 13%;
-        width: 15%;
+        width: 13%;
     }
 
     .mobile-window .dynamic-3D-shildik {
