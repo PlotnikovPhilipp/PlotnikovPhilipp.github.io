@@ -861,7 +861,8 @@ function initComplectOptions(options, openWindow) {
         // Add the accessories if they are
         let openPodpatnikWindow = null;
         let openShildikWindow = null;
-        if(options.accessory != 'Ничего не выбрано') {
+
+        if(options.accessory !== undefined) {
             let items = options.accessory.split('; ');
             
             let [key, value] = items[0].split(' ');
