@@ -590,9 +590,9 @@ main .inner-right-side--main ul select {
 
 .dynamic-3D-shildik {
     position: absolute;
-    top: 34%;
-    left: 22%;
-    width: 12%;
+    top: 35%;
+    left: 24%;
+    width: 9%;
     transform: rotate(-210deg);
     -webkit-transform: rotate(-210deg);
     -moz-transform: rotate(-210deg);
@@ -613,9 +613,9 @@ main .inner-right-side--main ul select {
 }
 
 .dynamic-3D-podpatnik {
-    width: 27%;
+    width: 25%;
     top: 24%;
-    left: 52%;
+    left: 55%;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
