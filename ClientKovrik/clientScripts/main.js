@@ -409,7 +409,7 @@ function checkAdditionalItemsOnReload() {
 }
 
 function changeAdditionalItemsOnImg(event) {
-    let element = event.currentTarget.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild; //Input
+    let element = event.currentTarget.firstElementChild.nextElementSibling.firstElementChild; //Input
     let price = parseInt(element.dataset.price);
 
     //Define type of event
