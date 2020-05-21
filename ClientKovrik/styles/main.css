@@ -616,11 +616,11 @@ main .inner-right-side--main ul select {
     width: 27%;
     top: 24%;
     left: 52%;
-    transform: rotate(4deg);
-    -webkit-transform: rotate(4deg);
-    -moz-transform: rotate(4deg);
-    -ms-transform: rotate(4deg);
-    -o-transform: rotate(4deg);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
 }
 
 .constructor-img-container img:first-of-type, .constructor-img-container img:nth-of-type(2) {
@@ -655,7 +655,7 @@ main .inner-right-side--main ul select {
 }
 
 footer {
-    margin-top: 1vw;
+    margin-top: 0.6vw;
     position: relative;
 }
 
