@@ -593,11 +593,11 @@ main .inner-right-side--main ul select {
     top: 33%;
     left: 24%;
     width: 9%;
-    transform: rotate(-210deg);
-    -webkit-transform: rotate(-210deg);
-    -moz-transform: rotate(-210deg);
-    -ms-transform: rotate(-210deg);
-    -o-transform: rotate(-210deg);
+    -webkit-transform: rotate(-27deg);
+    -moz-transform: rotate(-27deg);
+    -ms-transform: rotate(-27deg);
+    -o-transform: rotate(-27deg);
+    transform: rotate(-27deg);
 }
 
 .dynamic-podpatnik {
@@ -613,8 +613,8 @@ main .inner-right-side--main ul select {
 }
 
 .dynamic-3D-podpatnik {
-    width: 25%;
-    top: 24%;
+    width: 24%;
+    top: 25%;
     left: 55%;
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
