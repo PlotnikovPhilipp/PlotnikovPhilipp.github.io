@@ -209,7 +209,7 @@ fieldset {border: none}
 .container-of-view > h5 {
     display: inline-block;
     font-size: 1.3rem;
-    margin-left: 29%;
+    margin-left: 23.4%;
     font-family: Circle-Regular;
 }
 
@@ -323,9 +323,13 @@ main .inner-left-side--main {
     margin-left: 0.56388888888888888888888888888889vw;
 }
 
+.color-of-kovrika {
+    margin-top: -5%;
+}
+
 .color-of-kovrika ul {
     width: 95.016611295681063122923588039867%;
-    margin-top: 1.5972222222222222222222222222222vw;
+    margin-top: 1.5vw;
 }
 
 .color-of-kovrika ul::after {
@@ -348,7 +352,7 @@ main .inner-left-side--main {
 }
 
 .color-of-kovrika ul li[data-color="#FFFFFF"] {
-    border: 0.1vw solid black;
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .selector-of-color-circle {
@@ -375,12 +379,12 @@ main .inner-left-side--main {
     Okantovka
 */
 .color-of-okantovki {
-    margin-top: 3vw;
+    margin-top: 2vw;
 }
 
 .color-of-okantovki ul {
     width: 95.016611295681063122923588039867%;
-    margin-top: 1.5972222222222222222222222222222vw;
+    margin-top: 1.5vw;
 }
 
 .color-of-okantovki ul::after {
@@ -403,7 +407,7 @@ main .inner-left-side--main {
 }
 
 .color-of-okantovki ul li[data-color="#FFFFFF"] {
-    border: 0.1vw solid black;
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 /*
@@ -478,6 +482,7 @@ main .inner-right-side--main ul select {
 
 .custom-select-container {
     position: relative;
+    display: inline-block;
     margin: 0;
     padding: 0;
     margin-left: -1.3vw;
@@ -727,10 +732,16 @@ footer::after {
     margin-bottom: 0.5vw;
 }
 
+.right-footer-section__header::after {
+    content: ' ';
+    display: table;
+    width: 100%;
+}
+
 .right-footer-section__header h4 {
-    display: inline-block;
     font-family: Circle-Regular;
     font-size: 1.2rem;
+    float: left;
 }
 
 /*
@@ -739,6 +750,12 @@ footer::after {
 .range-of-item li .checkbox-container {
     margin-bottom: 0.5vw;
     position: relative;
+}
+
+.range-of-item li .checkbox-container::after {
+    content: ' ';
+    display: table;
+    width: 100%;
 }
 
 .range-of-item .left-footer-section .checkbox-container {
@@ -750,7 +767,7 @@ footer::after {
 }
 
 .range-of-item li .checkbox-container label {
-    display: inline-block;
+    float: left;
     width: 1vw;
     height: 1vw;
     border: 0.1vw solid black;
@@ -761,10 +778,12 @@ footer::after {
 
 .range-of-item li .checkbox-container label img {
     vertical-align: middle;
+    float: left;
 }
 
 .pop-icon--footer {
     vertical-align: baseline;
+    float: left;
     cursor: pointer;
 }
 
@@ -1191,7 +1210,7 @@ footer::after {
         Okantovka
     */
     .color-of-okantovki {
-        margin-top: 4vw;
+        margin-top: 3vw;
     }
 
     /*
