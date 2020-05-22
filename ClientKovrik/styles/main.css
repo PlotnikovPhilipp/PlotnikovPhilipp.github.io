@@ -877,6 +877,7 @@ footer::after {
 }
 
 .price-container {
+    font-family: Circle-Regular;
     display: inline-block;
     vertical-align: bottom;
     font-size: 1.4rem;
