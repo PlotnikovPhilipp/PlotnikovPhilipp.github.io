@@ -1063,9 +1063,11 @@ footer::after {
         Button
     */
     .mobile-window-switch {
+        width: 34px;
+        height: 34px;
         bottom: 2%;
         background-color: white;
-        padding: 3vw 3vw;
+        padding: 12px 13px 14px;
         right: 3%;
         -webkit-border-radius: 100vw;
         -moz-border-radius: 100vw;
@@ -1073,11 +1075,11 @@ footer::after {
         -o-border-radius: 100vw;
         border-radius: 100vw;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-        z-index: 2;
+        z-index: 999;
     }
 
     .mobile-window-switch img {
-        width: 55%;
+        width: 60%;
     }
 
     .mobile-window-switch h6 {
