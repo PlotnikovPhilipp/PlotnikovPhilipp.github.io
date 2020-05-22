@@ -1886,7 +1886,7 @@ footer::after {
         Button
     */
     .mobile-window-switch {
-        padding: 4vw 5vw;
+        padding: 12px 13px 14px;
     }
 
     .mobile-window .constructor-img-container {
@@ -1895,6 +1895,6 @@ footer::after {
     }
 
     .mobile-window-switch h6 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
