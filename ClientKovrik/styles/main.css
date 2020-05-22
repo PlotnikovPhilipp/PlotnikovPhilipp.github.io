@@ -1083,8 +1083,7 @@ footer::after {
     }
 
     .mobile-window-switch h6 {
-        font-size: 1.1rem;
-        font-family: Roboto-Bold;
+        font-size: 1rem;
     }
 }
 
@@ -1895,6 +1894,6 @@ footer::after {
     }
 
     .mobile-window-switch h6 {
-        font-size: 1.3rem;
+        font-size: 0.9rem;
     }
 }
