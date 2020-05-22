@@ -871,6 +871,13 @@ function initComplectOptions(options, openWindow) {
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
                 openPodpatnikWindow.style.visibility = 'hidden';
+                switch(value) {
+                    case 'чёрный':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3030-6165-4235-a135-313966376166/rezinovyi_podpyatnik.png';
+                        break;
+                    case 'бежевый':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3763-3534-4135-b861-373538363061/rezinovyi_podpyatnik.png';
+                }
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
@@ -879,6 +886,13 @@ function initComplectOptions(options, openWindow) {
                 openShildikWindow = document.getElementsByClassName('t-popup')[0];
                 openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = SHILDIK_PRICE[value[0].toUpperCase() + value.slice(1)]; // Define the price
                 openShildikWindow.style.visibility = 'hidden';
+                switch(value) {
+                    case 'средний':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3966-3330-4762-b239-663539386534/logotip_sredniy.jpg';
+                        break;
+                    case 'большой':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3164-3461-4439-b433-386536366261/logotip_1.jpeg';
+                }
                 setTimeout(initAccessory, 500, value, openShildikWindow, items);
             }
         } else {
@@ -909,6 +923,13 @@ function initAccessory(value, openWindow, options) {
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
                 openPodpatnikWindow.style.visibility = 'hidden';
+                switch(value) {
+                    case 'чёрный':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3030-6165-4235-a135-313966376166/rezinovyi_podpyatnik.png';
+                        break;
+                    case 'бежевый':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3763-3534-4135-b861-373538363061/rezinovyi_podpyatnik.png';
+                }
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
@@ -917,6 +938,13 @@ function initAccessory(value, openWindow, options) {
                 openShildikWindow = document.getElementsByClassName('t-popup')[0];
                 openShildikWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = SHILDIK_PRICE[value[0].toUpperCase() + value.slice(1)]; // Define the price
                 openShildikWindow.style.visibility = 'hidden';
+                switch(value) {
+                    case 'средний':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3966-3330-4762-b239-663539386534/logotip_sredniy.jpg';
+                        break;
+                    case 'большой':
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3164-3461-4439-b433-386536366261/logotip_1.jpeg';
+                }
                 setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
             }
         } else {
