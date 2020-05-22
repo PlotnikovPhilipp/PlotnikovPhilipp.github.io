@@ -833,7 +833,7 @@ function addToBin() {
 // Install the chosen options in the bin
 function initComplectOptions(options, openWindow) {
     document.body.style.overflow = 'auto';
-    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник' && options.complect != 'Комплект на весь салон в три ряда') {
+    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник' && options.complect != 'Комплект на весь салон в три ряда' && options.complect != 'Комплект на весь салон с перемычкой + в багажник') {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
@@ -841,7 +841,7 @@ function initComplectOptions(options, openWindow) {
         openWindow.getElementsByTagName('select')[BAGAGE_TYPE].value = options.bagage;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
-    } else if(options.complect == 'Комплект на весь салон в три ряда') {
+    } else if(options.complect == 'Комплект на весь салон в три ряда' || options.complect == 'Комплект на весь салон в три ряда + в багажник') {
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR - 1].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR - 1].value = options.okantovkaColor;
     } else {
@@ -853,7 +853,7 @@ function initComplectOptions(options, openWindow) {
     
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
     openWindow.classList.remove('t-popup_show');
-    document.getElementsByClassName('t706')[0].style.display = 'none'; 
+    openWindow.style.display = 'none'; 
     setTimeout(() => {
         openWindow.style.visibility = '';
         
@@ -893,7 +893,7 @@ function initAccessory(value, openWindow, options) {
     openWindow.getElementsByTagName('select')[0].value = value[0].toUpperCase() + value.slice(1);
     openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
     openWindow.classList.remove('t-popup_show');
-    document.getElementsByClassName('t706')[0].style.display = 'none'; 
+    openWindow.style.display = 'none'; 
     setTimeout(() => {
         openWindow.style.visibility = '';
 
