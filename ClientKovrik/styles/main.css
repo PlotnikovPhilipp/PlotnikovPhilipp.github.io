@@ -1063,11 +1063,11 @@ footer::after {
         Button
     */
     .mobile-window-switch {
-        width: 34px;
-        height: 34px;
+        width: 40px;
+        height: 40px;
         bottom: 2%;
         background-color: white;
-        padding: 12px 13px 14px;
+        padding: 18px 20px 22px;
         right: 3%;
         -webkit-border-radius: 100vw;
         -moz-border-radius: 100vw;
@@ -1877,8 +1877,8 @@ footer::after {
     }
 
     .mobile-window .dynamic-3D-shildik {
-        top: 31%;
-        left: 30%;
+        top: 33%;
+        left: 29%;
         width: 8%;
     }
     
@@ -1886,6 +1886,9 @@ footer::after {
         Button
     */
     .mobile-window-switch {
+        width: 34px;
+        height: 34px;
+        bottom: 2%;
         padding: 12px 13px 14px;
     }
 
