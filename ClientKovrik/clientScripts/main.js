@@ -745,6 +745,8 @@ function checkSizeForMobileWindow() {
 }
 
 function addToBin() {
+    document.getElementsByClassName('t706')[0].style.display = 'none';
+    
     //Define the items and their options to add to the bin
     let options = describingContainer.textContent.split(';');
     
