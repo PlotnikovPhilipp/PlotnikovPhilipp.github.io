@@ -1030,7 +1030,7 @@ footer::after {
     }
 
     .mobile-window .dynamic-3D-shildik {
-        top: 32%;
+        top: 34%;
         left: 31%;
         width: 9%;
     }
@@ -1083,7 +1083,7 @@ footer::after {
     }
 
     .mobile-window-switch h6 {
-        font-size: 1rem;
+        font-size: 0.7rem;
         font-family: Arial;
     }
 }
