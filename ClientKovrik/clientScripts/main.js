@@ -765,10 +765,10 @@ function addToBin() {
     let goodOptions = {};
     goodOptions.shape = options[0];
     goodOptions.complect = options[1];
-    if(goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник') goodOptions.bagage = options[2];
-    goodOptions.kovrikColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[3] : options[2];
-    goodOptions.okantovkaColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[4] : options[3];
-    goodOptions.accessory = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник')? options[5] : options[4];
+    if(goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник' || goodOptions.complect == 'Комплект на весь салон в три ряда + в багажник') goodOptions.bagage = options[2];
+    goodOptions.kovrikColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник' ||  goodOptions.complect == 'Комплект на весь салон в три ряда + в багажник')? options[3] : options[2];
+    goodOptions.okantovkaColor = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник' ||  goodOptions.complect == 'Комплект на весь салон в три ряда + в багажник')? options[4] : options[3];
+    goodOptions.accessory = (goodOptions.complect == 'В багажник' || goodOptions.complect == 'Комплект на весь салон с перемычкой + в багажник' ||  goodOptions.complect == 'Комплект на весь салон в три ряда + в багажник')? options[5] : options[4];
 
     // Add complects with choden options
     let openWindow = null;
@@ -837,11 +837,11 @@ function initComplectOptions(options, openWindow) {
     document.body.style.overflow = 'auto';
     
     // Choose the chosen option
-    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник' && options.complect != 'Комплект на весь салон в три ряда' && options.complect != 'Комплект на весь салон с перемычкой + в багажник') {
+    if(options.complect != 'В багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник' && options.complect != 'Комплект на весь салон в три ряда' && options.complect != 'Комплект на весь салон с перемычкой + в багажник' && options.complect != 'Комплект на весь салон в три ряда + в багажник') {
         openWindow.getElementsByTagName('select')[SHAPE].value = options.shape;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
-    } else if(options.complect == 'В багажник') {
+    } else if(options.complect == 'В багажник' || options.complect == 'Комплект на весь салон в три ряда + в багажник') {
         openWindow.getElementsByTagName('select')[BAGAGE_TYPE].value = options.bagage;
         openWindow.getElementsByTagName('select')[KOVRIK_COLOR].value = options.kovrikColor;
         openWindow.getElementsByTagName('select')[OKANTOVKA_COLOR].value = options.okantovkaColor;
@@ -900,10 +900,10 @@ function initComplectOptions(options, openWindow) {
                 openPodpatnikWindow.style.visibility = 'hidden';
                 switch(value) {
                     case 'чёрный':
-                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3030-6165-4235-a135-313966376166/rezinovyi_podpyatnik.png';
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild6464-6531-4561-a435-343832303834/podpyatnik_cherniy1_.jpg';
                         break;
                     case 'бежевый':
-                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3763-3534-4135-b861-373538363061/rezinovyi_podpyatnik.png';
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3037-3664-4766-b331-323039393137/podpyatnik_bejevyi_e.jpg';
                 }
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
             } else {
@@ -952,10 +952,10 @@ function initAccessory(value, openWindow, options) {
                 openPodpatnikWindow.style.visibility = 'hidden';
                 switch(value) {
                     case 'чёрный':
-                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3030-6165-4235-a135-313966376166/rezinovyi_podpyatnik.png';
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild6464-6531-4561-a435-343832303834/podpyatnik_cherniy1_.jpg';
                         break;
                     case 'бежевый':
-                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3763-3534-4135-b861-373538363061/rezinovyi_podpyatnik.png';
+                        document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3037-3664-4766-b331-323039393137/podpyatnik_bejevyi_e.jpg';
                 }
                 setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
             } else {
