@@ -323,7 +323,7 @@ main .inner-left-side--main {
 }
 
 .color-of-kovrika {
-    margin-top: -2%;
+    margin-top: 1.8%;
 }
 
 .color-of-kovrika ul {
@@ -378,7 +378,7 @@ main .inner-left-side--main {
     Okantovka
 */
 .color-of-okantovki {
-    margin-top: 2.4vw;
+    margin-top: 3.5vw;
 }
 
 .color-of-okantovki ul {
@@ -481,7 +481,7 @@ main .inner-right-side--main ul select {
 
 .custom-select-container {
     position: relative;
-    display: inline-block;
+    display: block;
     margin: 0;
     padding: 0;
     margin-left: -1.3vw;
