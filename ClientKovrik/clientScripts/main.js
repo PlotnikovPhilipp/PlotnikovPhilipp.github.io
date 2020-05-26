@@ -859,25 +859,25 @@ function initComplectOptions(options, openWindow) {
     switch(options.complect) {
         case 'Водительский':
             if(options.shape == '3D') {
-                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('inner-right-side--main hidden-radio-button')[0].dataset.price3d;
+                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('.inner-right-side--main .hidden-radio-button')[0].dataset.price3d;
                 openWindow.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3937-3561-4231-b735-326333393338/3d_voditelskiy.png';
             }
             break;
         case 'Водительский и пассажирский':
             if(options.shape == '3D') {
-                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('inner-right-side--main hidden-radio-button')[1].dataset.price3d;
+                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('.inner-right-side--main .hidden-radio-button')[1].dataset.price3d;
                 openWindow.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3763-6663-4639-a665-346461323939/3d_komplekt_perednie.png';
             }
             break;
         case 'Комплект на весь салон':
             if(options.shape == '3D') {
-                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('inner-right-side--main hidden-radio-button')[2].dataset.price3d;
+                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('.inner-right-side--main .hidden-radio-button')[2].dataset.price3d;
                 openWindow.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild6133-3866-4063-b736-346661636138/3d_komplekt.png';
             }
             break;
         case 'Комплект на весь салон с перемычкой + в багажник':
             if(options.shape == '3D') {
-                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('inner-right-side--main hidden-radio-button')[3].dataset.price3d;
+                openWindow.getElementsByClassName('js-product-price js-store-prod-price-val t-store__prod-popup__price-value')[0].textContent = document.querySelectorAll('.inner-right-side--main .hidden-radio-button')[3].dataset.price3d;
                 openWindow.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild6565-6634-4135-b461-653233626137/komplekt_3d_v_bagajn.png';
             }
 
