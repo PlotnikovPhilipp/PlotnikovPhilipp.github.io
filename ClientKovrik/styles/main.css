@@ -957,7 +957,7 @@ footer::after {
 }
 
 .red-switch-circle {
-    background-color: red;
+    background-color: #cd0000;
     border-radius: 100vw;
     -webkit-border-radius: 100vw;
     -moz-border-radius: 100vw;
