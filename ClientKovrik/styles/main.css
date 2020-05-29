@@ -956,6 +956,20 @@ footer::after {
     position: fixed;
 }
 
+.red-switch-circle {
+    background-color: red;
+    border-radius: 100vw;
+    -webkit-border-radius: 100vw;
+    -moz-border-radius: 100vw;
+    -ms-border-radius: 100vw;
+    -o-border-radius: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+
 @media (max-width: 1024px) {
     
     .right-side--main {
