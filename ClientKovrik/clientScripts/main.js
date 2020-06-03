@@ -372,6 +372,7 @@ function addAdditionalItemsOnImg(element) {
         let container = item.parentNode;
         if(!container.getElementsByClassName(element.dataset.class)[0]) {
             let needingElement = document.createElement('img');
+            needingElement.oncontextmenu = () => false;
             needingElement.src = urlBase + ((standartImg.checked)? element.dataset.img : element.dataset.threedimg);
             needingElement.dataset.img = element.dataset.img;
             needingElement.dataset.threedimg = element.dataset.threedimg;
