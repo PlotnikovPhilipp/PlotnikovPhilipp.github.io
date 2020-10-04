@@ -781,7 +781,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Водительский и пассажирский':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[DRIVER_AND_PASSENGER];
@@ -789,31 +789,31 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON];
-            complectCard.dispatchEvent(new Event('click'));
+            complectCard.dispatchEvent(new Event("click", {bubbles: true}));
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон с перемычкой + в багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_PLUS_BAGAGE];
-            complectCard.dispatchEvent(new Event('click'));
+            complectCard.dispatchEvent(new Event("click", {bubbles: true}));
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон в три ряда':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE];
-            complectCard.dispatchEvent(new Event('click'));
+            complectCard.dispatchEvent(new Event("click", {bubbles: true}));
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'Комплект на весь салон в три ряда + в багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[ALL_SALON_THREE_RANGE_PLUS_BAGAGE];
@@ -821,7 +821,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
             break;
         case 'В багажник':
             complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[BAGAGE];
@@ -829,7 +829,7 @@ function addToBin() {
             document.body.style.overflow = 'scroll';
             openWindow = document.getElementsByClassName('t-popup')[0];
             openWindow.style.visibility = 'hidden';
-            setTimeout(initComplectOptions, 1000, goodOptions, openWindow);
+            setTimeout(initComplectOptions, 500, goodOptions, openWindow);
     }
 }
 
@@ -883,7 +883,7 @@ function initComplectOptions(options, openWindow) {
             }
 
     }
-    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event("click", {bubbles: true}));
     openWindow.classList.remove('t-popup_show');
     openWindow.style.display = 'none'; 
     setTimeout(() => {
@@ -910,7 +910,7 @@ function initComplectOptions(options, openWindow) {
                     case 'бежевый':
                         document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3037-3664-4766-b331-323039393137/podpyatnik_bejevyi_e.jpg';
                 }
-                setTimeout(initAccessory, 1000, value, openPodpatnikWindow, items);
+                setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
                 complectCard.dispatchEvent(new Event('click'));
@@ -925,19 +925,19 @@ function initComplectOptions(options, openWindow) {
                     case 'большой':
                         document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3164-3461-4439-b433-386536366261/logotip_1.jpeg';
                 }
-                setTimeout(initAccessory, 1000, value, openShildikWindow, items);
+                setTimeout(initAccessory, 500, value, openShildikWindow, items);
             }
         } else {
                 document.getElementsByClassName('t706')[0].style.display = '';
         }
-    }, 1000);
+    }, 500);
 }
 
 // Install the chosen options in the bin
 function initAccessory(value, openWindow, options) {
     document.body.style.overflow = 'auto';
     openWindow.getElementsByTagName('select')[0].value = value[0].toUpperCase() + value.slice(1);
-    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event('click'));
+    openWindow.getElementsByClassName('t-store__prod-popup__btn t-btn t-btn_sm')[0].dispatchEvent(new Event("click", {bubbles: true}));
     openWindow.classList.remove('t-popup_show');
     openWindow.style.display = 'none'; 
     setTimeout(() => {
@@ -951,7 +951,7 @@ function initAccessory(value, openWindow, options) {
 
             if(key == 'Подпятник') {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[PODPATNIK];
-                complectCard.dispatchEvent(new Event('click'));
+                complectCard.dispatchEvent(new Event("click", {bubbles: true}));
                 document.body.style.overflow = 'scroll';
                 openPodpatnikWindow = document.getElementsByClassName('t-popup')[0];
                 openPodpatnikWindow.style.visibility = 'hidden';
@@ -962,7 +962,7 @@ function initAccessory(value, openWindow, options) {
                     case 'бежевый':
                         document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3037-3664-4766-b331-323039393137/podpyatnik_bejevyi_e.jpg';
                 }
-                setTimeout(initAccessory, 1000, value, openPodpatnikWindow, ['end']);
+                setTimeout(initAccessory, 500, value, openPodpatnikWindow, ['end']);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
                 complectCard.dispatchEvent(new Event('click'));
@@ -977,12 +977,12 @@ function initAccessory(value, openWindow, options) {
                     case 'большой':
                         document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3164-3461-4439-b433-386536366261/logotip_1.jpeg';
                 }
-                setTimeout(initAccessory, 1000, value, openShildikWindow, ['end']);
+                setTimeout(initAccessory, 500, value, openShildikWindow, ['end']);
             }
         } else {
             document.getElementsByClassName('t706')[0].style.display = '';
         }
-    }, 1000);
+    }, 500);
 }
 
 /*
