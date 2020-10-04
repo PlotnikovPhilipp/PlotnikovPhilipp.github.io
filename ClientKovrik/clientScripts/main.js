@@ -910,7 +910,7 @@ function initComplectOptions(options, openWindow) {
                     case 'бежевый':
                         document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3037-3664-4766-b331-323039393137/podpyatnik_bejevyi_e.jpg';
                 }
-                setTimeout(initAccessory, 500, value, openPodpatnikWindow, items);
+                setTimeout(initAccessory, 1000, value, openPodpatnikWindow, items);
             } else {
                 complectCard = document.getElementsByClassName('js-store-prod-btn t-store__card__btn t-btn t-btn_sm')[SHILDIK];
                 complectCard.dispatchEvent(new Event('click'));
@@ -925,7 +925,7 @@ function initComplectOptions(options, openWindow) {
                     case 'большой':
                         document.getElementsByClassName('js-store-product js-product')[0].dataset.productImg = 'https://static.tildacdn.com/tild3164-3461-4439-b433-386536366261/logotip_1.jpeg';
                 }
-                setTimeout(initAccessory, 500, value, openShildikWindow, items);
+                setTimeout(initAccessory, 1000, value, openShildikWindow, items);
             }
         } else {
                 document.getElementsByClassName('t706')[0].style.display = '';
