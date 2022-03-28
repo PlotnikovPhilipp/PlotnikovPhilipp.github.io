@@ -1352,7 +1352,7 @@ const SHILDIK = 8;
 // Options
 const SHAPE = 0;
 const BAGAGE_TYPE = 0;
-const KOVRIK_COLOR = 1;
+const KOVRIK_COLOR = 0;
 const OKANTOVKA_COLOR = 2;
 
 // Prices
